@@ -9,12 +9,12 @@ Cada alumno debe subir sus ejercicios dentro de una carpeta organizada de la sig
 ```
 1_TUP_1_2C_2024/
 |
-|-[nombre_alumno]/
+|-[apellido_nombre]/
 |               |-ejercicio_1/
-|                            |- style/
-|                            |- static/
-|                            |- index.html
-|
+|               |             |- style/
+|               |             |- static/
+|               |             |- index.html
+|               |
 |               |-ejercicio_2/
 |               |-ejercicio_3/
 |               |-ejercicio_n/               
@@ -23,5 +23,5 @@ Cada alumno debe subir sus ejercicios dentro de una carpeta organizada de la sig
 ```
 
 - `1_TUP_1_2C_2024/`: Carpeta raíz del curso.
-- `[nombre_alumno]/`: Carpeta principal del alumno. **Reemplaza `[nombre_alumno]`** por tu nombre.
+- `[apellido_nombre]/`: Carpeta principal del alumno. **Reemplaza `[apellido_nombre]`** por tu nombre.
 - `ejercicio_1/`, `ejercicio_2/`, etc.: Carpeta de cada ejercicio que contiene todos los archivos relacionados.
