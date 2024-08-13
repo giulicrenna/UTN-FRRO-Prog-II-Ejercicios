@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="link" name="Formulario">
+        <label for="name">Nombre</label>
+        <br>
+        <input type="text" id="Nombre" name="Nombre" maxlength="30" placeholder="Esbriba su nombre aqui...">
+        <br>
+        <label for="email">Correo Electronico</label>
+        <br>
+        <input type="email" id="email" name="email" maxlength="30" placeholder="nombre@correo.com">
+        <br>
+        <label for="asunto">Asunto</label>
+        <br>
+        <select name="asunto" id="Asunto" size="3">
+            <option value="Presupuesto">Pedir presupuesto</option>
+            <option value="CitaPrevia">Solicitar cita previa</option>
+            <option value="Otros">Otros</option>
+        </select>
+        <br>
+        <label for="marketing">¿Como nos conocio?</label>
+        <br>
+        <div class="marketing">
+            <input type="checkbox" value="Amigo" id="Amigo"><label for="Amigo">Un Amigo</label>
+            <input type="checkbox" value="Googleando" id="Googleando"><label for="Googleando">Googleando</label>
+            <input type="checkbox" value="Buzoneo" id="Buzoneo"><label for="Buzoneo">Buzoneo</label>
+        </div>
+        <br>
+        <label for="Mensaje">Esbriba su mensaje</label>
+        <br>
+        <textarea name="mensaje" id="mensaje" maxlength="300"></textarea>
+        <br>
+        <input type="checkbox" value="Acepta_RGPD" id="rgpd" required><label for="rgpd" class="rgpd"> 
+            He leido y aceptado el <a haref="link" target="_blank"> aviso legal y la politica de privacidad</a> 
+        </label>
+    </form>
+</body>
+</html>
