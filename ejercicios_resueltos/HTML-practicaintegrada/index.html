@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+<body>
+    <header> 
+
+        <h1>Antonella Garcia</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobremi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav> 
+
+    </header>
+
+    <section id="sobremi">
+        <h2>Sobre Mí</h2>   
+        <p>Soy Antonella Garcia tengo 30 años, estudio desarrollo full stack de forma autodidacta y a traves de cursos intensivos. Algunas de mis aptitudes que puedo destacar son mi actitud proactiva, autonomia, rápido aprendizaje, saber escuchar y trabajar en equipo.</p>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyecto">
+            <h3>Cuido</h3>
+            <p>Aplicacion para servicios asistenciales </p>
+            <a href="https://cuido.ar/">Ver proyecto</a>
+        </div>
+        <div class="proyecto">
+            <h3>Growing Up</h3>
+            <p>Pagina web de venta de productos canabicos</p>
+            <a href="https://store.steampowered.com/app/1191120/Growing_Up/?l=spanish">Ver proyecto</a>
+        </div>
+        <div class="proyecto">
+            <h3>Calendario Siembra</h3>
+            <p>Aplicacion informativa sobre cultivos </p>
+            <a href="https://www.argentina.gob.ar/sites/default/files/2023/08/script-tmp-inta_-calendario_de_siembra.pdf">Ver proyecto</a>
+        </div>
+    </section>
+
+    <section id="cursos">
+        <h2>Cursos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Institución</th>
+                    <th>Año</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TypeScript</td>
+                    <td>Miracle lab</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>React</td>
+                    <td>Coderhouse</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Coderhouse</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo web</td>
+                    <td>Coderhouse</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>Programación Web FullStack</td>
+                    <td>Proyecto T.TEC | EGG</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>SeProgramar</td>
+                    <td>Argentina Programa</td>
+                    <td>2021</td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVA</li>
+            <li>JAVASCRIPT</li>
+            <li>TYPESCRIPT</li>
+            <li>SQL</li>
+            <li>REACT</li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>   
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>   
+
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script> </body>
+</html>   
