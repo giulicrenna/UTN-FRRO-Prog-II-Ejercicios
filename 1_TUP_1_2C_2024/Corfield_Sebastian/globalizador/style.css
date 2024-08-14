@@ -1,0 +1,35 @@
+*{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.foto{
+    width: 150px;
+    height: 150px;
+}
+
+a{
+    text-decoration: none;
+}
+
+table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 200px;
+    background-color: blue;
+    padding: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius:30px ;
+
+}
+
+button{
+    width: 20%;
+}

@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header{
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: sticky;
+}
+
+h1, h2, p {
+    margin: 0.5% 0;
+}
+
+.profile-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.projects{
+    text-align: center;
+    padding: 5%;
+}
+
+.project-card{
+    background-color: aliceblue;
+    border:  1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+}
+
+.project-card h4{
+    margin-bottom: 3%;
+}
+
+.project-card p{
+    color: #636363;
+}
+
+.project-card a{
+    color: #00c6f8;
+    text-decoration: none;
+}
+
+.project-card a:hover{
+    color: #00c6f885;
+    text-decoration: underline;
+}
+
+.contact{
+    background-color: #444;
+    color: aliceblue;
+    text-align: center;
+    padding: 2% 0;
+}
+
+.contact a{
+    color: #00c6f8;
+    text-decoration: none;
+}
+
+.contact a:hover{
+    color: #00c6f885;
+    text-decoration: underline;
+}
