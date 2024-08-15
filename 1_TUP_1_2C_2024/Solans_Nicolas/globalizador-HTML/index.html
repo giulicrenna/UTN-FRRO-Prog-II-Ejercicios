@@ -1,0 +1,99 @@
+<!--Ejercicio: Crea una página web de perfil personal que incluya los siguientes elementos:
+
+Encabezado: Un encabezado de nivel 1 con tu nombre.
+Imagen de perfil: Una imagen de perfil con un atributo alt descriptivo.
+Sección de información personal: Un párrafo con una breve biografía.
+Lista de intereses: Una lista desordenada con al menos tres intereses o hobbies.
+Tabla de información de contacto: Una tabla que incluya dos filas con tu información de contacto (correo electrónico y teléfono).
+Enlace a redes sociales: Enlaces a tus perfiles de redes sociales (puedes usar URLs ficticias).
+Formulario de contacto: Un formulario con los siguientes campos:
+    Campo de texto para nombre
+    Campo de correo electrónico
+    Área de texto para mensaje
+    Botón de envío-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Globalizador 1</title>
+</head>
+
+<body>
+    <div class="card">
+
+        <header class="header">
+            <h1>Nicolas Solans</h1>
+            <img src="./image/DSC_4501.jpg" alt="Foto de perfil de Nicolas Solans" class="image">
+        </header>
+
+        <main>
+            <section>
+                <p>Hola! Soy Nicolas Solans, tengo 23 años. Actualente, estudio la <b>Tecnicatura en programacion</b> en
+                    la <b>UTN</b>. Mi objetivo es terminar la tecnicatura y comenzar mi carrera profesional como
+                    programador - desarrollador web.</p>
+            </section>
+
+            <div class="hobbies-container">
+                <h3>Mis hobbies</h3>
+                <ul>
+                    <li>Entreno rugby desde los 8 años</li>
+                    <li>Me gustan mirar deportes en general</li>
+                    <li>Mirar series y peliculas</li>
+                    <li>Jugar a la computadora</li>
+                </ul>
+            </div>
+
+            <div class="contact-container">
+                <h3>Mi contacto</h3>
+                <table>
+                    <tr>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                    </tr>
+                    <tr>
+                        <td><a href="mailto:nico.solans.drc@gmail.com" target="_blank">nico.solans.drc@gmail.com</a></td>
+                        <td>3412173325</td>
+                    </tr>
+                </table>
+            </div>
+            
+
+            <div class="form-container">
+                <h3>Formulario</h3>
+                <form class="form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="textarea">Dejame tu comentario</label>
+                        <textarea name="textarea" id="textarea" rows="10" cols="50" required maxlength="300" placeholder="Maximo 300 caracteres."></textarea>
+                    </div>
+                    <button class="form-submit-btn" type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="footer-container">
+                <h3>Mis redes sociales</h3>
+                <footer>
+                    <a href="https://www.instagram.com/nicosolans/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-solans-706518270/" target="_blank"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/NicolasSolans" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://x.com/Nicosolans" target="_blank"><i class="fa fa-twitter"></i></a>
+                </footer>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
