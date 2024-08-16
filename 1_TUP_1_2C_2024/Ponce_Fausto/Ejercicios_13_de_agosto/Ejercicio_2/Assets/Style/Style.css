@@ -4,6 +4,7 @@ header{
     text-align: center;
     background-color: rgb(71, 85, 135);
     border: solid 3px;
+    border-radius: 12%;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     padding: 0;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
 }
 
 img {
@@ -29,6 +31,7 @@ img {
 
 div {
 border: solid 2px;
+
 margin: 2%;
 border-radius: 50%;
 background-color: aliceblue;
@@ -40,4 +43,14 @@ main {
     margin: 0;
     padding: 0;
     border: solid 2px;
+    border-radius: 17%;
+}
+
+footer{
+    color: aliceblue;
+
+}
+
+footer h3{
+    text-decoration: underline;
 }
