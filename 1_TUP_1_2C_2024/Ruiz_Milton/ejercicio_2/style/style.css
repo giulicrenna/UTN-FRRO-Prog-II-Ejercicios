@@ -1,0 +1,128 @@
+/*- - - - - - - - - U N I V E R S A L - - - - - - - -*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/*- - - - - - - - - - H E A D E R - - - - - - - - - -*/
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #1b2022;
+  color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.h1-text {
+  width: 30%;
+}
+.menu-container {
+  width: 30%;
+}
+/*- - - - - - - - - -N A V - - - - - - - - - -*/
+.list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+li {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 13px;
+  display: inline-block;
+  position: relative;
+}
+a {
+  color: aliceblue;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+a:after {
+  content: "";
+  position: absolute;
+  background-color: aqua;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+h1 {
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-family: "Grey Qo", cursive;
+  font-weight: bolder;
+  font-style: normal;
+}
+i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+i:hover,
+h1:hover {
+  filter: drop-shadow(0 0 5px aqua);
+  transition: 1s;
+  translate: 4px;
+}
+h1:hover i {
+  transition: 1s;
+  transform: rotate(50deg);
+}
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a4b494;
+  height: 300px;
+  width: 100%;
+}
+.container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 130px;
+  width: 30%;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+.profile-img {
+  border-radius: 100%;
+  border: 3px solid whitesmoke;
+  box-shadow: rgb(59, 82, 73, 0.4) 5px 5px, rgba(59, 82, 73, 0.3) 10px 10px,
+    rgba(59, 82, 73, 0.2) 15px 15px, rgba(59, 82, 73, 0.1) 20px 20px,
+    rgba(59, 82, 73, 0.05) 25px 25px;
+}
+h2 {
+  color: aliceblue;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: inherit;
+}
+.mern-text {
+  color: rgb(240, 248, 255);
+  font-size: 15px;
+  font-style: italic;
+}
+.student-text {
+  color: aliceblue;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+}
+/*- - - - - - - - - - M A I N - - - - - - - - - -*/
