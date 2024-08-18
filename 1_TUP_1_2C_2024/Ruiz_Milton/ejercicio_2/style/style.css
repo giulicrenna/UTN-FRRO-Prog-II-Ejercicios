@@ -22,7 +22,7 @@
 .menu-container {
   width: 30%;
 }
-/*- - - - - - - - - -N A V - - - - - - - - - -*/
+/*- - - - - - - - - - N A V - - - - - - - - - -*/
 .list {
   display: flex;
   list-style: none;
@@ -60,6 +60,7 @@ a:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+/*- - - - - - - - - Text Container - - - - - - - - -*/
 h1 {
   font-size: 25px;
   letter-spacing: 5px;
@@ -89,11 +90,11 @@ h1:hover i {
   height: 350px;
   width: 100%;
 }
-.container-text {
+.text-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 130px;
+  height: 230px;
   width: 30%;
 }
 h2 {
@@ -105,7 +106,7 @@ h2 {
   font-family: "Montserrat", sans-serif;
   white-space: nowrap;
   border-right: 2px solid #1b2022;
-  width: 315px;
+  width: 319px;
   animation: typing 3s steps(19), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
@@ -119,30 +120,17 @@ h2 {
     border-color: transparent;
   }
 }
-.img-container {
-  display: flex;
-  justify-content: center;
-  width: 30%;
-  animation: fadeIn 3s;
-}
-.profile-img {
-  border-radius: 100%;
-  border: 3px solid whitesmoke;
-  box-shadow: rgb(59, 82, 73, 0.4) 5px 5px, rgba(59, 82, 73, 0.3) 10px 10px,
-    rgba(59, 82, 73, 0.2) 15px 15px, rgba(59, 82, 73, 0.1) 20px 20px,
-    rgba(59, 82, 73, 0.05) 25px 25px;
-}
-.profile-img:hover {
+h2:hover {
   transition: 1s;
-  transform: scale(1.01);
-  border-radius: 100%;
-  box-shadow: rgba(59, 82, 73, 0.4) -5px -5px, rgba(59, 82, 73, 0.3) -10px -10px,
-    rgba(59, 82, 73, 0.2) -15px -15px, rgba(59, 82, 73, 0.1) -20px -20px,
-    rgba(59, 82, 73, 0.05) -25px -25px;
+  text-shadow: 0px 2px 2px #1b2022;
 }
 .name {
   color: #1b2022;
+  transition: 1s;
+}
+.name:hover {
   text-shadow: 0px 2px 2px whitesmoke;
+  transition: 1s;
 }
 .mern-container,
 .student-container {
@@ -173,17 +161,19 @@ h2 {
   }
 }
 .mern-text:hover {
+  transition: 1s;
   text-shadow: 0px 2px 2px #1b2022;
 }
 .student-container {
   text-align: justify;
+  transition: 1s;
 }
 .student-text {
   color: aliceblue;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   animation: move-right-left 3s 1;
-  transition: 0.1s;
+  transition: 1s;
 }
 @keyframes move-right-left {
   from {
@@ -194,6 +184,58 @@ h2 {
   }
 }
 .student-text:hover {
+  transition: 1s;
   text-shadow: 0px 2px 2px #1b2022;
 }
+.button-container {
+  margin-top: 13px;
+}
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: whitesmoke;
+  width: 100px;
+  height: 40px;
+  background-color: #519872af;
+  border: 1px solid whitesmoke;
+  border-radius: 7px;
+  transition: 1s;
+  animation: fadeIn 3s;
+}
+.button:hover {
+  border: 1px solid #1b2022;
+  color: whitesmoke;
+  background-color: #51987288;
+  transition: 1s;
+  text-shadow: 0px 2px 2px #1b2022;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+/*- - - - - - - - - Img Container - - - - - - - - -*/
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  animation: fadeIn 3s;
+}
+.profile-img {
+  border-radius: 100%;
+  border: 3px solid whitesmoke;
+  transition: 1s;
+  box-shadow: rgb(59, 82, 73, 0.4) 5px 5px, rgba(59, 82, 73, 0.3) 10px 10px,
+    rgba(59, 82, 73, 0.2) 15px 15px, rgba(59, 82, 73, 0.1) 20px 20px,
+    rgba(59, 82, 73, 0.05) 25px 25px;
+}
+.profile-img:hover {
+  transition: 1s;
+  transform: scale(1.01);
+  border-radius: 100%;
+  box-shadow: rgba(59, 82, 73, 0.4) -5px -5px, rgba(59, 82, 73, 0.3) -10px -10px,
+    rgba(59, 82, 73, 0.2) -15px -15px, rgba(59, 82, 73, 0.1) -20px -20px,
+    rgba(59, 82, 73, 0.05) -25px -25px;
+}
+
 /*- - - - - - - - - - M A I N - - - - - - - - - -*/
