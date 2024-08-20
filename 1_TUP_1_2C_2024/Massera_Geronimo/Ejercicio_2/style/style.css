@@ -1,0 +1,132 @@
+/* StyleSheet */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+body {
+  background-color: #fff8f3;
+  font-family: Ubuntu, Sans Serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-top {
+  box-sizing: content-box;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 55px;
+  background: #fff8f3;
+  box-shadow: inset -6px -6px 13px #bfbab6, inset 6px 6px 13px #ffffff;
+  max-width: fit-content;
+  height: 50vw;
+  padding: 10px;
+  max-height: 400px;
+}
+
+.profile-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: left;
+  margin-right: 20px;
+}
+
+#profile-pic {
+  border: 1px transparent;
+  max-width: 300px;
+  height: 48vw;
+  max-height: 395px;
+  border-radius: 35px;
+}
+
+.profile-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  height: 48vw;
+  max-height: 395px;
+  max-width: 100%;
+  font-weight: 300;
+  color: #004a7c;
+  text-align: center;
+}
+
+.profile-desc h1 {
+  font-weight: 900;
+}
+
+.profile-desc h2 {
+  font-weight: 800;
+}
+
+.profile-desc p {
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 1.3rem;
+}
+
+
+.prjct1-title, .prjct2-title, .prjct3-title {
+  background-color: #004a7c;
+  border-radius: 55px;
+  background: #004a7c;
+  box-shadow: inset -6px -6px 13px #00385d, inset 6px 6px 13px #005d9b;
+  text-align: center;
+  padding: 1px;
+  color: #fff8f3;
+  font-weight: 600;
+  font-size: large;
+  margin-top: 1.8em;
+  margin-bottom: 0em;
+}
+
+.prjct1-content, .prjct2-content, .prjct3-content {
+  display: flex;  
+  background-color: #fff8f3;
+  border-radius: 55px;
+  background: #fff8f3;
+  box-shadow: inset -6px -6px 13px #bfbab6, inset 6px 6px 13px #ffffff;
+  text-align: left;
+  padding: 10px;
+  color: #004a7c;
+  font-weight: 500;
+  height: 5em; 
+  font-size: 1rem;
+}
+
+.projects a{
+  text-decoration: none;
+  color: #005691;
+  margin-left: 3rem;
+  font-size: 1.5rem;
+}
+
+.projects a:hover{
+  color: #DBE2EF;
+}
+
+.contact{
+  background-color: #004a7c;
+  border-radius: 55px;
+  background: #004a7c;
+  box-shadow: inset -6px -6px 13px #00385d, inset 6px 6px 13px #005d9b;
+  text-align: center;
+  padding: 10px;
+  color: #fff8f3;
+  margin-top: 1.8em;
+}
+
+.contact-info a{
+    color: #fff8f3;
+    font-size: 3rem;
+    margin-right: 5rem;
+    margin-left : 5rem;
+}
+
+.contact-info a:hover{
+    color: #DBE2EF;
+}

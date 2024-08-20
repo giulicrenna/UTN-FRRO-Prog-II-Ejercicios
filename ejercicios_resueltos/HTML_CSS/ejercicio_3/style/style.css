@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabecera */
+header {
+    background-image: url('../asset/banner.jpg');
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+header h1{
+    margin-bottom: 2%;
+}
+
+header nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: #001950d0;
+    border-radius: 5px;
+    padding: 1%;
+
+}
+
+header nav a:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: #0033a0d0;
+    border-radius: 5px;
+    padding: 1%;
+
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0.5rem 0;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    margin-top: 10%;
+    padding: 30px;
+    background-color: #002e5f;
+}
+
+footer a{
+    color: floralwhite;
+}
+
+/* Sección de Publicaciones */
+.posts {
+    padding: 2rem;
+}
+
+.posts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+    margin-top: 0;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.post-excerpt {
+    color: #666;
+}
+
+.post-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.post-card a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de Sobre mí */
+.about-me {
+    background-color: #eee;
+    border-left: 5px solid #007BFF;
+    padding: 1.5rem;
+    margin: 2rem;
+}
+
+.about-me h3 {
+    margin-top: 0;
+}
+
+.welcome{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.bar {
+    background-color: #007BFF;
+    width: 18%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.bar:hover {
+    background-color: #0056b3;
+}
+
+.bar span {
+    color: #000000;
+    font-weight: bold;
+    padding-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+}
