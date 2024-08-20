@@ -1,0 +1,82 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header{
+    background-color: #ab80af;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: sticky;
+}
+
+h1, h2, h3, p {
+    margin: 0.5% 0;
+    text-align: center;
+}
+
+.profile-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.proyectos{
+        text-align: center;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+}
+
+
+.proyecto{
+    width: 700px;
+    color: rgb(231, 231, 231);
+    background-color: rgb(101, 72, 139);
+    border:  1px solid #333;
+    border-radius: 5px;
+    margin: 4%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.proyecto h4{
+    margin-bottom: 3%;
+}
+
+.proyecto p{
+    color: #e4bdee;
+    padding: 3%;
+}
+
+.proyecto a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.proyecto a:hover{
+    color: #e4bdee;
+    text-decoration: underline;
+}
+
+.contacto{
+    background-color: #ab80af;
+    color: aliceblue;
+    padding: 2% 0;
+}
+
+.contacto a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.contacto a:hover{
+    color: #e4bdee;
+    text-decoration: underline;
+}
