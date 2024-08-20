@@ -1,0 +1,43 @@
+header{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(71, 85, 135);
+    border: solid 3px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img {
+    margin: 1%;
+    height: 350px;
+    border-radius: 47%;
+    border: solid 3px;
+    
+}
+
+.github {
+    width: 3%;
+    height: 3%;
+
+}
+
+div {
+border: solid 2px;
+margin: 2%;
+border-radius: 50%;
+background-color: aliceblue;
+
+}
+
+main {
+    background-color: rgb(58, 93, 170);
+    margin: 0;
+    padding: 0;
+    border: solid 2px;
+}

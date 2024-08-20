@@ -1,0 +1,154 @@
+body{
+background: linear-gradient(75deg, rgb(121, 211, 241), white, rgb(88, 207, 247)) ;
+background-size: cover;
+background-position: center center;
+background-attachment: fixed;
+height: 100%;
+}
+
+.Titulo
+{
+    display: flex;
+    justify-content: center;
+    color: rgb(38, 182, 230);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img{
+    display: block;
+    margin: auto;
+    border-radius:50%; 
+    border-style: double;
+    border-width: 10px;
+    border-color: rgb(88, 207, 247) ;
+}
+
+.carta {
+
+    background-color: white;
+    width: 75%;
+    border-radius: 2%;
+    display: block;
+    margin: auto;
+    
+    
+    
+}
+
+.Biografía {
+    display: block;
+    margin: auto;
+    width: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(38, 182, 230) ;
+    padding-top: 20px;
+    font-size: x-large;
+}
+
+.Lista ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 10px; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;     
+}
+
+.Lista ul li{
+    margin: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.Tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td, th {    
+    
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5%;
+}
+
+th{
+    color: rgb(38, 182, 230);
+}
+
+.normal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.normal input {
+    width: auto;
+    height: auto;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid rgb(38, 182, 230);
+}
+
+.Enviar {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.Enviar input[type="submit"],
+.Enviar input[type="reset"] {
+    display: flex;
+    padding: 5px;
+    margin-top: 10px;
+    width: auto;
+    box-sizing: border-box;
+    border: 1px solid rgb(38, 182, 230);
+    background: none;
+    outline: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+textarea{
+    border: 1px solid rgb(38, 182, 230);
+    width: 250px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+footer {
+
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+
+a {
+margin-bottom: 15px;
+color: rgb(38, 182, 230);
+
+}
+
+#ig {
+    color: rgb(221, 42, 123);
+
+}
+
+#li {
+
+    color: blue;
+}
