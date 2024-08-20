@@ -1,0 +1,77 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 10px;
+    background-color: dimgray;
+}
+
+.menu {
+    list-style-type: none;
+    margin:  0;
+    padding: 0;
+}
+
+h1{
+    margin: 0;
+    padding-bottom: 5px;
+    justify-content: end;
+    justify-self: end;
+    
+    align-self: end;
+    align-items: center;
+}
+
+.menu-item {
+    position: sticky;
+    display: inline-block;
+    color: aliceblue;
+    padding:  10px 20px;
+    cursor: pointer;
+}
+
+.menu-item:hover .submenu{
+    animation: showMenu 0.5s forwards;
+}
+
+.submenu {
+    list-style-type: none;
+    padding: 0;
+    background-color: #444;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.submenu li {
+    font-family: Arial, Helvetica, sans-serif;
+    padding:  10px;
+    color: white;
+    border-bottom: 1px solid #555;
+}
+
+.submenu li:hover {
+    background-color: #555;
+}
+
+@keyframes showMenu {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: max-content;
+        opacity: 1;
+    }
+}
+
+
+
