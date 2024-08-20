@@ -1,0 +1,232 @@
+body {
+    align-items: center;
+    background-color: #212121;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f4f4f4;
+    margin: auto;
+    padding: 60px;
+    max-width: 700px;
+    /* border: solid; */
+}
+
+.card {
+    border-radius: 20px;
+    background-color: #171717;
+    padding: 50px;
+}
+
+header {
+    text-align: center;
+    /* box-shadow: 10px 10px 10px 50px rgba(0, 0, 0, 0.7); */
+    border-color: rgba(0, 0, 0, 0.322);
+    border-bottom: none;
+    border-width: 1px;
+}
+
+.image {
+    width: 200px;
+    border-radius: 20%
+}
+
+h3,
+h1 {
+    color: #40e9fffd;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/*HOBBIES*/
+.hobbies-container {
+    width: auto;
+    background: linear-gradient(#171717, #171717) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+
+.hobbies-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.hobbies-container li {
+    margin-bottom: 12px;
+    color: #fff;
+    font-family: inherit;
+}
+
+/*FIN HOBBIES*/
+
+
+/*CONTACTO*/
+.contact-container {
+    width: auto;
+    background: linear-gradient(#171717, #171717) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.contact-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+}
+
+.contact-container th,
+.contact-container td {
+    padding: 12px 16px;
+    border: 1px solid #414141;
+    text-align: left;
+    color: #fff;
+}
+
+.contact-container th {
+    background-color: #313131;
+    color: #e81cff;
+    font-weight: 600;
+}
+
+.contact-container tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+.contact-container a {
+    color: #40c9ff;
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+.contact-container table td:hover {
+    background-color: #414141;
+}
+
+/*FIN CONTACTO*/
+
+/*FORMULARIO*/
+
+.form-container {
+    width: auto;
+    background: linear-gradient(#171717, #171717) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input {
+    width: auto;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: auto;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    /* width: 40%; */
+    background: #313131;
+    border: 1px solid #414141;
+    /* padding: 12px 16px; */
+    font-size: inherit;
+    gap: 8px;
+    /* margin-top: 8px; */
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+/*FIN FORMULARIO*/
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+}

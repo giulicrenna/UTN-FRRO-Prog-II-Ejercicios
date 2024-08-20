@@ -1,0 +1,52 @@
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.carta {
+    box-shadow: 0px 40px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(250, 241, 159)
+}
+
+body {
+    background-color: rgb(250, 246, 221);
+}
+
+a {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    color: rgb(126, 124, 12);
+    font-size: 21px;
+}
+
+main div img {
+    width: 100%;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 9px;
+    color: rgb(250, 246, 221);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover, a:hover {
+    opacity: 60%;
+}
+
+.descripcion {
+    font-family: Arial, Helvetica, sans-serif;
+}

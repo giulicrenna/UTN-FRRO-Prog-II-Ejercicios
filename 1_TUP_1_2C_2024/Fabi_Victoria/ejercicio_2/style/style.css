@@ -1,0 +1,92 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(232, 245, 235);
+}
+h1{
+    text-shadow: 2px 5px 5px  rgb(28, 27, 27);
+}
+.header {
+    background-color:  rgb(157, 189, 159);
+    display: flex;
+    border-radius: 10px;
+    font-size: large;
+    border-bottom: 2px solid black;
+}
+
+.mi_foto {
+    align-content: center;
+    border-radius: 60%;
+    max-width: 200px;
+    max-height:200px ;
+    border: 5px solid rgb(84, 80, 80);
+    margin-top: 20px;
+  
+}
+
+.introducion {
+    color: black;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 10px;
+    border: 15px solid rgb(84, 80, 80);
+    
+}
+
+.projets {
+   font-style: italic;
+}
+
+.mis_proyectos li {
+    margin-bottom: 10px;
+}
+h3 {
+    margin: 20px;
+    text-shadow: 2px 3px 3px  rgb(67, 64, 66);
+    font-size: 30px;
+    background-color:  rgb(157, 189, 159);
+    
+}
+
+.mis_proyectos {
+    margin-top: 20px;
+    margin: 5px;
+}
+
+.mis_proyectos a {
+    text-decoration: none;
+    background-color:  rgb(129, 126, 126);
+    
+}
+.mis_proyectos a:hover {
+    color: rgb(73, 241, 12);
+}
+ .proyecto {
+    border: 3px solid grey;
+ }
+
+footer{
+    background-color: rgb(157, 189, 159);
+    height: 150px;
+    padding: 30px;
+
+}
+
+.contact {
+    text-align: center;
+    
+}
+.contact a {
+    background-color: gray;
+    text-decoration: none;
+}
+.contact a:hover { 
+    
+    color: rgb(73, 241, 12);
+}
