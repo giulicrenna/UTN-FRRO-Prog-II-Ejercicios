@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../HTML/css/portafolio.css" type="text/css">
+
+    <title>Portafolio Personal</title>
+</head>
+<body>
+    <header>
+        <h1>Lucia Dell Olio</h1>
+        <nav>
+            <ul>
+                <li><a href="sobremi">Sobre mi</a></li>
+                <li><a href="proyectos">Proyectos</a></li>
+                <li><a href="cursos">Cursos</a></li>
+                <li><a href="hobbies">Hobbies</a></li>
+                <li><a href="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <img src="/imagenes/IMG_20230416_232919784.jpg" alt="foto de perfil"
+    width=450 height=450 class="imagen" >
+
+    <section id="sobremi" class="sobremi">
+        <h2><u>Sobre mi</u></h2>
+        <p>Hola! mi nombre es Lucia, estudiante de la <b>Tecnicatura en Programación</b> de la Universidad Tecnológica de Rosario.
+        <p>Mi objetivo es poder recibirme y dedicarme a lo que tanto me gusta: <b>la programación</b>. Por eso busco estar en constante aprendizaje y progresar.</p>
+    </section>
+
+    <section>
+        <h2><u>Hobbies:</u></h2>
+        <div class="hobbies" id="hobbies">
+            <ul>
+                <li class=list-item>Mirar peliculas</li>
+                <li class=list-item>Hacer deporte</li>
+                <li class=list-item>Leer</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2><u>Contactos:</u></h2>
+        <div class="contactos" id="contactos">
+            <table style="text-align: center;" border="">
+                <tr>
+                    <td colspan="2">Información de Contacto:</td>
+                </tr>
+                <tr>
+                    <td>Correo Electrónico</td>
+                    <td>luciadellolio@gmail.com</td>
+                    
+                </tr>
+                <tr>
+                    <td>Teléfono</td>
+                    <td>341-0000000</td>
+
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h2><u>Mis Redes:</u></h2>
+        <div class="enlaces" id="enlaces">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/Luuciaa" target="_blank">Github</a><br><br>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/lucia-dell-olio/" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <section>
+        <h2><u>Formulario de contacto:</u></h2>
+        <form action="#" class="form-container" id="formulariocontacto">
+            <fieldset>
+                <legend>Información personal</legend>
+                <div class="input-container">
+                    <i class="fa-solid fa-user"></i>
+                    <label for="username">Nombre:</label>
+                    <input type="text" id="username" name="username" placeholder="Escriba su nombre...">
+                </div><br>
+
+                <div class="input-container">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" required><br>
+                </div><br>
+
+                <div class="textarea">
+                    <label for="texto">Mensaje:</label><br>
+                    <textarea id="texto" name="texto" cols= 40 rows= 10 placeholder="Tu comentario aquí..."></textarea>
+                </div><br>
+                <p><button>Enviar</button></p>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
