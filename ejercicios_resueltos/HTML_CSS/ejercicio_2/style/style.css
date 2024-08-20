@@ -7,15 +7,16 @@ body{
 }
 
 header{
-    background-color: #444;
+    background-color: #ab80af;
     color: white;
     text-align: center;
     padding: 2rem 0;
     position: sticky;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     margin: 0.5% 0;
+    text-align: center;
 }
 
 .profile-img{
@@ -24,50 +25,58 @@ h1, h2, p {
     border-radius: 50%;
 }
 
-.projects{
-    text-align: center;
-    padding: 5%;
+.proyectos{
+        text-align: center;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
 }
 
-.project-card{
-    background-color: aliceblue;
+
+.proyecto{
+    width: 700px;
+    color: rgb(231, 231, 231);
+    background-color: rgb(101, 72, 139);
     border:  1px solid #333;
     border-radius: 5px;
-    margin-bottom: 1%;
+    margin: 4%;
     padding-bottom: 1%;
+    text-align: center;
 }
 
-.project-card h4{
+.proyecto h4{
     margin-bottom: 3%;
 }
 
-.project-card p{
-    color: #636363;
+.proyecto p{
+    color: #e4bdee;
+    padding: 3%;
 }
 
-.project-card a{
-    color: #00c6f8;
+.proyecto a{
+    color: #ffffff;
     text-decoration: none;
 }
 
-.project-card a:hover{
-    color: #00c6f885;
+.proyecto a:hover{
+    color: #e4bdee;
     text-decoration: underline;
 }
 
-.contact{
-    background-color: #444;
+.contacto{
+    background-color: #ab80af;
     color: aliceblue;
-    text-align: center;
     padding: 2% 0;
 }
 
-.contact a{
-    color: #00c6f8;
+.contacto a{
+    color: whitesmoke;
     text-decoration: none;
 }
 
-.contact a:hover{
-    color: #00c6f885;
+.contacto a:hover{
+    color: #e4bdee;
     text-decoration: underline;
 }
