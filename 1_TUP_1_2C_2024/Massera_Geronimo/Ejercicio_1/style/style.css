@@ -1,0 +1,75 @@
+/* Stylesheet */
+header {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: 600;
+  color: rgb(241, 242, 243);
+}
+
+body {
+  background-color: burlywood;
+}
+
+main div img {
+  max-width: 80%;
+  margin: 15px auto auto 1px;
+  border-radius: 10px;
+}
+
+.Description {
+  color: rgb(241, 242, 243);
+  font-size: 18px;
+}
+
+h1 {
+  color: rgb(241, 242, 243);
+  font-size: xx-large;
+}
+
+.Card {
+  background-color: rgb(216, 175, 120);
+  border-radius: 10px;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
+  max-width: 359px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: rgb(2, 25, 47);
+  font-size: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button {
+  border: none;
+  background-color: rgb(2, 25, 47);
+  color: rgb(241, 242, 243);
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#yt:hover {
+  color: red;
+  scale: 1.3;
+}
+
+#ghx:hover {
+  color: black;
+  scale: 1.3;
+}
+
+#bsky:hover {
+  color: #41adff;
+  scale: 1.3;
+}
