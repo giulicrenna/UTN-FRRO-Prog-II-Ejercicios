@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #28223F;
+}
+
+.contenedor-carta{
+	background-color: #231E39;
+	border-radius: 5px;
+	box-shadow: 0px 20px 40px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.contenedor-carta .dexter {
+    display: block;
+    margin: auto;
+    height: 15rem;
+    width: 20rem;
+    border: 1px solid #03BFCB;
+	border-radius: 5%;
+	padding: 7px;
+}
+
+h3{
+    margin: 10px 0;
+}
+
+h6{
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+
+.texto{
+	background-color: #1F1A36;
+	text-align: center;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+footer {
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}

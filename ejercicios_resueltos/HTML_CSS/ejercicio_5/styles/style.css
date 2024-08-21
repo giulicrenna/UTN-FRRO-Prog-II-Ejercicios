@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.circle:hover {
+    animation: growAndShrink 5s infinite;
+}
+
+@keyframes growAndShrink{
+    0% {
+        transform: scale(1);
+        background-color: green;
+    }
+    
+    50% {
+        transform: scale(2);
+        background-color: greenyellow;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: green;
+    }
+}
+
