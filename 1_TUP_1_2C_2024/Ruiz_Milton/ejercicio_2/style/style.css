@@ -87,7 +87,7 @@ h1:hover .fa-briefcase {
   justify-content: center;
   align-items: center;
   background-color: #a4b494;
-  height: 450px;
+  height: 594px;
   width: 100%;
 }
 .text-container {
@@ -275,3 +275,84 @@ h3 {
 }
 
 /*- - - - - - - - - - M A I N - - - - - - - - - -*/
+.my-projects-container {
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+  background-color: #315c45;
+  height: 450px;
+  display: block;
+  justify-content: center;
+}
+.block1-container,
+.block2-container,
+.block3-container {
+  height: 295px;
+  width: 21.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.block1-container:hover,
+.block2-container:hover,
+.block3-container:hover {
+  transition: 1s;
+  transform: scale(1.05);
+}
+.text-project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.block1,
+.block2,
+.block3 {
+  border-radius: 7px;
+  width: 80%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: #a4b494;
+}
+.block1:hover,
+.block2:hover,
+.block3:hover {
+  border: 1px solid whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.project1-tittle,
+.project2-tittle,
+.project3-tittle {
+  font-size: 13px;
+}
+.project1-description,
+.project2-description,
+.project3-description {
+  width: 80%;
+  text-align: center;
+  font-size: 11px;
+}
+.ae-img {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto;
+  filter: drop-shadow(0 0 0.75rem whitesmoke);
+}
+.my-img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  filter: drop-shadow(0 0 0.75rem whitesmoke);
+}
+.mdhl-img {
+  filter: drop-shadow(0 0 0.75rem whitesmoke);
+}
