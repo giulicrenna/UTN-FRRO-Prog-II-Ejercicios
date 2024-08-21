@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de perfil personal de Claudia Gonzalez">
+    <meta name="keywords" content="perfil, personal, biografía, intereses, contacto">
+    <meta name="author" content="Claudia Gonzalez">
+    <title>Perfil Personal de Claudia Gonzalez</title>
+    <link rel="icon" href="https://via.placeholder.com/16" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .contact-table th, .contact-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .contact-table th {
+            background-color: #f0f0f0;
+        }
+        .social-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Claudia Gonzalez</h1>
+        <img src="https://via.placeholder.com/150" alt="Imagen de perfil de Claudia Gonzalez" class="profile-img">
+        <section>
+            <h2>Información Personal</h2>
+            <p>Soy Claudia Gonzalez, y esta es una breve biografía sobre mí. Me apasiona el fútbol y me dedico a a coordinar fútbol femenino en la Asociación Rosarina de Fútbol. En mi tiempo libre, disfruto de jugar a la play con mi hijo, soy fan de los videos juegos.</p>
+        </section>
+        <section>
+            <h2>Mis Intereses</h2>
+            <ul>
+                <li>Fútbol</li>
+                <li>Videos Juegos</li>
+                <li>Leer libros de programación</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Información de Contacto</h2>
+            <table class="contact-table">
+                <tr>
+                    <th>Tipo</th>
+                    <th>Detalles</th>
+                </tr>
+                <tr>
+                    <td>Correo Electrónico</td>
+                    <td>claudiaromina22.cg@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Teléfono</td>
+                    <td>+5493412575457</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Redes Sociales</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/tu-perfil" target="_blank">Facebook</a>
+                <a href="https://www.twitter.com/tu-perfil" target="_blank">Twitter</a>
+                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <form action="/submit" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                <br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

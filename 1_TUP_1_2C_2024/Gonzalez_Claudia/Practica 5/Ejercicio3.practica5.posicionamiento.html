@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento y Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            position: fixed;
+            width: 100%;
+            background-color: #e30a0a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        header {
+            top: 0;
+        }
+        footer {
+            bottom: 0;
+        }
+        .contenedor {
+            display: flex;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .navegacion {
+            width: 20%;
+            background-color: #c3580c;
+            padding: 15px;
+        }
+        .contenido {
+            width: 80%;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>Encabezado Fijo</header>
+    <div class="contenedor">
+        <div class="navegacion">Columna de Navegación</div>
+        <div class="contenido">Columna de Contenido</div>
+    </div>
+    <footer>Pie de Página Fijo</footer>
+</body>
+</html>

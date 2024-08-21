@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Grilla</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                'menu contenido sidebar'
+                'footer footer footer';
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr 200px;
+            height: 100vh;
+            margin: 0;
+        }
+        header {
+            grid-area: header;
+            background-color: #28222e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            grid-area: menu;
+            background-color: #4509eb;
+            padding: 15px;
+        }
+        main {
+            grid-area: contenido;
+            padding: 15px;
+        }
+        aside {
+            grid-area: sidebar;
+            background-color: #2405be;
+            padding: 15px;
+        }
+        footer {
+            grid-area: footer;
+            background-color: #a2a1e6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>Encabezado</header>
+    <nav>Menú de Navegación</nav>
+    <main>Área de Contenido Principal</main>
+    <aside>Barra Lateral</aside>
+    <footer>Pie de Página</footer>
+</body>
+</html>
