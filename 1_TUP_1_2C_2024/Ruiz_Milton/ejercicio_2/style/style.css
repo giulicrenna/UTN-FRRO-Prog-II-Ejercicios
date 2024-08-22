@@ -278,10 +278,18 @@ h3 {
 .my-projects-container {
   font-family: "Montserrat", sans-serif;
   color: whitesmoke;
-  background-color: #315c45;
+  background-color: #d1dbbd;
   height: 450px;
   display: block;
   justify-content: center;
+}
+.project-text {
+  color: whitesmoke;
+  font-size: 23px;
+}
+.project-text:hover {
+  text-shadow: 0px 2px 2px black;
+  transition: 1s;
 }
 .block1-container,
 .block2-container,
@@ -306,6 +314,15 @@ h3 {
   text-align: center;
   height: 100px;
 }
+.project {
+  color: #1b2022;
+  transition: 1s;
+}
+.project:hover {
+  text-shadow: 0px 2px 2px whitesmoke;
+  transition: 1s;
+}
+
 .projects {
   display: flex;
   justify-content: center;
@@ -322,18 +339,25 @@ h3 {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: #a4b494;
+  background-color: #b6b8b2;
+  border: 1px solid whitesmoke;
+  transition: 1s;
 }
 .block1:hover,
 .block2:hover,
 .block3:hover {
-  border: 1px solid whitesmoke;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  background-color: rgb(158, 165, 140);
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .project1-tittle,
 .project2-tittle,
 .project3-tittle {
-  font-size: 13px;
+  font-size: 12px;
+  font-style: italic;
 }
 .project1-description,
 .project2-description,
@@ -346,13 +370,8 @@ h3 {
   padding-top: 30px;
   padding-bottom: 30px;
   height: auto;
-  filter: drop-shadow(0 0 0.75rem whitesmoke);
 }
 .my-img {
   padding-top: 20px;
   padding-bottom: 20px;
-  filter: drop-shadow(0 0 0.75rem whitesmoke);
-}
-.mdhl-img {
-  filter: drop-shadow(0 0 0.75rem whitesmoke);
 }
