@@ -1,0 +1,24 @@
+:root {
+    background-color: #fcf9f2;
+    color: #6d493d;
+    font-family:'Times New Roman', Times, serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-size: 4em;
+    max-width: 40%;
+}
+
+header img {
+    width: 17.5%;
+    border-radius: 50%;
+}
+
+ul {
+    list-style: none;
+}
