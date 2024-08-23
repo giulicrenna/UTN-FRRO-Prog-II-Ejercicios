@@ -392,3 +392,45 @@ h3 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.button-mdhl,
+.button-ae,
+.button-my {
+  background-color: rgba(245, 245, 245, 0.774);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: grey;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  transition: 1s;
+  padding: 10px 10px 10px 10px;
+  animation: fadeIn 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-mdhl:hover,
+.button-ae:hover,
+.button-my:hover {
+  border: 1px solid rgba(0, 0, 0, 0.582);
+  background-color: whitesmoke;
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mdhl-container,
+.ae-container,
+.my-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+.more-info {
+  font-size: 12px;
+}
