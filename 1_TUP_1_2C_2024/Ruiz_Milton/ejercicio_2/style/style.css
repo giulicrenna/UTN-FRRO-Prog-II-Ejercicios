@@ -35,7 +35,7 @@ li {
   display: inline-block;
   position: relative;
 }
-a {
+.a {
   color: aliceblue;
   text-decoration: none;
   letter-spacing: 1px;
@@ -44,7 +44,7 @@ a {
   font-weight: 400;
   font-style: normal;
 }
-a:after {
+.a:after {
   content: "";
   position: absolute;
   background-color: aqua;
@@ -56,7 +56,7 @@ a:after {
   transform-origin: bottom right;
   transition: transform 0.5s ease-out;
 }
-a:hover:after {
+.a:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -68,11 +68,6 @@ h1 {
   font-weight: bolder;
   font-style: normal;
 }
-.fa-briefcase {
-  margin-right: 10px;
-  font-size: 18px;
-}
-.fa-briefcase:hover,
 h1:hover {
   filter: drop-shadow(0 0 5px aqua);
   transition: 1s;
@@ -196,13 +191,17 @@ h3:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   color: whitesmoke;
-  width: 100px;
+  width: 120px;
   height: 40px;
   background-color: #519872af;
   border: 1px solid whitesmoke;
-  border-radius: 7px;
+  border-radius: 3px;
   transition: 1s;
+  padding: 10px 17px 10px 17px;
   animation: fadeIn 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button:hover {
   border: 1px solid #1b2022;
@@ -215,6 +214,17 @@ h3:hover {
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 .webs-container {
   display: flex;
@@ -236,16 +246,23 @@ h3 {
 .fa-linkedin,
 .fa-github,
 .fa-instagram {
-  font-size: 24px;
+  font-size: 27px;
   transition: 1s;
   margin-right: 7px;
+  color: aliceblue;
+}
+.fa-envelope {
+  font-size: 23px;
+  margin-right: 10px;
+  border-radius: 100%;
+  color: aliceblue;
 }
 .fa-linkedin:hover,
 .fa-github:hover,
 .fa-instagram:hover {
   filter: drop-shadow(0 0 5px aqua);
   transition: 1s;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .socials-container {
   width: 50%;
@@ -305,7 +322,7 @@ h3 {
 .block2-container:hover,
 .block3-container:hover {
   transition: 1s;
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .text-project-container {
   display: flex;
@@ -332,14 +349,14 @@ h3 {
 .block1,
 .block2,
 .block3 {
-  border-radius: 7px;
-  width: 80%;
-  height: 90%;
+  border-radius: 5px;
+  width: 90%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: #b6b8b2;
+  background-color: #b5b9ab;
   border: 1px solid whitesmoke;
   transition: 1s;
 }
@@ -347,7 +364,7 @@ h3 {
 .block2:hover,
 .block3:hover {
   border: 1px solid rgba(0, 0, 0, 0.137);
-  background-color: rgb(158, 165, 140);
+  background-color: rgb(140, 146, 124);
   transition: 1s;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
