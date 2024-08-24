@@ -294,15 +294,17 @@ h3 {
 /*- - - - - - - - - - M A I N - - - - - - - - - -*/
 .my-projects-container {
   font-family: "Montserrat", sans-serif;
-  color: whitesmoke;
+  color: #1b2022;
   background-color: #d1dbbd;
-  height: 450px;
+  height: 900px;
   display: block;
   justify-content: center;
+  transition: 0s;
 }
 .project-text {
   color: whitesmoke;
   font-size: 23px;
+  width: 220px;
 }
 .project-text:hover {
   text-shadow: 0px 2px 2px black;
@@ -329,11 +331,15 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100px;
+  height: 270px;
 }
 .project {
   color: #1b2022;
   transition: 1s;
+}
+.fa-list-check {
+  margin-left: 3px;
+  font-size: 20px;
 }
 .project:hover {
   text-shadow: 0px 2px 2px whitesmoke;
@@ -349,16 +355,17 @@ h3 {
 .block1,
 .block2,
 .block3 {
-  border-radius: 5px;
+  border-radius: 7px;
+  border: 1px solid whitesmoke;
   width: 90%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   background-color: #b5b9ab;
-  border: 1px solid whitesmoke;
   transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .block1:hover,
 .block2:hover,
@@ -366,6 +373,7 @@ h3 {
   border: 1px solid rgba(0, 0, 0, 0.137);
   background-color: rgb(140, 146, 124);
   transition: 1s;
+  color: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -433,4 +441,98 @@ h3 {
 }
 .more-info {
   font-size: 12px;
+}
+.fa-arrow-up-right-from-square {
+  color: #1b2022;
+  font-size: 11px;
+  margin-left: 0px;
+}
+/*- - - - - - - - - - F O O T E R - - - - - - - - - -*/
+.footer-container {
+  width: 100%;
+  height: 400px;
+  background-color: #1b2022;
+}
+.contact-text {
+  color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+.footer-container {
+  width: 100%;
+  display: block;
+  justify-content: center;
+}
+.contact-container {
+  height: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sendme-container {
+  padding: 7px;
+  width: 275px;
+  border: 1px solid whitesmoke;
+  height: 212px;
+  border-radius: 4px;
+}
+.txtcontact-container {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  font-size: 15px;
+}
+.fa-phone,
+.fa-location-dot {
+  margin-right: 5px;
+}
+.footer-subcontainer {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.contact1,
+.contact2 {
+  height: 270px;
+  width: 25%;
+}
+.contact2 {
+  display: flex;
+  justify-content: flex-end;
+}
+#email,
+#name,
+#coments {
+  font-size: 12px;
+  padding: 13px;
+  border-radius: 3px;
+  width: 260px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+}
+#coments {
+  height: 100px;
+}
+.submit-contact {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+.button-contact-container {
+  display: flex;
+  justify-content: center;
 }
