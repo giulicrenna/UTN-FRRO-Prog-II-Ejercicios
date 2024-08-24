@@ -1,0 +1,57 @@
+body {
+    background: #e5c0c0;
+    color: #4b4b4b;
+    font-family: sans-serif;
+    margin: 50px auto ;
+    max-width: 400px;
+    max-height: 100px;
+    margin-bottom: 50px;
+}
+header{
+    background: #383535;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    background: #f2f313;
+    border-radius: 50%; 
+    height: 100%;
+}
+.title {
+    color: grey;
+    border-bottom: 2px solid #000;
+    width: 200px;
+    margin: auto;
+}
+.subtitle {
+    color: grey;
+    border-bottom: 2px solid #000;
+    width: 350px;
+    margin: auto;
+    font-size: 20px;
+}
+.biografia{ 
+    border-left:2px solid #f1f1f1;
+    padding: 10px;
+    text-align: justify;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.socia-networks {
+    color: rgb(126, 126, 130);
+    text-align: center;
+    padding: 20px;
+    background-color: #4b4b4b;
+}
+
+.socia-networks h3 {
+    color: rgb(216, 129, 129);
+    border-bottom: 2px solid #c08080;
+    width: 150px;
+    margin: 20px auto;
+}
+a {
+    color: #fff;
+    margin: 20px;
+}
