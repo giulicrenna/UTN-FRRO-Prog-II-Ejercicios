@@ -3,6 +3,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /*- - - - - - - - - - H E A D E R - - - - - - - - - -*/
 .header-container {
@@ -13,11 +14,17 @@
   width: 100%;
   background-color: #1b2022;
   color: aliceblue;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
 }
 .h1-text {
   width: 30%;
+}
+.fa-briefcase {
+  font-size: 15px;
 }
 .menu-container {
   width: 30%;
@@ -67,6 +74,10 @@ h1 {
   font-family: "Grey Qo", cursive;
   font-weight: bolder;
   font-style: normal;
+  transition: 1s;
+}
+.fa-briefcase {
+  transition: 1s;
 }
 h1:hover {
   filter: drop-shadow(0 0 5px aqua);
@@ -82,7 +93,7 @@ h1:hover .fa-briefcase {
   justify-content: center;
   align-items: center;
   background-color: #a4b494;
-  height: 594px;
+  height: 654px;
   width: 100%;
 }
 .text-container {
@@ -305,6 +316,7 @@ h3 {
   color: whitesmoke;
   font-size: 23px;
   width: 220px;
+  transition: 1s;
 }
 .project-text:hover {
   text-shadow: 0px 2px 2px black;
@@ -314,7 +326,7 @@ h3 {
 .block2-container,
 .block3-container {
   height: 295px;
-  width: 21.5%;
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,7 +369,7 @@ h3 {
 .block3 {
   border-radius: 7px;
   border: 1px solid whitesmoke;
-  width: 90%;
+  width: 95%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -449,8 +461,10 @@ h3 {
 }
 /*- - - - - - - - - - F O O T E R - - - - - - - - - -*/
 .footer-container {
+  display: block;
+  justify-content: center;
   width: 100%;
-  height: 400px;
+  height: 310px;
   background-color: #1b2022;
 }
 .contact-text {
@@ -462,11 +476,8 @@ h3 {
   text-align: center;
   height: 100px;
   width: 100%;
-}
-.footer-container {
-  width: 100%;
-  display: block;
-  justify-content: center;
+  font-size: 15px;
+  transition: 1s;
 }
 .contact-container {
   height: 100px;
@@ -481,13 +492,14 @@ h3 {
 .sendme-container {
   padding: 7px;
   width: 275px;
-  border: 1px solid whitesmoke;
-  height: 212px;
+  height: 105px;
   border-radius: 4px;
 }
 .txtcontact-container {
+  height: 110px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .box {
   font-size: 15px;
@@ -505,34 +517,76 @@ h3 {
 }
 .contact1,
 .contact2 {
-  height: 270px;
+  height: 130px;
   width: 25%;
 }
 .contact2 {
   display: flex;
   justify-content: flex-end;
 }
-#email,
-#name,
-#coments {
+#email {
+  border: 1px solid whitesmoke;
   font-size: 12px;
-  padding: 13px;
+  padding: 9px;
   border-radius: 3px;
   width: 260px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   font-family: "Montserrat", sans-serif;
 }
 #coments {
   height: 100px;
 }
 .submit-contact {
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  background-color: #519872af;
   text-align: center;
   font-size: 12px;
-  padding: 10px;
+  padding: 9px;
+  border-radius: 3px;
   width: 100%;
   font-family: "Montserrat", sans-serif;
+  transition: 1s;
+}
+.submit-contact:hover {
+  transition: 1s;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 .button-contact-container {
   display: flex;
   justify-content: center;
+}
+.copyright-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.copyright-text {
+  color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+.email-link {
+  color: whitesmoke;
+  transition: 1s;
+  text-decoration: none;
+}
+.email-link:hover,
+.contact-text:hover {
+  transition: 1s;
+  filter: drop-shadow(0 0 0.75rem white);
+}
+.pphone,
+.pemail,
+.plocation {
+  transition: 1s;
+}
+.pphone:hover,
+.pemail:hover,
+.plocation:hover {
+  transition: 1s;
+}
+.fa-address-book {
+  margin-left: 6px;
 }

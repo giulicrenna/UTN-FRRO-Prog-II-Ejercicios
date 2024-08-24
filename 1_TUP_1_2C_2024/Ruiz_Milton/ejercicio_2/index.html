@@ -27,7 +27,7 @@
     />
     <title>Ejercicio N° 2</title>
   </head>
-  <body>
+  <body id="body">
     <header>
       <div class="header-container">
         <div class="h1-text">
@@ -36,16 +36,16 @@
         <div class="menu-container">
           <nav class="nav-container">
             <ul class="list">
-              <li><a href="#home" target="_blank" class="a">Home</a></li>
+              <li><a href="#body" class="a">Home</a></li>
               <li>
-                <a href="#projects" target="_blank" class="a">Projects</a>
+                <a href="#projects" class="a">Projects</a>
               </li>
-              <li><a href="#resume" target="_blank" class="a">Resume</a></li>
+              <li><a href="#resume" class="a">Resume</a></li>
             </ul>
           </nav>
         </div>
       </div>
-      <div class="profile-container">
+      <div class="profile-container" id="resume">
         <div class="text-container">
           <div class="name-container">
             <h2>¡Hello, I'm <strong class="name">Milton F. Ruiz</strong>!</h2>
@@ -62,7 +62,7 @@
           </div>
           <div class="button-container">
             <button class="button">
-              <a href="#" target="_blank" class="link-container"
+              <a href="#contact" class="link-container"
                 ><i class="fa-solid fa-envelope"></i>
                 <p>Contact</p></a
               >
@@ -97,7 +97,7 @@
     </header>
     <main>
       <section>
-        <article>
+        <article id="projects">
           <div class="my-projects-container">
             <div class="text-project-container">
               <p class="project-text">
@@ -195,42 +195,54 @@
         </article>
       </section>
     </main>
-    <footer>
+    <footer id="contact">
       <div class="footer-container">
         <div class="txtcontact-container">
-          <p class="contact-text">Contacto</p>
+          <p class="contact-text">
+            Contact <i class="fa-solid fa-address-book"></i>
+          </p>
         </div>
         <div class="footer-subcontainer">
           <div class="contact1">
             <div class="contact-container">
-              <p><i class="fa-solid fa-phone"></i> 341-3245896</p>
-              <p>
-                <a href="mailto:miltonfruizok@gmail.com" target="_blank"
+              <p class="pphone">
+                <i class="fa-solid fa-phone"></i> 341-3245896
+              </p>
+              <p class="pemail">
+                <a
+                  href="mailto:miltonfruizok@gmail.com"
+                  target="_blank"
+                  class="email-link"
                   ><i class="fa-solid fa-envelope box"></i
                   >miltonfruizok@gmail.com</a
                 >
               </p>
-              <p><i class="fa-solid fa-location-dot"></i> Rosario, Santa Fe</p>
+              <p class="plocation">
+                <i class="fa-solid fa-location-dot"></i> Rosario, Santa Fe
+              </p>
             </div>
           </div>
           <div class="contact2">
-            <div class="sendme-container">
-              <label for="email"></label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                required
-              />
-              <textarea
-                name="coments"
-                id="coments"
-                placeholder="Send me..."
-                required
-              ></textarea>
-              <button type="submit" class="submit-contact">Submit</button>
-            </div>
+            <form>
+              <div class="sendme-container">
+                <label for="email"></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+                <button type="submit" class="submit-contact">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="copyright-container">
+          <div class="copyright-csubcontainer">
+            <p class="copyright-text">
+              © 2023 Milton Franco Ruiz. All rights reserved
+            </p>
           </div>
         </div>
       </div>
