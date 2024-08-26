@@ -4,14 +4,16 @@
     font-family:'Times New Roman', Times, serif;
 }
 
+body {
+    margin: 0px;
+}
+
 header {
     display: flex;
     justify-content: space-evenly;
-}
-
-h1 {
-    font-size: 4em;
-    max-width: 40%;
+    background-color: #c19b87;
+    color: #fcf9f2;
+    padding: 10px;
 }
 
 header img {
@@ -19,6 +21,53 @@ header img {
     border-radius: 50%;
 }
 
+img {
+    box-shadow: 0.5px 0.5px 15px 0.1px #6d493d;
+}
+
+h1 {
+    font-size: 4em;
+    max-width: 40%;
+}
+
+main {
+    padding: 0 5%;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 3%
+}
+
 ul {
-    list-style: none;
+    font-size: 1.5em;
+    margin-bottom: 5%;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+table {
+    margin-bottom: 3%;
+}
+
+a {
+    color: #6d493d;
+    text-decoration: none;
+}
+
+form {
+    box-shadow: 0.5px 0.5px 15px 0.1px #6d493d;
+    margin: 5% 0;
+    width: 50%;
+}
+
+footer {
+    background-color: #c19b87;
+    padding: 1%;
 }
