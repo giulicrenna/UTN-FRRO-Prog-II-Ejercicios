@@ -1,0 +1,56 @@
+ .body_container{
+    background-color: rgb(20, 17, 17);
+    display: flex;
+    justify-content: center;
+
+ }
+
+ .div_container{
+    background-color: rgb(139, 242, 242);
+    display: flex;
+    width: 700px ;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+ }
+img{
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+}
+ .tamaño_letra{
+    font-size: 20px;
+ }
+
+ h3{
+    font-size: 24px;
+ }
+
+ .sobre_mi{
+    border: 2px solid ; 
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+ }
+ .redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    
+ }
+ i{
+    font-size: 40px;
+ }
+ .boton{
+    display: flex;
+    justify-content: end;
+ }
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+ }
