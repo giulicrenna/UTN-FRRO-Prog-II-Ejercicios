@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es  ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - Ejercicio globalizador</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/profile.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header style="display: block; justify-content: center; text-align: center">
+      <div>
+        <h1>Milton F. Ruiz</h1>
+        <img src="./assets/profile.jpg" alt="Imagen de Milton" width="200" style="border-radius: 100%;"/>
+        <h3 style="text-decoration: underline">Información Personal:</h3>
+        <p>
+          Hola, soy Milton F. Ruiz estudiante de <br />
+          Ingeniería en Sistemas / Tecnicatura en <br />
+          Programación, ademas estoy relizando <br />
+          la carrera de analista en ciberseguridad.
+          <br />
+        </p>
+      </div>
+    </header>
+    <main>
+      <div style="text-align: center">
+        <h3 style="text-decoration: underline;text-decoration: underline">Lista de Intereses / Hobbies</h3>
+        <div style="display: flex; justify-content: center">
+          <ul>
+            <li style="margin-right: 10px">
+              Hacer deporte. Actualmente calistenia.
+            </li>
+            <li style="margin-right: 18px">
+              Escuchar Musica, soy DJ Profesional.
+            </li>
+            <li style="margin-right: 25px">
+              Programar y crear nuevos proyectos.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="text-align: center; text-decoration: underline">Tabla de Información de contacto</h3>
+          <div style="display: flex; justify-content: center">
+            <table border="1">
+              <tr>
+                <th style="padding: 5px">Correo</th>
+                <th style="padding: 5px">Telefono</th>
+              </tr>
+              <tr>
+                <td style="padding: 5px">miltonfruiz@outlook.es</td>
+                <td style="padding: 5px">3413245896</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h3 style="text-decoration: underline">Enlace a redes sociales</h3>
+          <div style="display: flex; flex-direction: column">
+            <a href="https://www.linkedin.com/in/miltonfruiz/" target="_blank">Linkedin</a>
+            <a href="https://www.instagram.com/djtaicke/" target="_blank">Instagram</a>
+            <a href="https://github.com/miltonfruiz" target="_blank">Github</a>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          "
+        >
+          <h3  style="text-decoration: underline">Formulario de contacto</h3>
+          <form style="display: flex; flex-direction: column">
+            <label for="name">Name</label>
+            <input type="text" style="align-items: center" required/>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required/>
+            <textarea
+              name="coments"
+              id="coments"
+              rows="10"
+              cols="35"
+              style="resize: none; margin-top: 5px"
+            >
+ Ingrese mensaje...</textarea
+            >
+            <input type="submit" style="margin-top: 5px"></input>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
