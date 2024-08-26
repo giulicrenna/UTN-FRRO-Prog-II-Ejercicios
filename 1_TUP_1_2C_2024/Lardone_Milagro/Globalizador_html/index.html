@@ -1,0 +1,104 @@
+<!-- Encabezado: Un encabezado de nivel 1 con tu nombre.
+Imagen de perfil: Una imagen de perfil con un atributo alt descriptivo.
+Sección de información personal: Un párrafo con una breve biografía.
+Lista de intereses: Una lista desordenada con al menos tres intereses o hobbies.
+Tabla de información de contacto: Una tabla que incluya dos filas con tu información de contacto (correo electrónico y teléfono).
+Enlace a redes sociales: Enlaces a tus perfiles de redes sociales (puedes usar URLs ficticias).
+Formulario de contacto: Un formulario con los siguientes campos:
+Campo de texto para nombre
+Campo de correo electrónico
+Área de texto para mensaje
+Botón de envío -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/831d55a45a.js" crossorigin="anonymous"></script>
+    <title>Milagro Lardone</title>
+</head>
+
+<body class="body_container">
+    <div class="div_container">
+
+        <h1 class="nombre">Milagro Lardone</h1>
+
+        <img src="./image/foto.jpeg" alt="imagen de perfil">
+
+        <div class="sobre_mi">
+            <h3><ins>Sobre mi.</ins></h3>
+            <p class="tamaño_letra"><em> Me llamo Milagro Lardone, soy pastelera profesional con practicas en España.
+                    <br>Tengo un emprendimiento de pasteleria llamado <a
+                        href="https://www.instagram.com/masqueunantojo_._/?hl=es-la" target="_blank">Mas Que Un
+                        Antojo</a>. <br> Actualmente soy estudiante en la UTN de la tecnicatura en Programación</em>
+            </p>
+        </div>
+
+        <br>
+
+        <div class="sobre_mi">
+            <h3><ins> Mis intereses.</ins></h3>
+            <ul>
+                <li class="tamaño_letra">Cocinar.</li>
+                <li class="tamaño_letra">Pasar tiempo con los animales.</li>
+                <li class="tamaño_letra">Estudiar y adquirir nuevos conocimientos.</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="sobre_mi">
+            <h3><ins>Contacto</ins></h3>
+            <table>
+                <tr>
+                    <th class="tamaño_letra" colspan="2">Correo electrónico</th>
+                    <th class="tamaño_letra">Telefono</th>
+                </tr>
+                <tr>
+                    <td class="tamaño_letra" colspan="2"><a
+                            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=jrjtXSqmMCfZFwPqRkcQsrJPxgjsgxWWjQVfnCbfKwCJVcHmtjczBkXZmKbVfHVjsNDLlTdM"
+                            target="_blank">milagrolardone@gmail.com</a></td>
+                    <td class="tamaño_letra">3412124661</td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="sobre_mi">
+            <h3> <ins>Redes sociales</ins></h3>
+            <div class="redes">
+                <p><a href="https://www.whatsapp.com/catalog/5493412124661/?app_absent=0"><i style="color: rgb(5, 181, 5);"
+                            class="fa-brands fa-whatsapp"></i></a></p>
+                <p><a href="https://www.instagram.com/mily_lardone/"><i style="color: blueviolet;"
+                            class="fa-brands fa-instagram"></i></a></p>
+                <p><a href="https://www.linkedin.com/in/milagro-lardone-327005272/"><i style="color: blue;"
+                            class="fa-brands fa-linkedin"></i></a></p>
+            </div>
+        </div>
+
+        <br>
+
+
+        <div class="sobre_mi">
+            <h3><ins>Formulario</ins></h3>
+            <form id="form">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" name="Nombre" placeholder="Ingrese su nombre aqui">
+                <br>
+                <label for="Email">Correo electrónico:</label>
+                <input type="email" name="Email" placeholder="ej: milagro@gmail.com">
+                <br>
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" placeholder="Escriba un mensaje"></textarea>
+                <br>
+                <div class="boton"><button>Enviar</button></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
