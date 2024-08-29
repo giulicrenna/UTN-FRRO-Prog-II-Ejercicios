@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5: Formularios con Select y Textarea</title>
+  </head>
+  <body>
+    <h1>
+      Ejercicio: Crea un documento HTML que contenga un formulario con los
+      siguientes campos:
+    </h1>
+    <form action="link">
+      <p>a) un campo de texto para el nombre</p>
+      <label for="firstname">Nombre</label>
+      <input type="text" name="firstname" id="firstname" />
+      <br />
+      <p>b) un campo de correo electrónico,</p>
+      <label for="correo">Correo</label>
+      <input type="email" name="correo" id="correo" />
+      <br />
+      <p>c) un campo de selección con tres opciones</p>
+      <select name="opciones" id="opciones">
+        <option value="1">Opcion 1</option>
+        <option value="2">Opcion 2</option>
+        <option value="3">Opcion 3</option>
+      </select>
+      <br /><br />
+      <textarea name="comentario" id="textarea" rows="10" cols="10">
+        Escribe tu consulta...</textarea
+      >
+      <br />
+      <input type="submit" name="enviar" id="enviar" />
+    </form>
+  </body>
+</html>

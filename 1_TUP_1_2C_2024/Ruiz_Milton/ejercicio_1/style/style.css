@@ -1,0 +1,68 @@
+* {
+  font-family: sans-serif;
+}
+.card {
+  width: 300px;
+  height: 500px;
+  border: 2px solid rgb(0, 204, 255);
+  margin: auto;
+  text-align: center;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.4s;
+}
+.card:hover {
+  border: 2px solid whitesmoke;
+  box-shadow: rgb(0, 204, 255) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  transform: scale(1.01);
+  transform: scale(1.01) rotate(1deg);
+}
+h1 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 550;
+
+  font-size: 25px;
+}
+h3 {
+  font-size: 15px;
+  color: gray;
+}
+h5 {
+  font-size: 15px;
+  color: gray;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+img {
+  width: 100%;
+}
+.messi {
+  filter: drop-shadow(0 0 0.75rem rgb(0, 204, 255));
+}
+.messi:hover {
+  filter: drop-shadow(10px 5px 10px #b4a625);
+}
+button {
+  color: rgba(0, 0, 0, 0.527);
+  padding: 10px;
+  border: 2px solid rgb(0, 204, 255);
+  margin-top: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover {
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  box-shadow: rgb(0, 204, 255) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+i {
+  color: rgba(0, 0, 0, 0.377);
+}
+i:hover {
+  color: rgb(0, 204, 255);
+}

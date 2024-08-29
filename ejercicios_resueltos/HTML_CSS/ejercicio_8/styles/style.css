@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ececec;
+}
+
+.pulse-button {
+    padding:  15px 30px;
+    font-size: 1.2rem;
+    color: aliceblue;
+    background-color: rgb(182, 182, 182);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pulse-button:hover {
+    background-color: rgb(226, 226, 226);
+    animation:  pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
