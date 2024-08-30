@@ -1,0 +1,57 @@
+body {
+    font-family:fantasy;
+    background-color: rgb(192, 189, 189);
+}
+
+#titulo {
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(63, 64, 67);
+    color:darkgray;
+    font-size: none;
+
+}
+
+#parrafo {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.yo {
+    border-radius: 80px;
+    border-bottom: 100px;
+    background-color: darkblue;
+    width: 20%;
+    height: 20%;
+    margin: 50px 50px 5px 70%;
+}
+
+.texto {
+    border: solid 2px black;
+    border-radius: 4px;
+    background-color: rgb(48, 8, 128);
+    padding: 50px;
+    margin: 60px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+form {
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 500px;
+    margin-top: 60px;
+    background-color:rgb(63, 64, 67);
+    color:antiquewhite;
+    
+}
+
+footer {
+    text-align: center;
+    padding: 60px;
+    padding-bottom: 450px;
+    height: 40px;
+}
