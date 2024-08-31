@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #102B3F;
+    background-blend-mode: darken;
+    color: white;
+    text-align: center;
+    padding: 3.5rem 0;
+}
+
+header h1{
+    margin-bottom: 2%;
+}
+
+header nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102B3F;
+    margin: 0 25px;
+    text-decoration: none;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 12px;
+
+}
+
+header nav a:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102B3F;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1%;
+
+}
+
+header nav a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0.5rem 0;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    color: #ddd;
+    margin-top: 10%;
+    padding: 30px;
+    background-color: #102B3F;
+}
+
+footer a{
+    color: floralwhite;
+    text-decoration: none;
+}
+.div01 {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 75px auto;
+    padding: 1rem;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div02 {
+    text-align: center;
+    line-height: 30px;
+    
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 75px auto;
+    padding: 50px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
+    flex-direction: column;
+.logos {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.img01 {
+    width: 600px;
+    height: 600px;
+    border-radius: 5px;
+}
+
+.img02 {
+    width: 300px;
+    height: 300px;
+
+}
+
+.post-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.posts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-card h3 {
+    margin-top: 0;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
