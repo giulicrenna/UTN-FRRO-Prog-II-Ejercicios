@@ -1,0 +1,150 @@
+*{
+    font-size: 20px;
+    font-family: sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#logo{
+    height: 400px;
+    width: 100%;
+}
+header {
+    background-color: black;
+  
+    
+    
+}
+nav{
+    background-color: black;
+}
+#ul-header{
+    display: flex;
+    justify-content: end;
+    width: 55%;
+    
+}
+.navegador{
+    margin-bottom: 10px;
+    list-style-type: none;
+    display: inline;
+    margin-left: 40px;
+    color: white;
+   
+}
+
+.link-header{
+    text-decoration: none;
+    color: white;
+}
+
+.link-header:hover{
+
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+#formulario{
+    display: flex;
+    justify-content: center;
+    
+    color: white;
+    
+}
+button{
+    border: none;
+    background: none;
+
+}
+i{
+    color: white;
+}
+i:hover{
+    cursor: pointer;
+}
+
+#div-buscador{
+    margin-bottom: 10px;
+    float: right;
+    margin-right: 10px;   
+
+}
+main{
+    display: flex;
+    justify-content: end;
+    width: 80%;
+    float: right;
+   
+    
+}
+#conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    background-color: beige;
+    height: 1050px;
+    width: 100%;
+}
+.articulo{
+    margin: 20px;
+    height: 810px;
+    width: 200px;
+    background-color: gray;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 30px;
+
+}
+
+.imagen-articulo{
+    
+    height: 20%;
+    width: 100%;
+}
+
+
+#div-sidebar{
+    background-color:#333;
+    width: 20%;
+    height: 1050px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.link-sidebar{
+    color: black;
+    text-decoration: none;
+}
+
+.link-sidebar:hover{
+    transition: 200ms;
+    color: beige    ;
+
+}
+
+section{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+footer{
+    
+    background-color: lightgray;
+}
+
+iframe{
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+p{
+    margin-left: 20px;
+}

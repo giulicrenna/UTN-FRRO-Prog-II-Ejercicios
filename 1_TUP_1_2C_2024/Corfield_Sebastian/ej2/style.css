@@ -1,0 +1,48 @@
+*{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.foto{
+    width: 150px;
+    height: 150px;
+    border-radius: 70px;
+    object-fit: cover;
+   
+
+}
+header{
+    background-color: gray;
+    padding-bottom: 25px;
+}
+
+.div-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 40px;
+    color: white;
+    
+    
+}
+
+body{
+    background-color: beige ;
+}
+
+.section-proyectos{
+    background-color: #333;
+}
+.h2-proyectos{
+    color: white;
+}
+
+.p-proyectos{
+    color: white;
+}
+
+.section-sobreMi{
+    border: 3px solid yellow;
+}
