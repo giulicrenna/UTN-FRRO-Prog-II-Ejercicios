@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <h1>Bienvenidos a mi pagina web</h1>
+    <body>
+    <p><strong>Esta es una página de ejemplo</strong></p>
+    <p>Lista desordenada de elementos</p>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+</body>
+</html>
