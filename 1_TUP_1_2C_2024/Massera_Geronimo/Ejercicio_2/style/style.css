@@ -44,8 +44,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   height: 48vw;
   max-height: 395px;
   max-width: 100%;
@@ -56,17 +54,21 @@ header {
 
 .profile-desc h1 {
   font-weight: 900;
+  font-size: 1.3rem;
 }
 
 .profile-desc h2 {
   font-weight: 800;
+  font-size: 1.1rem;
 }
 
 .profile-desc p {
   font-weight: 500;
   text-align: center;
   opacity: 0.7;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  display: flex;
+  align-items:flex-end;
 }
 
 
@@ -85,7 +87,8 @@ header {
 }
 
 .prjct1-content, .prjct2-content, .prjct3-content {
-  display: flex;  
+  display: flex; 
+  justify-content: center; 
   background-color: #fff8f3;
   border-radius: 55px;
   background: #fff8f3;
@@ -98,9 +101,18 @@ header {
   font-size: 1rem;
 }
 
+.projects p{
+  font-size: 80%;
+  align-items: flex-start;
+}
+
 .projects a{
+  text-align: right;
+  align-items: flex-end;
+  justify-content: center;
   text-decoration: none;
   color: #005691;
+  margin-top: 3rem;
   margin-left: 3rem;
   font-size: 1.5rem;
 }
@@ -110,6 +122,9 @@ header {
 }
 
 .contact{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   background-color: #004a7c;
   border-radius: 55px;
   background: #004a7c;
