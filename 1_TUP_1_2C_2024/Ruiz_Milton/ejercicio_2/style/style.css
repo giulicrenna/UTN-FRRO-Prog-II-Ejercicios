@@ -1,0 +1,594 @@
+/*- - - - - - - - - U N I V E R S A L - - - - - - - -*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/*- - - - - - - - - - H E A D E R - - - - - - - - - -*/
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #1b2022;
+  color: aliceblue;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.h1-text {
+  width: 30%;
+}
+.fa-briefcase {
+  font-size: 15px;
+}
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+/*- - - - - - - - - - N A V - - - - - - - - - -*/
+.list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+li {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 13px;
+  display: inline-block;
+  position: relative;
+}
+.a {
+  color: aliceblue;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.a:after {
+  content: "";
+  position: absolute;
+  background-color: aqua;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+.a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*- - - - - - - - - Text Container - - - - - - - - -*/
+h1 {
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-family: "Grey Qo", cursive;
+  font-weight: bolder;
+  font-style: normal;
+  transition: 1s;
+}
+.fa-briefcase {
+  transition: 1s;
+}
+h1:hover {
+  filter: drop-shadow(0 0 5px aqua);
+  transition: 1s;
+  translate: 4px;
+}
+h1:hover .fa-briefcase {
+  transition: 1s;
+  transform: rotate(50deg);
+}
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a4b494;
+  height: 654px;
+  width: 100%;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 270px;
+  width: 30%;
+}
+h2 {
+  color: aliceblue;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: inherit;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+  border-right: 2px solid #1b2022;
+  width: 319px;
+  animation: typing 3s steps(19), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+h2:hover {
+  transition: 1s;
+  text-shadow: 0px 2px 2px #1b2022;
+}
+.name {
+  color: #1b2022;
+  transition: 1s;
+}
+.name:hover {
+  text-shadow: 0px 2px 2px whitesmoke;
+  transition: 1s;
+}
+.mern-container,
+.student-container,
+.h3-container {
+  animation: fadeIn 3s;
+  overflow-x: hidden;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mern-text {
+  color: rgb(240, 248, 255);
+  font-size: 15px;
+  font-style: italic;
+  animation: move-left-right 3s 1;
+  transition: 0.1s;
+}
+@keyframes move-left-right {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.mern-text:hover,
+h3:hover {
+  transition: 1s;
+  text-shadow: 0px 2px 2px #1b2022;
+}
+.student-container {
+  text-align: justify;
+  transition: 1s;
+}
+.student-text {
+  color: aliceblue;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  animation: move-right-left 3s 1;
+  transition: 1s;
+}
+@keyframes move-right-left {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.student-text:hover {
+  transition: 1s;
+  text-shadow: 0px 2px 2px #1b2022;
+}
+.button-container {
+  margin: 13px 0px 13px 0px;
+}
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: whitesmoke;
+  width: 120px;
+  height: 40px;
+  background-color: #519872af;
+  border: 1px solid whitesmoke;
+  border-radius: 3px;
+  transition: 1s;
+  padding: 10px 17px 10px 17px;
+  animation: fadeIn 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button:hover {
+  border: 1px solid #1b2022;
+  color: whitesmoke;
+  background-color: #51987288;
+  transition: 1s;
+  text-shadow: 0px 2px 2px #1b2022;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+.webs-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+}
+.h3-container {
+  width: 50%;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+  font-weight: 300;
+  font-size: 15px;
+  animation: move-left-right 3s 1;
+  transition: 0.1s;
+}
+.fa-linkedin,
+.fa-github,
+.fa-instagram {
+  font-size: 27px;
+  transition: 1s;
+  margin-right: 7px;
+  color: aliceblue;
+}
+.fa-envelope {
+  font-size: 23px;
+  margin-right: 10px;
+  border-radius: 100%;
+  color: aliceblue;
+}
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-instagram:hover {
+  filter: drop-shadow(0 0 5px aqua);
+  transition: 1s;
+  transform: scale(1.05);
+}
+.socials-container {
+  width: 50%;
+}
+/*- - - - - - - - - Img Container - - - - - - - - -*/
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  animation: fadeIn 3s;
+}
+.profile-img {
+  border-radius: 100%;
+  border: 3px solid whitesmoke;
+  transition: 1s;
+  box-shadow: rgb(59, 82, 73, 0.4) 5px 5px, rgba(59, 82, 73, 0.3) 10px 10px,
+    rgba(59, 82, 73, 0.2) 15px 15px, rgba(59, 82, 73, 0.1) 20px 20px,
+    rgba(59, 82, 73, 0.05) 25px 25px;
+}
+.profile-img:hover {
+  transition: 1s;
+  transform: scale(1.01);
+  border-radius: 100%;
+  box-shadow: rgba(59, 82, 73, 0.4) -5px -5px, rgba(59, 82, 73, 0.3) -10px -10px,
+    rgba(59, 82, 73, 0.2) -15px -15px, rgba(59, 82, 73, 0.1) -20px -20px,
+    rgba(59, 82, 73, 0.05) -25px -25px;
+}
+
+/*- - - - - - - - - - M A I N - - - - - - - - - -*/
+.my-projects-container {
+  font-family: "Montserrat", sans-serif;
+  color: #1b2022;
+  background-color: #d1dbbd;
+  height: 900px;
+  display: block;
+  justify-content: center;
+  transition: 0s;
+}
+.project-text {
+  color: whitesmoke;
+  font-size: 23px;
+  width: 220px;
+  transition: 1s;
+}
+.project-text:hover {
+  text-shadow: 0px 2px 2px black;
+  transition: 1s;
+}
+.block1-container,
+.block2-container,
+.block3-container {
+  height: 295px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.block1-container:hover,
+.block2-container:hover,
+.block3-container:hover {
+  transition: 1s;
+  transform: scale(1.01);
+}
+.text-project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 270px;
+}
+.project {
+  color: #1b2022;
+  transition: 1s;
+}
+.fa-list-check {
+  margin-left: 3px;
+  font-size: 20px;
+}
+.project:hover {
+  text-shadow: 0px 2px 2px whitesmoke;
+  transition: 1s;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.block1,
+.block2,
+.block3 {
+  border-radius: 7px;
+  border: 1px solid whitesmoke;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: #b5b9ab;
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.block1:hover,
+.block2:hover,
+.block3:hover {
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  background-color: rgb(140, 146, 124);
+  transition: 1s;
+  color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.project1-tittle,
+.project2-tittle,
+.project3-tittle {
+  font-size: 12px;
+  font-style: italic;
+}
+.project1-description,
+.project2-description,
+.project3-description {
+  width: 80%;
+  text-align: center;
+  font-size: 11px;
+}
+.ae-img {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto;
+}
+.my-img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.button-mdhl,
+.button-ae,
+.button-my {
+  background-color: rgba(245, 245, 245, 0.774);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: grey;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  transition: 1s;
+  padding: 10px 10px 10px 10px;
+  animation: fadeIn 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-mdhl:hover,
+.button-ae:hover,
+.button-my:hover {
+  border: 1px solid rgba(0, 0, 0, 0.582);
+  background-color: whitesmoke;
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mdhl-container,
+.ae-container,
+.my-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+.more-info {
+  font-size: 12px;
+}
+.fa-arrow-up-right-from-square {
+  color: #1b2022;
+  font-size: 11px;
+  margin-left: 0px;
+}
+/*- - - - - - - - - - F O O T E R - - - - - - - - - -*/
+.footer-container {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  height: 310px;
+  background-color: #1b2022;
+}
+.contact-text {
+  color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  font-size: 15px;
+  transition: 1s;
+}
+.contact-container {
+  height: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sendme-container {
+  padding: 7px;
+  width: 275px;
+  height: 105px;
+  border-radius: 4px;
+}
+.txtcontact-container {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  font-size: 15px;
+}
+.fa-phone,
+.fa-location-dot {
+  margin-right: 5px;
+}
+.footer-subcontainer {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.contact1,
+.contact2 {
+  height: 130px;
+  width: 25%;
+}
+.contact2 {
+  display: flex;
+  justify-content: flex-end;
+}
+#email {
+  border: 1px solid whitesmoke;
+  font-size: 12px;
+  padding: 9px;
+  border-radius: 3px;
+  width: 260px;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+#coments {
+  height: 100px;
+}
+.submit-contact {
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  background-color: #519872af;
+  text-align: center;
+  font-size: 12px;
+  padding: 9px;
+  border-radius: 3px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  transition: 1s;
+}
+.submit-contact:hover {
+  transition: 1s;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+.button-contact-container {
+  display: flex;
+  justify-content: center;
+}
+.copyright-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.copyright-text {
+  color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+.email-link {
+  color: whitesmoke;
+  transition: 1s;
+  text-decoration: none;
+}
+.email-link:hover,
+.contact-text:hover {
+  transition: 1s;
+  filter: drop-shadow(0 0 0.75rem white);
+}
+.pphone,
+.pemail,
+.plocation {
+  transition: 1s;
+}
+.pphone:hover,
+.pemail:hover,
+.plocation:hover {
+  transition: 1s;
+}
+.fa-address-book {
+  margin-left: 6px;
+}
