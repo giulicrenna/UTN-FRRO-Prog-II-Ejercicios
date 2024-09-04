@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="icon" href="/1_TUP_1_2C_2024/Suarez_Surraco_Manuela/Globalizador/assets/images/icons8-estrella-100.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,43 +16,46 @@
     <main>
         <section>
             <h2>Informacion personal</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat dolorum saepe itaque ipsum aut officia suscipit quidem id quas perspiciatis quibusdam eos temporibus qui mollitia provident tempora, illo adipisci consectetur?</p>
+            <p>Hola! Soy Manuela, estudiante de la Tecnicatura Universitaria en Programación de la UTN.</p>
             <h3>Intereses</h3>
-            <ul>
-                <li>Interés</li>
-                <li>Interés</li>
-                <li>Interés</li>
+            <ul class="interests-list">
+                <li>Programación</li>
+                <li>Música</li>
+                <li>Dibujo</li>
             </ul>
         </section>
         <section>
             <h2>Informacion de contacto</h2>
             <table border="1.5">
                 <tr>
-                    <th>Email</th>
+                    <th><i class="fas fa-envelope-open-text"></i> Email</th>
                    <td>suarezzmanuela@gmail.com</td> 
                 </tr>
                 <tr>
-                    <th>Teléfono</th>
+                    <th><i class="fas fa-phone-square-alt"></i> Teléfono</th>
                     <td>+54 9 341...</td>
                 </tr>
             </table>
             <h3>Mis redes</h3>
-            <ul>
-                <li><a href="https://www.linkedin.com" target="_blank">Linkedin</a></li>
-                <li><a href="https://github.com/ManuelaSuarez" target="_blank">GitHub</a></li>
+            <ul class="media-list">
+                <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                <li><a href="https://github.com/ManuelaSuarez" target="_blank"><i class="fab fa-github-square"></i> GitHub</a></li>
             </ul>
         </section>
         <section>
+            <h3>Formulario de contacto</h3>
             <form action="">
-                <h3>Formulario de contacto</h3>
                 <label for="">Nombre</label>
                 <input type="text" placeholder="Escriba su nombre">
                 <label for="">Email</label>
                 <input type="email" name="" id="" placeholder="Escriba su email">
                 <label for="">Mensaje</label>
-                <textarea name="" id="" placeholder="Escriba su mensaje"></textarea>
-                <button type="submit">Enviar</button>
-                <button type="reset">Borrar</button>
+                <textarea name="" id="" placeholder="Escriba su mensaje" rows="5"></textarea>
+                <div class="buttons-form">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                </div>
+                
             </form>
         </section>
     </main>
