@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sliding-text {
+    font-size: 2rem;
+    white-space: nowrap;
+    animation: slide 5s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
