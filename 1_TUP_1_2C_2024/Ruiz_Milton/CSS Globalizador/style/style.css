@@ -1,0 +1,106 @@
+/*- - - - - - - - - U N I V E R S A L - - - - - - - -*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/*- - - - - - - - - - H E A D E R - - - - - - - - - -*/
+.header-container {
+  border: 2px solid red;
+  background: url(../assets/4.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  height: 600px;
+}
+.container-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  height: 70px;
+  background-color: #000000;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.container-logo,
+.container-links,
+.container-search {
+  border: 2px solid blue;
+  height: 30px;
+}
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.fa-blog {
+  font-size: 20px;
+}
+.my-blog {
+  color: whitesmoke;
+  font-size: 20px;
+}
+.list {
+  list-style: none;
+}
+li {
+  margin: 0px 30px 0px 30px;
+  font-size: 13px;
+  display: inline;
+}
+.a {
+  font-size: 14px;
+  color: whitesmoke;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.container-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#search-class {
+  font-style: italic;
+  border-radius: 2px;
+  height: 33px;
+  font-size: 13px;
+  color: grey;
+}
+#search-class:hover {
+  transition: 1s;
+  border: 1px solid rgba(255, 242, 0, 0.733);
+}
+.form-container {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.button-class {
+  background-color: #fff200bb;
+  border-radius: 4px;
+  border: 1px solid whitesmoke;
+  color: white;
+  font-size: 13px;
+  height: 33px;
+  padding: 5px 15px 5px 15px;
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.button-class:hover {
+  transition: 2s;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
