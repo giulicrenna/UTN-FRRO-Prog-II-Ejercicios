@@ -1,0 +1,32 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background-color: #e0e0e0;
+}
+
+.cicle {
+    width: 200px;
+    height: 200px;
+    background-color: #3f5;
+    border-radius: 50%;
+    animation: growAndShrink 5s infinite;
+    margin: auto;
+    margin-top: 200px;
+}
+
+@keyframes growAndShrink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,76 @@
+img {
+    width: 190px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+body {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: #F5F5F5;
+    margin: auto;
+    box-shadow: 0px 40px 20px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
+}
+
+.my-info {
+    background-color: #2297999c;
+    padding: 2%;
+    border: solid;
+    border-bottom: none;
+    border-top: none;
+    border-width: 2px;
+}
+
+.title-proyectos {
+    background-color: #48CFCB;
+    padding: 2%;
+    border: solid;
+    border-bottom: none;
+    border-width: 2px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.proyecto1 {
+    background-color: #42424236;
+    border: solid;
+    flex-direction: column;
+    padding: 10%;
+    border-right: none;
+    border-width: 2px;
+}
+
+.proyecto2 {
+    background-color: #42424236;
+    border: solid;
+    flex-direction: column;
+    padding: 10%;
+    border-right: none;
+    border-width: 2px;
+}
+
+.proyecto3 {
+    background-color: #42424236;
+    border: solid;
+    flex-direction: column;
+    padding: 10%;
+    border-width: 2px;
+}
+
+.contacto {
+    padding: 1%;
+    background-color: #F5F5F5;
+}
+
+.boton {
+    outline: 0;
+    padding: 9px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
