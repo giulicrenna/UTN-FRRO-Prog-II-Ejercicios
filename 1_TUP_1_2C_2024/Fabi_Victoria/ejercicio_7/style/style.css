@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: azure;
+}
+
+.rotation_box {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(224, 30, 186);
+    border-radius: 30%;
+    border: 5px solid blueviolet;
+    box-shadow: 0px 0px 15px 5px rgb(67, 73, 253),
+                0px 0px 25px 15px rgb(17, 255, 0);
+    animation: rotate 5s linear infinite;
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

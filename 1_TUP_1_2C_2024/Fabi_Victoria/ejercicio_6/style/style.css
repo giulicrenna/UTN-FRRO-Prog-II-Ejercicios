@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: aliceblue;
+
+
+}
+
+.parpadea {
+    color: #ffffff;
+    font-size: 100px;
+    animation: blink 5s infinite;
+    text-shadow: 0px 0px 20px rgb(187, 249, 30);
+
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        color: blue;
+    }
+}

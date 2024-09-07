@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.cuadrado {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(248, 36, 234);
+    animation: moverYColorear 5s infinite alternate;
+}
+
+@keyframes moverYColorear {
+    0% {
+        transform: translateX(0) translateY(0);
+        background-color: rgb(0, 255, 26);
+    }
+
+    50% {
+        transform: translateX(500px); 
+        background-color: rgb(252, 122, 15);
+    }
+
+    100% {
+        transform: translateY(300px);
+        background-color: blue;
+
+    }
+}
