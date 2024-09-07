@@ -7,7 +7,6 @@
 }
 /*- - - - - - - - - - H E A D E R - - - - - - - - - -*/
 .header-container {
-  border: 2px solid red;
   background: url(../assets/4.jpeg);
   background-size: cover;
   background-position: center;
@@ -21,7 +20,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
   height: 70px;
   background-color: #000000;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -30,7 +28,6 @@
 .container-logo,
 .container-links,
 .container-search {
-  border: 2px solid blue;
   height: 30px;
 }
 .nav-container {
@@ -44,7 +41,7 @@
 }
 .my-blog {
   color: whitesmoke;
-  font-size: 20px;
+  font-size: 15px;
 }
 .list {
   list-style: none;
@@ -55,7 +52,7 @@ li {
   display: inline;
 }
 .a {
-  font-size: 14px;
+  font-size: 12px;
   color: whitesmoke;
   text-decoration: none;
   letter-spacing: 1px;
@@ -86,7 +83,7 @@ li {
   align-items: center;
 }
 .button-class {
-  background-color: #fff200bb;
+  background-color: #bbb42e;
   border-radius: 4px;
   border: 1px solid whitesmoke;
   color: white;
@@ -96,11 +93,49 @@ li {
   transition: 1s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.button-class:hover {
-  transition: 2s;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 2px solid red;
+}
+.h1-class,
+.p-class {
+  color: whitesmoke;
+}
+.description-container {
+  text-align: justify;
+}
+.a-info-button {
+  text-decoration: none;
+  color: white;
+}
+.info-button {
+  display: flex;
+  justify-content: space-around;
+  background-color: #bbb42e;
+  border-radius: 20px;
+  border: 1px solid white;
+  font-size: 13px;
+  padding: 7px 33px 7px 33px;
+  transition: 1s;
+  font-size: 15px;
+}
+.fa-solid {
+  color: whitesmoke;
+}
+.container-design {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  padding-top: 120px;
+}
+.h1-container {
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
