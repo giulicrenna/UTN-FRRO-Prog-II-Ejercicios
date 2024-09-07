@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    background-color: aliceblue ;
+}
+
+.pulse_button {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    color: rgb(7, 7, 7);
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+}
+
+.pulse_button:hover {
+    background-color: blue;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
