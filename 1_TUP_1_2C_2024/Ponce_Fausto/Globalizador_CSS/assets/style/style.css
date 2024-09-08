@@ -1,28 +1,26 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
+    background-color: lightblue;
 }
 
-header{
+.navbar{
     display: flex;
-    justify-content: center;    
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
 }
 
-.navbar > *{
-    display: inline-block;
-    padding: 12px;
+.navbar p {
+    display: flex;
 
 }
-.navbar img {
-    
+.navbar p img{
+    max-width: 12%;
+    max-height: 12%;
+    position: relative;
+    left: 5px;
 }
-
-li{
-    list-style-type: none;
-}
-
-
 
 .imagenes-redes{
     width: 50px;
@@ -31,4 +29,38 @@ li{
 
 .imagenes{
     border-radius: 12px;
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.contenido {
+    width: 70%;
+}
+.card {
+    /* border: solid 2px rgb(172, 20, 20); */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    margin: 15px;
+}
+
+.card p{
+    width: 75%;
+}
+.card input{
+    margin: 10px;
+}
+
+main {
+    display: flex;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
