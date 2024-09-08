@@ -1,0 +1,210 @@
+body{
+    font-family:Arial, Helvetica;
+    background-color: rgb(238, 238, 238);
+    margin: 0;
+    min-height: 100vh;
+}
+
+header{
+    color: white;
+    background-color: #1f1f1f;
+    padding: 10px;
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover{
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.busqueda input{
+    padding: 10px;
+    padding-left: 10px;
+    border-radius: 35px;    
+}
+
+.post {
+    background-color:white;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 15px
+}
+
+.post h2{
+    margin-top: -5px;
+    font-size: 40px;
+    margin-bottom: 10px
+}
+
+.fecha{
+    margin-top: -15px;
+    font-size: 12px;
+    color: #888787;
+}
+
+.mainbody{
+    display:grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+    flex: 1;
+    
+}
+
+.post img{
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid black;
+    box-shadow: 0px 0px 15px black;
+}
+
+.enviar{
+    background-color: rgb(75, 74, 74);
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cajatexto{
+    height: 10px;
+    margin-top: -10px;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    padding: 10px;
+}
+
+.texto{
+    font-size: 20px;
+}
+
+.label{
+    text-decoration:underline;
+}
+
+.mensaje{
+    width: 50%;
+    height: 50px;
+    margin-top: -10px;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    padding: 10px;
+}
+
+.comments textarea {
+    width: 97%;
+    height: 50px;
+    margin-top: -10px;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    padding: 10px;
+}
+
+.sidebar{
+    background-color: white;
+    box-shadow: 0px 0px 15px black;
+    border-radius: 15px;
+    min-height: 681px;
+}
+
+.divisor{
+    height: 2px;
+    border-radius: 50px;
+    background-color: black;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.sidebar section{
+    margin-bottom: 40px;
+}
+
+.enunciado{
+    text-align: center
+}
+
+.sidebar ul{
+    margin-top: -15px
+}
+
+.sidebar ul li{
+    list-style: none;
+    text-align: left;
+    margin-left: -30px;
+    margin-bottom:5px
+}
+
+.sidebar ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover{
+    color: rgb(133, 133, 133);
+    text-decoration: underline;
+}
+
+.sidebar img{
+    width: 4%;
+}
+
+footer{
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+    text-decoration:none;
+    margin: 20px;
+}
+
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .search input {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
