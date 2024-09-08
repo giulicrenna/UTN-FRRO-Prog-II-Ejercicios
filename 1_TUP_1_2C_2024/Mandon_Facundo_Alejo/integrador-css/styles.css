@@ -1,0 +1,26 @@
+.container {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    background-color: rgb(252, 95, 95);
+    gap: 1em;
+}
+
+.item {
+    border-color: aliceblue;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+
+}
+.container-head {
+    flex: 1;
+    display: flex;
+    margin: 0;
+    padding: 0px;
+    background-color: rgb(252, 95, 95);
+}
+
+.item-1 {
+    flex: 1;
+}
