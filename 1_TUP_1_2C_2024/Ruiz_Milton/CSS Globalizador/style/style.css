@@ -6,14 +6,14 @@
   scroll-behavior: smooth;
   font-family: "Raleway", sans-serif;
 }
-html {
+/*html {
   transition: 1s;
   filter: blur(5px) grayscale(80%);
 }
 html:hover {
   transition: 1s;
   filter: blur(0px) grayscale(0%);
-}
+}*/
 /*- - - - - - - - - - H E A D E R - - - - - - - - - -*/
 .header-container {
   background: linear-gradient(to right, rgb(0 0 0 /0.6), rgb(0 0 0 /0.6)),
@@ -31,7 +31,7 @@ html:hover {
   justify-content: center;
   align-items: center;
   height: 70px;
-  background-color: #000000;
+  background-color: #020303;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   position: fixed;
@@ -50,6 +50,26 @@ html:hover {
   justify-content: center;
   align-items: center;
   height: auto;
+}
+.button-category {
+  width: 40px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #bbb42e;
+  border: 1px solid whitesmoke;
+  transition: 1s;
+}
+.button-category:hover {
+  border: 1px solid black;
+  color: whitesmoke;
+  background-color: rgb(187, 180, 46);
+  transition: 1s;
+  text-shadow: 0px 2px 2px #1b2022;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .fa-blog {
   font-size: 25px;
@@ -182,7 +202,7 @@ li {
   background-color: #bbb42e;
   border-radius: 20px;
   border: 1px solid white;
-  padding: 7px 40px 7px 40px;
+  padding: 7px 50px 7px 50px;
   transition: 1s;
   font-size: 13px;
   margin-top: 20px;
@@ -216,23 +236,23 @@ li {
 }
 /*- - - - - - - - - - M A I N - - - - - - - - - -*/
 .article-container {
-  background-color: rgba(128, 128, 128, 0.082);
-  border: 2px solid red;
-  height: 600px;
+  height: 500px;
 }
 .text-article-container {
-  height: 100px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.text-article {
-  border: 2px solid blue;
+.text-article-subcontainer {
   height: 50px;
   align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.article-text {
+  font-size: 25px;
 }
 .desc-programacion-container,
 .desc-musica-container,
@@ -243,16 +263,16 @@ li {
 .desc-programacion,
 .desc-musica,
 .desc-deportes {
-  font-size: 11px;
+  font-size: 10px;
   width: 85%;
   text-align: justify;
+  font-style: italic;
 }
 .container-article1,
 .container-article2,
 .container-article3 {
-  border: 2px solid blue;
   width: 100px;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -261,9 +281,10 @@ li {
 .subcontainer-article1,
 .subcontainer-article2,
 .subcontainer-article3 {
+  background-color: #eeeeee;
   border: 1px solid rgba(0, 0, 0, 0.575);
   border-radius: 5px;
-  width: 90%;
+  width: 80%;
   height: 90%;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
@@ -271,18 +292,51 @@ li {
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
+.program-img-container {
+  width: 100%;
+  height: 45%;
+  background: url(../assets/program.avif) no-repeat center center;
+  background-size: cover;
+  background-position: center;
+}
+.music-img-container {
+  width: 100%;
+  height: 45%;
+  background: url(../assets/musica.avif) no-repeat center center;
+  background-size: cover;
+  background-position: center;
+}
+.sports-img-container {
+  width: 100%;
+  height: 45%;
+  background: url(../assets/deportes.jpg) no-repeat center center;
+  background-size: cover;
+  background-position: center;
+}
+.date-class {
+  color: white;
+  font-size: 11px;
+  font-style: italic;
+  display: flex;
+  justify-content: end;
+  padding: 5px 15px 0px 0px;
+}
+.fa-code,
+.fa-music,
+.fa-dumbbell {
+  color: black;
+}
 .program-img,
 .music-img,
 .sports-img {
   border-radius: 3px;
   width: 100%;
-  height: auto;
+  max-height: 100%;
 }
 #textarea {
   color: gray;
   font-style: italic;
-  font-size: 12px;
+  font-size: 10px;
   resize: none;
   border-radius: 50px;
   width: 90%;
@@ -291,4 +345,26 @@ li {
 .text-area-container {
   display: flex;
   justify-content: center;
+}
+.button-submit-class {
+  background-color: #bbb42e;
+  border-radius: 4px;
+  border: 1px solid whitesmoke;
+  color: white;
+  font-size: 11px;
+  height: 30px;
+  padding: 5px 35px 5px 35px;
+  transition: 1s;
+}
+.button-submit-class:hover {
+  border: 1px solid black;
+  color: whitesmoke;
+  background-color: rgb(187, 180, 46);
+  transition: 1s;
+  text-shadow: 0px 2px 2px #1b2022;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }

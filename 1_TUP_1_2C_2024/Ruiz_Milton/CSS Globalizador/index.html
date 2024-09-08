@@ -40,10 +40,22 @@
       <div class="header-container">
         <div class="container-fluid text-center">
           <div class="row container-nav">
-            <div class="col-3 container-logo">
+            <div class="col-1">
+              <button class="button-category" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i></button>
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>Try scrolling the rest of the page to see this option in action.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 container-logo">
               <h1 class="my-blog"><i class="fa-solid fa-blog"></i>   Mi Blog</h1>
             </div>
-            <div class="col-6 container-links">
+            <div class="col-5 container-links">
               <nav class="nav-container">
                 <ul class="list">
                   <li><a href="#" class="a">Inicio</a></li>
@@ -62,7 +74,7 @@
                   placeholder="Buscar..."
                   aria-label="Search"
                 />
-                <button class="button-class" type="submit">Buscar</button>
+                <button class="button-class" type="search">Buscar</button>
               </form>
             </div>
           </div>
@@ -80,7 +92,7 @@
               es que encuentres contenido interesante y motivador que te impulse a
               seguir explorando y disfrutando de tus actividades favoritas.
               ¡Gracias por visitarme! Espero que disfrutes cada lectura y encuentres
-               en este espacio algo que te inspire. Saludos!
+              en este espacio algo que te inspire. Saludos!
             </p>
           </div>
           <div>
@@ -98,58 +110,64 @@
     </header>
     <main><div class="container text-center article-container mt-5">
       <div id="article" class="row text-article-container">
-        <div class="text-article"><p class="my-0">Articulos</p></div>
+        <div class="text-article-subcontainer"><p class="my-0 article-text"><i class="fa-regular fa-newspaper"></i> <strong>Articulos</strong></p></div>
       </div>
       <div class="row">
         <div class="col container-article1">
           <div class="subcontainer-article1">
             <div class="program-img-container">
-              <img class="program-img" src="./assets/program.avif" alt="Programming Img">
+              <div class="date-class"><p>08 de Agosto 2024</p></div>
             </div>
             <div>
-              <p class="my-2">Programación</p>
+              <p class="my-2"><strong><i class="fa-solid fa-code"></i> Programación</strong></p>
             </div>
             <div class="desc-programacion-container">
-              <p class="desc-programacion">Aquí, encontrarás temas sobre programación, lenguajes de codificación, estructuras de datos, algoritmos y tendencias en desarrollo de software.</p>
+              <p class="desc-programacion">Consulta temas sobre programación, lenguajes de codificación, estructuras de datos, algoritmos y diferentes herramientas para desarrollo.</p>
             </div>
             <div class="text-area-container">
               <textarea class="form-control" id="textarea" rows="1" placeholder="Ingrese mensaje..."></textarea>
             </div>
-            <div><p>Fecha</p></div>
+            <div class="container-button-submit-class mt-3">
+              <button class="button-submit-class" type="submit">Enviar</button>
+            </div>
           </div>
         </div>
         <div class="col container-article2">
           <div class="subcontainer-article2">
             <div class="music-img-container">
-              <img class="music-img" src="./assets/musica.avif" alt="Music Img">
+              <div class="date-class"><p>08 de Agosto 2024</p></div>
             </div>
             <div>
-              <p class="my-2">Música</p>
+              <p class="my-2"><strong><i class="fa-solid fa-music"></i> Música</strong></p>
             </div>
             <div class="desc-musica-container">
-              <p class="desc-musica">Aquí encontrarás temas sobre música, abarcando desde la teoría musical y los géneros diversos hasta la evolución histórica de los estilos y mas.</p>
+              <p class="desc-musica">Consulta temas sobre música electrónica, DJ's, mezcla y producción con diferentes herramientas, eventos, fechas y los diversos géneros del trance.</p>
             </div>
             <div class="text-area-container">
               <textarea class="form-control" id="textarea" rows="1" placeholder="Ingrese mensaje..."></textarea>
             </div>
-            <div><p>Fecha </p></div>
+            <div class="container-button-submit-class mt-3">
+              <button class="button-submit-class" type="submit">Enviar</button>
+            </div>
           </div>
         </div>
         <div class="col container-article3">
           <div class="subcontainer-article3">
             <div class="sports-img-container">
-              <img class="sports-img" src="./assets/deportes.jpg" alt="Sports Img">
+              <div class="date-class"><p>08 de Agosto 2024</p></div>
             </div>
             <div>
-              <p class="my-2">Deportes</p>
+              <p class="my-2"><strong><i class="fa-solid fa-dumbbell"></i> Deportes</strong></p>
             </div>
             <div class="desc-deportes-container">
-              <p class="desc-deportes">Aquí, encontrarás temas sobre deportes, explorando desde los fundamentos de diferentes disciplinas y hasta las últimas noticias en el mundo deportivo.</p>
+              <p class="desc-deportes">Consulta temas sobre diferentes deportes, gimnasio, calistenia, disciplinas y hasta las últimas noticias relacionadas al mundo deportivo.</p>
             </div>
             <div class="text-area-container">
               <textarea class="form-control" id="textarea" rows="1" placeholder="Ingrese mensaje..."></textarea>
             </div>
-            <div><p>Fecha </p></div>
+            <div class="container-button-submit-class mt-3">
+              <button class="button-submit-class" type="submit">Enviar</button>
+            </div>
           </div>
         </div>
       </div>
