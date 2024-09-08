@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Jerry's blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
+    F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="icon" href="asset/image/icono.ico">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to- fit=no">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="./asset/image/Jerry-logo.png" id="logo" alt="Logotipo de Jerry">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#sobreMi">Sobre mí</a></li>
+                    <li><a href="#articulos">Días de Relax</a></li>
+                    <li><a href="#contactame">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <section class="sobreMi" id="sobreMi">
+                <h2>Sobre mi</h2>
+                <p>¡Hola! Soy Jerry, un yorkshire mini de 11 años con un corazón tan grande como mi amor por el sol.</p>
+                <p>Aunque soy pequeño, tengo una gran personalidad y siempre sé cómo hacer sonreír a quienes me rodean.</p> 
+                <p>A lo largo de los años, he vivido muchas aventuras,desde paseos tranquilos en la plaza hasta emocionantes días en la playa.</p> 
+                <p>Mi lugar favorito en casa es junto a la ventana, donde puedo tomar el sol mientras sueño con mis próximos paseos.</p>
+                <p>Soy tranquilo, tierno y, aunque ya tengo mis años, sigo disfrutando cada día como si fuera una nueva aventura.</p>
+            </section>
+
+            <section class="articles" id="articulos">
+                <article class="article" id="sol">
+                    <h2>Tomar sol es de mis actividades preferidas</h2>
+                    <p>Fecha: 01/09/2024</p>
+                    <img src="./asset/image/JerrySol.jpeg" alt="">
+                    <p>Cada mañana, cuando el sol comienza a asomarse por la ventana de nuestro departamento,
+                        yo ya estoy listo para mi momento de gloria.</p>
+                    <p>Me encanta encontrar ese rincón especial donde la luz entra con más fuerza. 
+                        Allí me acomodo, estiro mis patitas y cierro los ojos mientras disfruto del calorcito 
+                        que me envuelve. Es como un abrazo cálido de sol que me hace sentir muy feliz y relajado.</p>
+                    <p>
+                        No importa si hace frío o calor afuera, para mí, no hay nada mejor que empezar el día con un buen baño de sol. Es mi ritual matutino, y me hace sentir como el perrito más afortunado del mundo.
+                        ¡Así que si alguna vez ven un pequeño rayito de sol con patas, ya saben quién soy!</p>
+                    <div class="comments">
+                        <h3>Contame...</h3>
+                        <form>
+                            <textarea placeholder="A vos te gusta el sol tanto como a mí?"></textarea>
+                            <button type="submit">Enviame tu opinion</button>
+                        </form>
+                    </div>
+                </article>
+
+                <article class="article" id="mar">
+                    <h2>Mi primera vez conociendo el mar</h2>
+                    <p>Fecha: 27/08/2024</p>
+                    <img src="./asset/image/JerryPlaya.jpeg" alt="Jerry en la playa">
+                    <p> Hoy quiero contarles sobre mi primera vez en la playa.
+                        Esto ocurrió en el año 2021, en Monte Hermoso. Fue la primera vez que vi el gran mar azul y sentí la brisa en mi hocico. </p>
+                    <p>Al meter mis patitas en el agua por primera vez, 
+                        me sorprendió lo fría y divertida que era. Corrí por la arena, salté en las olas y me sentí muy feliz.</p>
+                    <p>Fue un día lleno de nuevos olores y sensaciones, y me encantó cada minuto. ¡No puedo esperar para volver a la playa!</p>
+                    <div class="comments">
+                        <h3>Te gustó mi experiencia?</h3>
+                        <form>
+                            <textarea placeholder="Contame como fue la tuya..."></textarea>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </article>
+
+                <article class="article" id="plaza">
+                    <h2>Caminatas y descanso en el parque</h2>
+                    <p>Fecha: 15/08/2024</p>
+                    <img src="./asset/image/JerryPaseo.jpeg" alt="Jerry paseando en la plaza">
+                    <p>Los paseos en la plaza son tranquilos y relajantes. Me gusta caminar despacio, disfrutar de los olores y observar todo a mi alrededor.</p>
+                    <p>Pero también me gusta tirarme en el pasto y descansar.</p>
+                    <div class="comments">
+                        <h3>Cuantas veces al día salís a pasear?</h3>
+                        <form>
+                            <textarea placeholder="Chusmeame..."></textarea>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <section class="categories">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#sol">Tomar Sol</a></li>
+                    <li><a href="#mar">Días de Playa</a></li>
+                    <li><a href="#plaza">Paseos en la Plaza</a></li>
+                </ul>
+            </section>
+
+            <section class="latest-articles">
+                <h3>Últimas Entradas</h3>
+                <ul>
+                    <li><a href="#sol">Tomar sol es de mis actividades preferidas</a></li>
+                    <li><a href="#mar">Mi primera vez conociendo el mar</a></li>
+                    <li><a href="#plaza">Caminatas y descanso en el parque</a></li>
+                </ul>
+            </section>
+
+            <section class="social-media">
+                <h3>Seguime en instagram</h3>
+                    <a href="https://www.instagram.com/sr.jerry19/">Instagram</a>
+            </section>
+        </aside>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Me encontras en...</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.1782724400546!2d-60.674625699999964!3d-32.9463024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab58a6af2d07%3A0xb7cc1649dedeb6ab!2s3%20de%20Febrero%203654%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1725819112531!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3 id="contactame">Contactame</h3>
+            <form action="">
+                <label for="">Si querés contactarme dejame tu mail</label>
+                <input type="email">
+                <input type="submit" value="Enviar">
+            </form>
+            <p>&copy; 2024 El Diario de Jerry. Todos los derechos reservados.</p>
+            <p><a href="./PoliticasDePrivacidad.html" target="_blank">Política de Privacidad</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
