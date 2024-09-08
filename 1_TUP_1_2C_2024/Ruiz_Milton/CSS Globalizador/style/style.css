@@ -6,6 +6,14 @@
   scroll-behavior: smooth;
   font-family: "Raleway", sans-serif;
 }
+html {
+  transition: 1s;
+  filter: blur(5px) grayscale(80%);
+}
+html:hover {
+  transition: 1s;
+  filter: blur(0px) grayscale(0%);
+}
 /*- - - - - - - - - - H E A D E R - - - - - - - - - -*/
 .header-container {
   background: linear-gradient(to right, rgb(0 0 0 /0.6), rgb(0 0 0 /0.6)),
@@ -44,11 +52,25 @@
   height: auto;
 }
 .fa-blog {
-  font-size: 20px;
+  font-size: 25px;
+  transition: 1s;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  animation: rotation 3s linear infinite;
+  filter: drop-shadow(0 0 5px #bbb42e);
+}
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 .my-blog {
   color: whitesmoke;
   font-size: 15px;
+  filter: drop-shadow(0 0 5px #bbb42e);
 }
 .list {
   list-style: none;
@@ -141,14 +163,14 @@ li {
   text-shadow: 0px 2px 2px #bbb42e;
 }
 .h1-class {
-  font-size: 80px;
+  font-size: 100px;
   font-family: "Babylonica", cursive;
   font-weight: 400;
   font-style: normal;
 }
 .description-container {
-  font-size: 13px;
-  text-align: justify;
+  font-size: 12px;
+  text-align: center;
 }
 .a-info-button {
   text-decoration: none;
