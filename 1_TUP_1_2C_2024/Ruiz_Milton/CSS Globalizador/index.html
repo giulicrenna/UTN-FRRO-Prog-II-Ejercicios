@@ -42,13 +42,52 @@
           <div class="row container-nav">
             <div class="col-1">
               <button class="button-category" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i></button>
-              <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <div class="offcanvas offcanvas-start category-container" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header ms-3">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Sección de Categorías</h5>
+                  <button id="button-close" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
                 </div>
-                <div class="offcanvas-body">
-                  <p>Try scrolling the rest of the page to see this option in action.</p>
+                <div class="offcanvas-body d-block">
+                  <div class="container-text-category">
+                    <p class="text-category">Bienvenido a la sección categorías. Aquí encontraras información relacionada a los articulos que se encuentran en la página web.</p>
+                  </div>
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Programación</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Música</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Deportes</a>
+                    </li>
+                    <li class="nav-item dropdown mb-2">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Últimos Artículos
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a id="li-dp-item" class="dropdown-item" href="#">Sección artículo N° 1</a></li>
+                        <li><a id="li-dp-item" class="dropdown-item" href="#">Sección artículo N° 2</a></li>
+                        <li><a id="li-dp-item" class="dropdown-item" href="#">Sección artículo N° 3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webs-container">
+                  <div class="h3-container">
+                    <h3 class="h3-text">Redes Sociales</h3>
+                  </div>
+                  <div class="socials-container">
+                    <a href="https://www.linkedin.com/in/miltonfruiz/" target="_blank"
+                      ><i class="fa-brands fa-linkedin"></i
+                    ></a>
+                    <a href="https://github.com/miltonfruiz" target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                    <a href="https://www.instagram.com/djtaicke/" target="_blank"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>

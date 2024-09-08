@@ -51,9 +51,33 @@ html:hover {
   align-items: center;
   height: auto;
 }
+.category-container {
+  background: linear-gradient(to right, rgb(0 0 0 /0.8), rgb(0 0 0 /0.8)),
+    url(../assets/ama\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  box-shadow: rgba(187, 180, 46, 0.25) 0px 30px 60px -12px inset,
+    rgba(187, 180, 46, 0.3) 0px 18px 36px -18px inset;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.navbar-nav {
+  height: 155px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.116);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#button-close {
+  transition: 1s;
+  border: 1px solid white;
+  color: white;
+}
 .button-category {
-  width: 40px;
-  height: 35px;
+  width: 35px;
+  height: 30px;
   border-radius: 3px;
   background-color: #bbb42e;
   border: 1px solid whitesmoke;
@@ -70,6 +94,65 @@ html:hover {
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.container-category-list {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+.category-list {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+.offcanvas-title {
+  color: white;
+}
+.nav-item {
+  color: white;
+}
+.nav-item:hover {
+  transition: 0s;
+  background-color: #bbb42e;
+  color: white;
+}
+.container-text-category {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#li-dp-item:hover {
+  background-color: #bbb42e;
+  color: white;
+}
+.text-category {
+  width: 90%;
+  font-size: 12px;
+  text-align: justify;
+}
+.h3-text {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+.webs-container {
+  margin-bottom: 40px;
+}
+.fa-linkedin,
+.fa-github,
+.fa-instagram {
+  font-size: 23px;
+  transition: 1s;
+  margin-right: 13px;
+  color: aliceblue;
+}
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-instagram:hover {
+  filter: drop-shadow(0 0 5px #bbb42e);
+  transition: 1s;
+  transform: scale(1.1);
 }
 .fa-blog {
   font-size: 25px;
