@@ -19,8 +19,8 @@ a{
     color: inherit;
 }
 a:hover{
-    color: rgb(255, 0, 0);
-    text-decoration: underline dotted;
+    color: rgba(49, 181, 181, 0.7);
+    text-decoration:underline rgb(152, 71, 71);
     
 }
 .navbar p {
@@ -73,6 +73,10 @@ a:hover{
 }
 .card input{
     margin: 10px;
+    background-color: rgb(98, 162, 141);
+    width: 20%;
+    border-radius: 25px;
+
 }
 .card textarea{
     width: 32%;
@@ -138,4 +142,37 @@ ul a li {
     
  }
  
-
+ @media (max-width: 768px){
+    body{
+        flex-direction: column;
+        
+    }
+    .card{
+        margin: 5%;
+    }
+    .card p{
+        width: 80%;
+    }
+    .imagenes{
+        width: 45%;
+        height: auto;
+    }
+    .card h2{
+        width: 100%;
+        text-align: center;
+    }
+    .card textarea{
+        width: 70%;
+    }
+    .card input{
+        width: 50%;
+    }
+    aside{
+        width: 100%;
+        height: auto;
+    }
+    footer iframe{
+        width: 30%;
+        height: auto;
+    }
+ }
