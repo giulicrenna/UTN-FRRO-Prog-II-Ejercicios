@@ -1,0 +1,210 @@
+body{
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+header{
+    border: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(39, 37, 37);
+    color: tan;
+    font-family: url(Bread\ Coffee.ttf);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: large;
+    h1{
+        color: tan;
+        background-color: rgb(0, 0, 0);
+        border: solid tan;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        
+        a{
+            margin: 10px;
+            border: solid black;
+            background-color: rgb(239, 197, 142);
+            padding: 5px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        
+    }
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    h2{
+        border: solid aliceblue;
+        border-radius: 10px;
+        padding: 5px;
+        background-color:sandybrown;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: medium;
+        color: black;
+    }
+    p{
+        padding: 10px;
+        border: outset rgb(35, 35, 35);
+        
+        background-color: rgb(35, 35, 35);
+        font-family: cursive;
+        color: orange;
+    }
+    
+}
+
+
+
+
+.mis-proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    h2{
+        border: solid aliceblue;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: sandybrown;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: medium;
+    }
+    li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        border: outset rgb(35, 35, 35);
+        background-color: rgb(35, 35, 35);
+        font-family: cursive;
+        color: orange;
+        a{
+            color: tan;
+            text-decoration: none;
+            font-size: small;
+        } 
+    }
+    
+}
+.mis-cursos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        color: black;
+        border: solid aliceblue;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: sandybrown;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: medium;
+    }
+    table{
+        color: tan;
+        background-color: rgb(35,35,35);
+        padding: 5px;
+        display: flex;
+        th{
+            color: black;
+            padding: 5px;
+            background-color: aliceblue;
+        }
+        td{
+            color: black;
+            padding: 5px;
+            background-color: burlywood;
+        }
+
+    }
+}
+
+.mis-habilidades{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        color: black;
+        border: solid aliceblue;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: sandybrown;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: medium;
+    }
+    ol{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        border: outset rgb(35, 35, 35);
+        background-color: rgb(35, 35, 35);
+        font-family: cursive;
+        color: orange;
+        li{
+            margin: 10px;
+            color: orange;
+            text-decoration: none;
+            font-size: small;
+            padding: 10px;
+        } 
+    }
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h2{
+        color: black;
+        border: solid aliceblue;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: sandybrown;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: medium;
+        
+    }
+    form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: outset rgb(35, 35, 35);
+        background-color: rgb(35,35,35);
+        label{
+            color: black;
+            background-color: burlywood;
+        }
+    }
+    button{
+        background-color: burlywood;
+        cursor: pointer;
+    }
+}
+
+
