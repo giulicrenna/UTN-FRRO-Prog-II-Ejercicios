@@ -1,0 +1,188 @@
+.cuerpo {
+    background-color: rgb(23, 22, 24);
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+#inicio {
+   
+    height: 400px;
+    background-image: url('/Blog/img/fondo3.png');
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+
+}
+#sobremi {
+
+    background-image: url('/Blog/img/fondo3.png');
+    background-size: contain;
+    visibility: 5%; 
+    opacity: 3000px;
+
+}
+
+#skill {
+    background-image: url('/Blog/img/fondo3.png');
+    background-size: cover;
+}
+
+#namenavegador {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    background-color: rgb(192, 196, 185);
+    text-align: center;
+
+}
+
+#name{
+    
+    font-size: 20px;
+    font-style: oblique;
+    color: aliceblue;
+    
+    text-align:center;
+    
+    
+}
+
+#opciones a {
+    justify-content:space-between;
+    text-align: right;
+    align-items: end;
+    color: aliceblue;
+    font-size: 30px;
+    text-decoration: none;
+        
+}
+
+#opciones a:hover {
+    
+    color: black;
+    text-decoration: underline;
+    align-items: start;
+    cursor: pointer;
+    
+}
+
+.L {
+    width: 15%;
+    height: 30%;
+    border-right: solid 1px black ;
+    margin-bottom: 10px;
+}
+.J {
+    width: 8%;
+}
+
+.D {
+    width: 9%;
+    margin-right: -10px;
+}
+
+.B {
+    width: 12%;
+    margin-left: 0.05px;
+}
+
+#parrafo {
+    background-color: rgb(192, 196, 185);
+    text-align: center;
+    font-size: 20px;
+    font-style: oblique;
+    margin: 15px;
+}
+
+#inicio {
+    background-color: rgb(226, 235, 244);
+    text-align: center;
+    display: table;
+    border-radius: 4px;
+    align-items: center;
+    padding: 50px;
+    margin: 60px;
+    font-size: 20px;
+    font-family: oswald;
+
+}
+
+.yo {
+    border-radius: 80px;
+    border-bottom: 100px;
+    background-color: darkblue;
+    width: 20%;
+    height: 20%;
+    margin: 50px 50px 5px 70%;
+}
+
+.texto {
+    font-style: oblique;
+    border: solid 2px black;
+    border-radius: 4px;
+    background-color: rgb(226, 235, 244);
+    padding: 50px;
+    margin: 60px;
+    text-align: justify;
+    font-size: 25px;
+    font-family: tomorrow;
+}
+
+form {
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 200px;
+    margin-top: 60px;
+    background-color:rgb(192, 196, 185);
+    color:aliceblue;
+    
+}
+
+.logoface {
+
+    height: 7%;
+    width: 5%;
+}
+
+.i {
+    width: 3%;
+    height: 6%;
+}
+
+.w {
+    width: 4%;
+    height: 6%;
+}
+
+.contacto a {
+
+    color:black;
+
+}
+.contacto a:hover {
+    text-decoration: none;
+    color: brown;
+    cursor: pointer;
+}
+
+
+footer {
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 100px;
+    height: 40px;
+}
+
+footer a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+a:hover {
+
+    text-decoration: line-through;
+}
