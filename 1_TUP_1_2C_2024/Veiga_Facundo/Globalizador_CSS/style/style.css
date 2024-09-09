@@ -183,34 +183,34 @@ footer .enlaces {
 }
 
 @media (max-width: 700px) {
-    header {
-        position: absolute;
-    }
+  header {
+    position: absolute;
+  }
 
-    nav {
-        flex-direction: column;
-    }
+  nav {
+    flex-direction: column;
+  }
 
-    nav * {
-        margin-bottom: 10px;
-    }
+  nav * {
+    margin-bottom: 10px;
+  }
 
-    body {
-        padding-top: 400px;
-        width: 0px;
-    }
+  body {
+    padding-top: 400px;
+    width: 0px;
+  }
 
-    aside {
-        position: absolute;
-        width: 100%;
-        height: 310px;
-        padding-top: 220px;
-        left: 0;
-        top: 0;
-        padding-left: 180px;
-    }
+  aside {
+    position: absolute;
+    width: 100%;
+    height: 310px;
+    padding-top: 220px;
+    left: 0;
+    top: 0;
+    padding-left: 180px;
+  }
 
-    section input {
-        margin-bottom: 5px;
-    }
+  section input {
+    margin-bottom: 5px;
+  }
 }
