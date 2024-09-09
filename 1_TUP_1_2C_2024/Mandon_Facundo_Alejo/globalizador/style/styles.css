@@ -14,11 +14,14 @@
 }
 
 .item {
-    border-color: aliceblue;
     list-style-type: none;
     padding: 10px;
     margin: 0px;
+    text-decoration-color: white;
 
+}
+.item:hover {
+    color: rgb(225, 225, 40);
 }
 .container-head {
     flex: 1;

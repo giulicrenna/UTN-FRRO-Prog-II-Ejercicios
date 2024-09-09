@@ -1,26 +1,111 @@
-.container {
-    margin: 0;
-    padding: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+section {
+    background-color: black;
+}
+
+article {
+    background-color: black;
+}
+
+div {
+    background-color: black;
+}
+
+p {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+footer {
     display: flex;
-    background-color: rgb(252, 95, 95);
-    gap: 1em;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    background-color: black;
+}
+
+a {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+a:hover {
+    color: rgb(202, 202, 0);
+    transition-duration: 0.4s;
+}
+header {
+  background-color: black;
+}
+
+main {
+  background-color: black;
+}
+
+.container {
+  padding: 0px;
+  display: flex;
+  gap: 1em;
+  background-color: black;
 }
 
 .item {
-    border-color: aliceblue;
-    list-style-type: none;
-    padding: 10px;
-    margin: 0px;
-
+  list-style-type: none;
+  padding: 10px;
+  margin: 0px;
+  color: rgb(217, 217, 217);
+  background-color: black;
+  font-family: "Open Sans", sans-serif;;
+  font-weight:700;
 }
+.item a {
+  border-color: aliceblue;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0px;
+  color: white;
+  text-decoration: none;
+}
+
+.item:hover {
+    color: rgb(220, 220, 58);
+  text-decoration: underline;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+
+.item a:hover {
+  color: rgb(220, 220, 58);
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+
 .container-head {
-    flex: 1;
-    display: flex;
-    margin: 0;
-    padding: 0px;
-    background-color: rgb(252, 95, 95);
+  flex: 1;
+  display: flex;
+  margin: 0;
+  padding: 0px;
+  background-color: rgb(252, 95, 95);
 }
 
 .item-1 {
-    flex: 1;
+  flex: 1;
 }
+
+.item-8 {
+    padding-right: 5em;
+  }
+  
