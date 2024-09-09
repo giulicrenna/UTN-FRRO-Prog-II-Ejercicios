@@ -1,0 +1,246 @@
+*{
+    padding: 0%;
+    margin: 0%;   
+    font-family:"DM Sans", sans-serif;
+    font-size: 20px;
+}
+
+
+nav{
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.opciones ul li{
+    font-size: 25px;
+    list-style: none;
+    display: inline;
+    padding: 15px;
+
+}
+
+a{
+    color: rgb(235, 235, 235);
+    font-weight: bold;
+
+}
+
+a:hover{
+    transition: 100ms;
+    color: rgb(120, 120, 120);
+}
+
+.search{
+    display: inline-flex;
+
+}
+
+input{
+    background-color: rgb(66, 66, 66);
+    border-style: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+button{
+    background-color: rgb(66, 66, 66);
+    border-style: none;
+}
+
+
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(140, 110, 135);
+}
+#blog {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#blog h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #c583ac;
+    font-style: oblique;
+}
+
+#blog img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+#biografia {
+    margin-top: 20px;
+    background-color: #ffd2ee;
+}
+
+#biografia h3 {
+    font-size: 28.8px;
+    color: #903372;
+}
+
+#biografia p {
+    font-size: 19.2px;
+    line-height: 25.6px;
+}
+
+#hobbies {
+    margin-top: 30px;
+    background-color: #ffd2ee;
+}
+
+#hobbies h3 {
+    font-size: 28.8px;
+    color: #903372;
+}
+
+#hobbies ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#hobbies li {
+    font-size: 19.2px;
+    margin-bottom: 5px;
+}
+
+#informacion {
+    background-color: #ffd2ee;
+    margin-top: 30px;
+}
+
+#informacion h3 {
+    font-size: 28.8px;
+    color: #903372;
+}
+
+#informacion table {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 19.2px;
+}
+
+#redes {
+    margin-top: 30px;
+    
+}
+
+#redes h3 {
+    font-size: 28.8px;
+    color: #903372;
+}
+
+#redes a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 19.2px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    border: 2px solid #0d0d0d;
+    border-radius: 5px;
+}
+
+#redes a:hover {
+    background-color: #e4bbfa;
+    color: white;
+}
+
+#Form-contact {
+    margin-top: 30px;
+}
+
+#Form-contact h3 {
+    font-size: 28.8px;
+    color: #903372;
+}
+
+#Form-contact form {
+    margin-top: 15px;
+}
+
+#Form-contact label {
+    font-size: 19.2px;
+}
+
+#Form-contact input {
+    background-color: #514e63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 19.2px;
+    cursor: pointer;
+}
+
+#Form-contact input:hover {
+    background-color: #9178a2;
+}
+
+
+
+/* FOOTER */
+
+
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-content ul li {
+    display: inline;
+}
+
+.footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
