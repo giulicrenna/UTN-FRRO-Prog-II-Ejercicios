@@ -31,8 +31,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
     <title>CSS - Ejercicio globalizador</title>
   </head>
   <body>
@@ -147,11 +147,12 @@
         </div>
       </div>
     </header>
-    <main><div class="container text-center article-container mt-5">
+    <main>
+      <div class="container text-center article-container mt-5">
       <div id="article" class="row text-article-container">
         <div class="text-article-subcontainer"><p class="my-0 article-text"><i class="fa-regular fa-newspaper"></i> <strong>Articulos</strong></p></div>
       </div>
-      <div class="row">
+      <div class="row mt-5">
         <div class="col container-article1">
           <div class="subcontainer-article1">
             <div class="program-img-container">
@@ -210,8 +211,106 @@
           </div>
         </div>
       </div>
-    </div></main>
-    <footer></footer>
+      </div>
+    </main>
+    <footer id="contact">
+      <div class="footer-container container-fluid">
+        <div class="txtcontact-container">
+          <p class="contact-text">
+            Contact <i class="fa-solid fa-address-book"></i>
+          </p>
+        </div>
+        <div class="footer-subcontainer container">
+          <div class="contact1 col">
+            <div class="contact-container">
+              <p class="pcompany"><i class="fa-regular fa-building"></i> MILTON F. RUIZ</p>
+              <p class="pphone">
+                <i class="fa-solid fa-phone"></i> 341-3245896
+              </p>
+              <p class="pemail">
+                <a
+                  href="mailto:miltonfruizok@gmail.com"
+                  target="_blank"
+                  class="email-link"
+                  ><i class="fa-solid fa-envelope box"></i
+                  > miltonfruizok@gmail.com</a
+                >
+              </p>
+              <p class="plocation">
+                <i class="fa-solid fa-location-dot"></i> Rosario, Santa Fe
+              </p>
+              <p class="plocation">
+                <i class="fa-solid fa-user"></i>  CIF. B27453589
+              </p>
+            </div>
+          </div>
+          <div class="contact3 col">
+            <div class="contact-container">
+              <p class="pcompany"><i class="fa-solid fa-circle-info"></i> INFORMACIÓN</p>
+              <p class="paviso">
+                 Aviso legal
+              </p>
+              <p class="ptermino">
+                Términos de uso
+              </p>
+              <p class="ppolitica">
+                <a href="./politicas.html" target="_blank">Política de privacidad</a>
+              </p>
+              <p class="psoporte">
+                Soporte técnico de Redes
+              </p>
+            </div>
+          </div>
+          <div class="contact3 col">
+            <div class="contact-container">
+              <p class="pcompany"><i class="fa-solid fa-map"></i> MAPA</p>
+              <div class="container-maps">
+                <iframe
+                  class="utn-ubication"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.8678335252102!2d-60.64639392525914!3d-32.95449867228352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab11d0eb49c3%3A0x11f1d3d54f950dd0!2sUniversidad%20Tecnol%C3%B3gica%20Nacional%20%7C%20Facultad%20Regional%20Rosario!5e0!3m2!1ses-419!2sar!4v1725843389225!5m2!1ses-419!2sar"
+                  width="200"
+                  height="120"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="contact4 col">
+            
+            <form>
+              <p class="psubs"><i class="fa-solid fa-bell"></i>  SUBSCRIBITE</p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  He leído y acepto la política de privacidad.
+                </label>
+              </div>
+              <div class="sendme-container2">
+                <label for="email"></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+                <button type="submit" class="submit-contact">Quiero subscribirme <i class="fa-solid fa-hand-pointer"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="copyright-container mt-3">
+          <div class="copyright-csubcontainer">
+            <p class="copyright-text">
+              © 2024 Milton Franco Ruiz. All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
