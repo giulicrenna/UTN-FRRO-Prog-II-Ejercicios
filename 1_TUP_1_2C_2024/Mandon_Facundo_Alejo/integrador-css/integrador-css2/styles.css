@@ -423,6 +423,11 @@ header {
     list-style: none;
 }
 
+a:hover{
+  color: #01b981;
+  transition-duration: 0.4s;
+}
+
 .contenedor-header{
     display: flex;
     max-width: 140rem;
