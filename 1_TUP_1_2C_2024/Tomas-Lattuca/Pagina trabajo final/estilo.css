@@ -1,0 +1,55 @@
+body{
+    background-image: url(./images/restofondo.jpg);
+    overflow-y: scroll;
+    min-height: 177vh;
+}
+ul{
+    display: flex;
+    justify-content: right;
+    color: white;
+    list-style-type: none;
+}
+nav{
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px
+}
+.nav-links{
+    justify-content: end;
+    margin-top: 50px;
+    padding-right: 20px;
+}
+.logo{
+    font-size: 30px;
+    color: white;
+    margin: 50px;
+}
+.nav-item{
+    margin: 10px;
+}
+.parrafos{
+    text-align: center;
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: green;
+    padding: 100px;
+    height: 200px;
+    width: 500px;
+    opacity: 75%;
+    margin: auto;
+    margin-top: 100px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.nav-item-login:hover{
+    background-color: rgb(60, 255, 0);
+    
+}
+.nav-item-login{
+    margin-top: 10px;
+}
+
