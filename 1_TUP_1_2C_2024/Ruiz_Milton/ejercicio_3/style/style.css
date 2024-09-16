@@ -1,0 +1,7 @@
+/*- - - - - - - - - N O R M A L Z A C I O N - - - - - - - -*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
