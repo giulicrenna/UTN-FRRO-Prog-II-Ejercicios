@@ -1,0 +1,103 @@
+body{
+    background-image: url(./images/restofondo.jpg);
+    overflow-y: scroll;
+    min-height: 177vh;
+}
+
+.menu-item {
+    display: inline-block;
+    max-width: 300px;
+    margin-left: 45px;
+    margin-top: 100px;
+    border: 40px solid green;
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255); 
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.menu-item p {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+h1{
+    text-align: center;
+    font-size: 75px;
+    font-family: Impact;
+    color: green;
+    border: 5px solid green;
+    border-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    margin: 40px auto;
+    text-transform: uppercase;
+    max-width: 30%;
+    background-color: white;
+}
+
+
+ul{
+    display: flex;
+    justify-content: right;
+    color: white;
+    list-style-type: none;
+}
+nav{
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px
+}
+.nav-links{
+    justify-content: end;
+    margin-top: 50px;
+    padding-right: 20px;
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    margin: 50px;
+}
+.nav-item{
+    margin: 10px;
+}
+
+h3{
+    text-align: center;
+    font-size: 75px;
+    font-family: Impact;
+    color: green;
+    border: 5px solid green;
+    border-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    margin: 40px auto;
+    text-transform: uppercase;
+    max-width: 30%;
+    background-color: white;
+}
+
+.bebidas{
+    display: inline-block;
+    max-width: 300px;
+    margin-left: 811px;
+    margin-top: 60px;
+    border: 40px solid green;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255); 
+    border-width: 2vh;
+    font-weight: bold;
+    font-size: large;
+}
+
+.nav-item-login{
+    margin-top: 10px;
+}

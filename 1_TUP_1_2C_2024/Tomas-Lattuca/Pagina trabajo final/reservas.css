@@ -1,0 +1,90 @@
+body{
+    background-image: url(./images/restofondo.jpg);
+    text-align: center;
+    
+}
+
+ul{
+    display: flex;
+    justify-content: right;
+    color: white;
+    list-style-type: none;
+}
+nav{
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px
+}
+.nav-links{
+    justify-content: end;
+    margin-top: 50px;
+    padding-right: 20px;
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    margin: 50px;
+}
+.nav-item{
+    margin: 10px;
+}
+
+.nav-item-login{
+    margin-top: 10px;
+}
+
+.cuadro{
+    height: 50px;
+    border: solid;
+    text-align: center;
+}
+
+.cuadro:hover{
+    border: solid color blue;
+    color: blue;
+}
+
+h1{
+    text-align: center;
+    font-size: 75px;
+    font-family: Impact;
+    color: green;
+    border: 5px solid green;
+    border-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    margin: 40px auto;
+    text-transform: uppercase;
+    max-width: 40%;
+    background-color: white;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    border: 10px, solid green;
+    margin: 40px auto;
+    border-color: black;
+    max-width: 20%;
+    background-color: green;
+}
+h3{
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    border: 10px, solid green;
+    margin: 40px auto;
+    border-color: black;
+    max-width: 20%;
+    background-color: green;
+}
+.boton{
+    margin-top: 10px;
+}
+.boton:hover{
+    color: blue;
+    background-color: green;
+}
