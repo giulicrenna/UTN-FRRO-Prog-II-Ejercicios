@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #491f1f;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 150px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 10%;
+}
+
+header nav a:hover {
+    background: #ee3333;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.busqueda {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline-color: #ee3333;
+}
+
+.botonBusqueda {
+    padding: 10px;
+    border: none;
+    background: #ee3333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botonBusqueda:hover {
+    background: #af2626;
+}
+
+.grid-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+main {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+article {
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    flex: 2;
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+article h2 {
+    margin-bottom: 0.5rem;
+}
+
+article p {
+    margin-bottom: 0.5rem;
+}
+
+article a {
+    color: #ee3333;
+}
+
+.comentarios form {
+    margin-top: 1rem;
+}
+
+.comentarios textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+aside {
+    flex: 1;
+    background: #9e525241;
+    padding: 1rem;
+}
+
+aside div {
+    margin-bottom: 1rem;
+}
+
+aside h2 {
+    margin-bottom: 0.5rem;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 0.5rem;
+}
+
+aside ul li a {
+    color: #ee3333;
+}
+
+#Seccion4 ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+#Seccion4 ul li a {
+    color: #333;
+}
+
+#Seccion4 ul li a:hover {
+    color: #4b29299c;
+}
+
+footer {
+    background: #491f1f;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer iframe {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #ee3333;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        flex-direction: column; 
+    }
+
+    article {
+        flex: 100%; 
+    }
+
+    aside {
+        margin-top: 1rem;
+    }
+    .logo img {
+        height: 100px;
+    }
+    
+    .busqueda,
+    .botonBusqueda {
+        font-size: 0.875rem;
+    }
+}
