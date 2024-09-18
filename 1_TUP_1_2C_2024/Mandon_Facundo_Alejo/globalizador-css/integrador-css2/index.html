@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Personal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b408879b64.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!--PRIMER PARTE DEL HEADER-->
+      <div class="container menu-nav">
+        <div class="logo">
+          <img
+            src="https://images.unsplash.com/photo-1599974816500-b7c5c6641b2d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8NTU5fGVufDB8fDB8fHww"
+            alt="Imagen del creador"
+          />
+          <a href="/">Facundo Mandon</a>
+        </div>
+        <nav class="navegacion">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre mi</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Habilidades</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!--SEGUNDA PARTE DEL HEADER-->
+      <section class="contenedor-header">
+        <div class="contenido-header">
+          <h1>Facundo Mandón</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+            temporibus, nulla cum ut aspernatur voluptatum libero repellendus
+            tempora sequi ad alias, pariatur repudiandae molestiae adipisci?
+            Libero repellendus unde illo dicta?
+          </p>
+          <div class="botones-header">
+            <a href="#">Enviar proyectos</a>
+            <a href="#">Leer articulos</a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://us.123rf.com/450wm/korionov/korionov1508/korionov150800044/43616862-monocromo-retrato-de-perfil-de-los-hombres-j%C3%B3venes.jpg"
+            alt="banner-header"
+          />
+        </div>
+        <div class="boton-busqueda">
+          <input type="text" placeholder="Buscar..." />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <div class="seccion-principal">
+        <h2>Últimos Artículos</h2>
+        <p class="parrafo-titulo">
+          Investigue los últimos artículos en los que trabajé
+        </p>
+        <!--1-->
+        <section>
+          <div class="articulo">
+            <!--categoría-->
+            <span class="etiqueta">DJANGO</span>
+            <h2><a href="#">Lorem ipsum dolor sit amet consectetum.</a></h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              praesentium, pariatur, ex, itaque dolorum veniam ducimus eaque
+              soluta aut rem hic. Eligendi quisquam omnis asperiores iure
+              maiores eius pariatur? Optio!
+            </p>
+            <div class="mas-informacion">
+              <a href="#">Leer más</a>
+              <span class="span-lectura">4 minutos de lectura</span>
+            </div>
+          </div>
+        </section>
+        <!--2-->
+        <section>
+          <div class="articulo">
+            <!--categoría-->
+            <span class="etiqueta">HTML</span>
+            <h2><a href="#">Lorem ipsum dolor sit amet consectetum.</a></h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              praesentium, pariatur, ex, itaque dolorum veniam ducimus eaque
+              soluta aut rem hic. Eligendi quisquam omnis asperiores iure
+              maiores eius pariatur? Optio!
+            </p>
+            <div class="mas-informacion">
+              <a href="#">Leer más</a>
+              <span class="span-lectura">4 minutos de lectura</span>
+            </div>
+          </div>
+        </section>
+        <!--3-->
+        <section>
+          <div class="articulo">
+            <!--categoría-->
+            <span class="etiqueta">CSS</span>
+            <h2><a href="#">Lorem ipsum dolor sit amet consectetum.</a></h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              praesentium, pariatur, ex, itaque dolorum veniam ducimus eaque
+              soluta aut rem hic. Eligendi quisquam omnis asperiores iure
+              maiores eius pariatur? Optio!
+            </p>
+            <div class="mas-informacion">
+              <a href="#">Leer más</a>
+              <span class="span-lectura">4 minutos de lectura</span>
+            </div>
+          </div>
+          <!--boton ver todos-->
+          <div class="contenedor-btn">
+            <a href="#" class="btn-ver-todos">Ver todos</a>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <!-- Sección de Categorías -->
+        <section class="categorias">
+            <h2>Categorías</h2>
+            <ul class="items-categorias">
+                <li><a href="#">Categoría 1</a></li>
+                <li><a href="#">Categoría 2</a></li>
+                <li><a href="#">Categoría 3</a></li>
+                <li><a href="#">Categoría 4</a></li>
+            </ul>
+        </section>
+    
+        <!-- Sección de Últimos Artículos -->
+        <section class="categorias">
+            <h2>Últimos Artículos</h2>
+            <ul class="items-categorias">
+                <li><a href="#">Artículo 1</a></li>
+                <li><a href="#">Artículo 2</a></li>
+                <li><a href="#">Artículo 3</a></li>
+                <li><a href="#">Artículo 4</a></li>
+            </ul>
+        </section>
+    
+        <!-- Widget de Redes Sociales -->
+        <section class="categorias">
+            <h2>Síguenos</h2>
+            <ul class="items-categorias">
+                <li><a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a></li>
+                <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+            </ul>
+        </section>
+    </aside>
+    </main>
+    
+
+
+    <footer>
+      <div class="contenedor-footer">
+        <div class="fuentes-footer">
+          <h3>Recursos</h3>
+          <ul>
+            <li><a href="#">Mapa del sitio</a></li>
+            <li><a href="#">RSS Feed</a></li>
+            <li><a href="#">Solicitud de función</a></li>
+            <li><a href="#">Reportar un error</a></li>
+          </ul>
+        </div>
+        <div class="paginas-footer">
+          <h3>Paginas</h3>
+          <ul>
+            <li><a href="#">Contáctame</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+        <div class="explorar-footer">
+          <h3>Explorar</h3>
+          <ul>
+            <li><a href="#">Artículos</a></li>
+            <li><a href="#">Proyectos Django</a></li>
+            <li><a href="#">Libros</a></li>
+            <li><a href="#">Cursos</a></li>
+          </ul>
+        </div>
+        <div class="proyectos-footer">
+          <h3>Proyectos</h3>
+          <ul>
+            <li><a href="#">Enviar un proyecto</a></li>
+            <li><a href="#">Redes sociales</a></li>
+            <li><a href="#">Proyectos de código abierto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contenedor-footer2">
+        <div class="footer-final">
+          <p>&copy; 2024 - Blog Personal | Desarrollado por Facundo Mandon</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

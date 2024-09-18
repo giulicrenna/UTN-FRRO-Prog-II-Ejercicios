@@ -1,0 +1,42 @@
+
+.navegador {
+    display: flex;
+    background-color: rgb(127, 132, 255);
+    justify-content: right;
+}
+
+.container {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    background-color: rgb(252, 95, 95);
+    gap: 1em;
+}
+
+.item {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+    text-decoration-color: white;
+
+}
+.item:hover {
+    color: rgb(225, 225, 40);
+}
+.container-head {
+    flex: 1;
+    display: flex;
+    margin: 0;
+    padding: 0px;
+    background-color: rgb(252, 95, 95);
+}
+
+.item-1 {
+    flex: 1;
+}
+
+.item-resume {
+    display: flex;
+    justify-content: space-between;
+}
+
