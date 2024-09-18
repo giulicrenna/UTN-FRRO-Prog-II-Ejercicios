@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 /*NORMALIZADO*/
 
+
 *{
     box-sizing:border-box;
 }
@@ -12,6 +13,7 @@ html{
 body{
     font-family: 'Open Sans';
     font-size: 1.6rem;
+    background-color: #16223e;
 }
 
 img {
@@ -487,14 +489,14 @@ main{
     border:1px solid transparent;
     background-color: #1f2735;
     color: #d4d4d4;
+    display: flex;
 }
 
 .seccion-principal{
     margin: 0;
-    max-width: 70%;
-    padding: 8rem 0;
+    width: 90%;
+    padding: 8rem 3rem;
     background-color:#0f172a;
-    float: left;
 }
 
 .seccion-principal h2,.seccion-principal p{
@@ -593,45 +595,54 @@ main{
 /*Aside*/
 
 .sidebar {
-  display: flex;
- margin: 0 auto;
- max-width: 10%; 
+  width: 10%;
  background-color:#16223e;
  border:2px solid #0b0b0b;
  border-radius: 2px;
+ color: white;
+ font-size: 0.9rem;
+ background-color: #0e0c26;
 }
 
 .categorias {
-  display: flex;
-  padding: 1rem;
+  margin: 0 auto;
+  display: block;
+  padding: 1rem 0 0 0;
+
+
 }
 
-.items-categorias {
-
+.items-categorias a{
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
+.items-categorias a:-webkit-any-link{
+  color: white;
+}
+
+.items-categorias a:hover{
+  color: #01b981;
+  transition-duration: 0.4s;
+}
 /*Footer*/
 
 footer{
-    background-color: #0f172a;
+    background-color: #16223e;
     border: 1px solid transparent;
-    display:inline-block;
 }
 
 .contenedor-footer{
     color: #fff;
-    width: 100vh;
     margin: 0 auto;
     display: flex;
-    padding: 10rem 1rem;
-    justify-content: space-between;
-    float: left;
+    padding: 5rem 5rem;
+    justify-content: space-around;
     background-color: #16223e;
 }
 
 .contenedor-footer ul{
     padding: 0;
-
 }
 
 .contenedor-footer li{
@@ -650,12 +661,12 @@ footer{
 }
 
 .contenedor-footer2{
+  display: flex;
+  justify-content: center;
     background-color: #1f2735;
     color: #a3a3a3;
     padding: 1.5rem 0;
-    float: left;
-    background-color: #16223e;
-    width: 100vh;
+    background-color: #121826;
 }
 
 .footer-final{
