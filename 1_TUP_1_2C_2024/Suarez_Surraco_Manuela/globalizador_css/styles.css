@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+body {
+    background-color: bisque;
+}
+
+header {
+    background-color: rgb(162, 244, 158);
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 5%;
+}
+
+header img {
+    width: 8%;
+}
+
+nav {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu__lista {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu__lista li a{
+    font-size: 1.3em;
+    transition: all .1s ease-in-out;
+}
+
+.menu__lista li a:hover {
+    color: #fdfdfd;
+}
+
+main {
+    display: flex;
+}
+
+.side-bar {
+    background-color: #9f1010;
+    padding: 1%;
+    text-align: start;
+}
+
+.side-bar h3 {
+    font-size: 1.5rem;
+    color: #fdfdfd;
+    margin-bottom: 10%;
+    padding-bottom: 5%;
+    border-bottom: #fdfdfd 1px solid;
+}
+
+i {
+    color: #fdfdfd;
+}
+
+.side-bar ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.side-bar ul li{
+    font-size: 1.2rem;
+    margin-bottom: 15%;
+}
+
+.side-bar ul li a {
+    color: #fdfdfd;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+}
+
+.side-bar ul li a:hover {
+    font-size: 1.3rem;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner__titulo {
+    font-size: 4rem;
+    color: #fdfdfd;
+    font-family: Pacifico, cursive;
+    position: absolute;
+    left: 50%;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.recetas {
+    margin: 1% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.receta {
+    margin: 2% 0;
+    padding: 1%;
+    background: #fdfdfd;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgb(171, 153, 131) 10px 10px 10px;
+}
+
+.receta__contenido {
+    padding: 1rem;
+}
+
+.receta__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+}
+
+.receta__descripcion {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 5%;
+}
+
+.receta__boton {
+    background: #da2b1f;
+    border: none;
+    border-radius: 5px;
+    color: #fdfdfd;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all .1s ease-in-out;
+}
+
+.receta__boton:hover {
+    cursor: pointer;
+    background: #9f1010;
+}
+
+footer {
+    background-color: chocolate;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe {
+    width: 70%;
+    margin-bottom: 2%;
+}
