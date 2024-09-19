@@ -5,3 +5,53 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/cyber.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  border-radius: 3px;
+  animation: slide 32s infinite;
+}
+a {
+  border: 2px solid yellow;
+  text-decoration: none;
+  padding: 15px;
+}
+nav {
+  border: 2px solid blue;
+  padding: 2%;
+}
+
+@keyframes slide {
+  25% {
+    background-image: url(../assets/defense.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background-image: url(../assets/server.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  75% {
+    background-image: url(../assets/network.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background-image: url(../assets/cyber.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
