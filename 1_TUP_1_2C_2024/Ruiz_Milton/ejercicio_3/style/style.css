@@ -4,6 +4,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Kanit", sans-serif;
 }
 .header-container {
   display: flex;
@@ -11,7 +12,6 @@
   justify-content: center;
   align-items: center;
   background-image: url(../assets/cyber.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -20,38 +20,52 @@
   animation: slide 32s infinite;
 }
 a {
-  border: 2px solid yellow;
+  border: 1px solid yellow;
   text-decoration: none;
-  padding: 15px;
+  padding: 7px 20px 7px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
 }
-nav {
+.nav {
   border: 2px solid blue;
   padding: 2%;
+  display: flex;
 }
-
+a .fa-solid {
+  font-size: 25px;
+}
 @keyframes slide {
   25% {
     background-image: url(../assets/defense.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   50% {
     background-image: url(../assets/server.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   75% {
     background-image: url(../assets/network.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   100% {
     background-image: url(../assets/cyber.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
+}
+.welcome-text {
+  font-size: 35px;
+  color: white;
+  letter-spacing: 10px;
+  filter: drop-shadow(0 0 15px white);
+  text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black,
+    1px 1px 0px black;
 }
