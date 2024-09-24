@@ -6,6 +6,8 @@
   scroll-behavior: smooth;
   font-family: "Kanit", sans-serif;
 }
+/*- - - - - - - - - H O M E - - - - - - - -*/
+
 .header-container {
   display: flex;
   flex-direction: column;
@@ -41,7 +43,7 @@ nav a {
 nav a:hover {
   border: 1px solid white;
   transition: 1s;
-  background-color: yellow;
+  background-color: rgb(173, 173, 43);
 }
 .nav {
   padding: 20px;
@@ -102,7 +104,6 @@ nav a .fa-solid {
   color: gray;
   font-size: 15px;
   text-align: center;
-  padding: 100px;
   font-weight: 300;
 }
 .fa-person-digging {
@@ -136,7 +137,7 @@ nav a .fa-solid {
 .email:hover,
 .linkedin:hover {
   transition: 1s;
-  color: yellow;
+  color: rgb(173, 173, 43);
 }
 .copyright-text {
   font-size: 10px;
@@ -145,5 +146,66 @@ nav a .fa-solid {
   margin-top: 80px;
 }
 .active-link {
-  border: 1px solid yellow;
+  border: 1px solid rgb(173, 173, 43);
+}
+/*- - - - - - - - - P U B L I C A T I O N S - - - - - - - -*/
+.section-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.recent-publications {
+  color: black;
+  font-size: 20px;
+}
+.article-container {
+  display: flex;
+  border: 1px solid rgba(128, 128, 128, 0.459);
+  width: 50%;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nd-text {
+  padding: 10px 30px 10px 30px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.description-text {
+  text-align: justify;
+  padding: 10px 30px 10px 30px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.459);
+  font-style: oblique;
+}
+.time-text {
+  padding: 10px 30px 10px 30px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.61);
+}
+.read-more {
+  color: blue;
+  font-size: 15px;
+  padding: 10px 0px 10px 30px;
+  text-decoration: none;
+  width: 28%;
+  transition: 1s;
+  color: rgb(173, 173, 43);
+}
+.read-more:hover {
+  color: rgb(92, 124, 29);
+  transition: 1s;
+}
+.fa-angles-right {
+  font-size: 11px;
+}
+.network-defense {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
