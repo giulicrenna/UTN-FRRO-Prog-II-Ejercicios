@@ -39,6 +39,7 @@ nav a {
   transition: 1s;
 }
 nav a:hover {
+  border: 1px solid white;
   transition: 1s;
   background-color: yellow;
 }
@@ -142,4 +143,7 @@ nav a .fa-solid {
   color: white;
   font-weight: 100;
   margin-top: 80px;
+}
+.active-link {
+  border: 1px solid yellow;
 }
