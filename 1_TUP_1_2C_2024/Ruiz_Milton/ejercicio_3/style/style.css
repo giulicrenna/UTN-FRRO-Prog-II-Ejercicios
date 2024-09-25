@@ -133,6 +133,7 @@ nav a .fa-solid {
   transition: 1s;
   padding: 5px;
   width: 250px;
+  letter-spacing: 1px;
 }
 .email:hover,
 .linkedin:hover {
