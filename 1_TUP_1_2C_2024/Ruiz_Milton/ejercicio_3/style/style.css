@@ -217,6 +217,7 @@ nav a .fa-solid {
 }
 .fa-network-wired,
 .fa-shield-halved,
-.fa-user-secret {
+.fa-user-secret,
+.fa-server {
   font-size: 13px;
 }
