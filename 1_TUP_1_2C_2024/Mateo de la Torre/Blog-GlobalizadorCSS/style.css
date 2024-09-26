@@ -1,0 +1,395 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,9,64,255);
+    position: fixed;
+    top: 0;left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .btn-menu {
+    float: left;
+    line-height: 100px;
+}
+
+.logo img{
+    height: 60px;
+    width: 110px;
+    margin-right: 50px;
+}
+
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo h1{
+    color: #fff;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-right: 50px;
+    padding: 5px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+    transition: width 0.4s ease;
+    background-color: white;
+}
+
+.search-bar input::placeholder {
+    color: grey;
+}
+
+.search-bar button {
+    background-color: rgba(0,9,64,255);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.search-bar button:hover {
+    background-color: #0f0380;
+}
+
+
+/* MAIN */
+main {
+    background-color: #f4f4f4;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; 
+    margin: 20px;
+}
+
+
+.article {
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 0;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.article h2 {
+    margin-top: 0;
+}
+
+.article .date {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.article .content {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+
+.comments {
+    margin-top: 20px;
+}
+
+.comments h3 {
+    margin-bottom: 10px;
+}
+
+.comment-form {
+    width: 100%;
+    max-width: 90%;
+    margin-left: 30px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.comment-form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0,9,64,255);
+    transition: background-color 0.3s ease;
+    color: white;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0f0380;
+}
+
+
+
+/* ASIDE */
+#btn-menu{
+    display: none;
+}
+
+.container-menu{
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1001;
+}
+
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background-color: rgba(0,9,64,255);
+    height: 100vh;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+
+.cont-menu nav{
+    transform: translateY(15%);
+}
+
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background-color: grey;
+}
+
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer{
+    color: #ddd;
+    margin-top: 8%;
+    padding: 15px;
+    background-color: rgba(0,9,64,255);
+}
+
+footer a{
+    color: floralwhite;
+    text-decoration: none;
+}
+
+@media (max-width: 940px) {
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-right: 0;
+    width: 100%;
+    flex: 1 0 auto;
+    justify-content: center;
+    padding-top: 350px;
+}
+
+.article {
+    margin-top: 10px;
+    padding: 15px;
+    max-width: 90%;
+    border-radius: 15px; 
+    text-align: center;
+}
+
+.comment-form {
+    width: 100%;
+    max-width: 100%;
+    margin-left: -10px;
+}
+
+.sidebar {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.header {
+    flex-direction: column; 
+    height: auto;
+    padding: 10px 15px;
+    align-items: center;
+}
+
+.container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 0;
+    height: 40px;
+    text-align: center;
+    align-self: center;
+}
+
+.btn-menu {
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.menu a {
+    font-size: 14px;
+    padding: 10px 12px;
+    margin-right: 0;
+}
+
+.search-bar {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+}
+
+.search-bar button {
+    margin-left: 8px;
+}
+
+.container-menu{
+    height: 100%;
+}
+
+.cont-menu{
+    height: 100%;
+}
+
+footer {
+    padding: 10px 15px; 
+    margin-bottom: 0;
+    width: 100%;
+}
+
+}
