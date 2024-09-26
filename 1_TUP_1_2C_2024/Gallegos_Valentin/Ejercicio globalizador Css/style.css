@@ -1,0 +1,210 @@
+*{
+    background-color: #1e1e1e;
+    color: #d3d3d3
+}
+#logotipo
+{
+    border: solid black;
+    max-width: 23.547880690737834vw;
+    max-height: 24.50980392156863vh;
+    padding-left: 3.1397174254317113vw;
+    padding-right: 3.1397174254317113vw;
+    background-color:rgb(149, 56, 236) ;
+    position:relative;
+    right: 3.790750568612585vw;
+}
+
+header{
+    display:flex;   
+    justify-content: space-between;
+    margin-right: 35%;
+}
+#search{
+    width:22.744503411675513vw;
+    padding: 1.6025641025641026vh 1.1372251705837755vw;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0 4px 6px rgba(1, 1, 1, 1);
+    font-size: 1.2130401819560273vw;
+    height:1.4423076923076923vh;
+    border: 5px solid rgb(10, 10, 10);
+}
+    
+
+#button{
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 6.410256410256411vh;
+    margin-left:0;
+    position: relative;
+    left:-0.530705079605762vw;
+    box-shadow: 0 0.3032600454890068vw 0.9615384615384616vh rgba(1, 1, 1, 1);
+    border: 5px solid rgb(10, 10, 10);
+}
+    
+nav > div:nth-child(2){
+   padding: 1.6025641025641026vh 0.7581501137225171vw;
+    position:relative;
+    left: 46.24715693707354vw;
+    display: flex;
+    flex-direction: column;
+    width: 16.224412433661865vw;
+    align-items: flex-start;
+    border: solid rgb(149, 56, 236) 35px;
+    background-color: rgb(149, 56, 236);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    height: 24.03846153846154vh;
+    border-top: 5px;
+
+}
+#link_inicio{
+    max-width: 10.993176648976497vw;
+    max-height: 24.03846153846154vh;
+}
+#zamora
+{
+    height: 48.07692307692308vh;
+    width: 37.90750568612585vw;
+    position: relative;
+    left: 30.32600454890068vw;
+}
+.texto
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.Articulo1>p{
+    font-size: 1.1372251705837755vw;
+    width:30.32600454890068vw;
+    position:relative;
+    left: 34.116755117513264vw;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.Articulo2>p{
+    font-size: 1.1372251705837755vwpx;
+    width:30.32600454890068vw;
+    position:relative;
+    left: 34.116755117513264vw;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.Articulo3>p{
+    font-size: 1.1372251705837755vw;
+    width:30.32600454890068vw;
+    position:relative;
+    left: 34.116755117513264vw;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.Intereses{
+    background-color: rgb(149, 56, 236);
+}
+
+#capacitacion{
+    
+    height: 48.07692307692308vh;
+    width: 47vw;
+    position: relative;
+    left: 350px;
+    
+}
+
+#partido{
+    height: 52.88461538461539vh;
+    width: 37.90750568612585vw;
+    position: relative;
+    left: 30.17437452615618vw;
+}
+.comentarios{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.comentarios>input:first-child{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    border: white solid 1px;
+}
+.comentarios>input:last-child{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width:6.0652009097801365vw;
+    justify-self: end;
+}
+
+aside{
+    background-color: #b67066;
+    display: flex;
+    flex-direction: column;
+    width: 18.953752843062926vw;
+    position:sticky;
+    left:0;
+    top:10;
+    bottom:0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.sidebar{
+    background-color: #b67066;
+    width: 7.372251705837757vw;
+    
+}
+#titulo1{
+    background-color: #b67066;
+    width:37.90750568612585vw;
+    position:relative;
+    left:30.70507960576194vw;
+    border-radius: 30px;
+}
+
+#titulo2{
+    background-color: #b67066;
+    width:39.04473085670963vw;
+    position:relative;
+    left:30.70507960576194vw;
+    border-radius: 30px;
+}
+
+#titulo3{
+    background-color: #b67066;
+    width:37.90750568612585vw;
+    position:relative;
+    left:30.70507960576194vw;
+    border-radius: 30px;
+    font-size: large;
+}
+
+.Fechas{
+    background-color: rgb(149, 56, 236);
+    width:15.16300227445034vw;
+    position:relative;
+    left:41.69825625473844vw;
+    border-radius: 30px;
+    font-size: large;
+}
+footer{
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    position:relative;
+    bottom: 48.07692307692308vh;
+    margin-left:37.90750568612585vw;
+}
+.Links:hover{
+    color: red;
+}
+footer>div:nth-child(3)>ul{
+    list-style: none;
+}
