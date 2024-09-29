@@ -22,13 +22,13 @@
 }
 main {
   background-color: #f0f0f0;
-  height: 1150px;
+  height: 1300px;
 }
 nav a {
   border: 1px solid white;
   text-decoration: none;
   padding: 7px 20px 7px 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   margin: 10px;
   color: white;
   display: flex;
@@ -51,7 +51,6 @@ nav a:hover {
 .nav {
   padding: 20px;
   display: flex;
-  margin-bottom: 50px;
 }
 nav a .fa-solid {
   font-size: 18px;
@@ -118,6 +117,7 @@ nav a .fa-solid {
   text-align: center;
 }
 .h3-class {
+  letter-spacing: 5px;
   font-size: 23px;
   color: white;
   padding: 50px;
@@ -155,7 +155,8 @@ nav a .fa-solid {
   justify-content: space-evenly;
   align-items: center;
 }
-.recent-publications {
+.recent-publications,
+.about-me-text {
   padding: 90px 0px 40px 0px;
   color: black;
   font-size: 20px;
@@ -193,7 +194,8 @@ nav a .fa-solid {
   font-size: 10px;
   color: rgba(0, 0, 0, 0.61);
 }
-.read-more {
+.read-more,
+.show-credential-text {
   color: blue;
   font-size: 15px;
   padding: 10px 0px 10px 30px;
@@ -201,7 +203,11 @@ nav a .fa-solid {
   width: 28%;
   color: rgb(173, 173, 43);
 }
-.read-more:hover {
+.show-credential-text {
+  width: 33%;
+}
+.read-more:hover,
+.show-credential-text:hover {
   color: rgb(92, 124, 29);
   transition: 1s;
 }
@@ -218,4 +224,22 @@ nav a .fa-solid {
 .fa-user-secret,
 .fa-server {
   font-size: 13px;
+}
+/*- - - - - - - - - A B O U T M E - - - - - - - -*/
+.p-class-about-me {
+  font-size: 12px;
+  text-align: justify;
+  width: 50%;
+  color: black;
+  padding: 30px;
+  margin-bottom: 50px;
+  background-color: white;
+  border-left: 4px solid yellow;
+  font-weight: 300;
+}
+.section-class-about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
