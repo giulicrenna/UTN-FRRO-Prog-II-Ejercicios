@@ -1,1 +1,29 @@
-
+/*- - - - - - - - - N O R M A L Z A C I O N - - - - - - - -*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Kanit", sans-serif;
+}
+/*- - - - - - - - - H E A D E R - - - - - - - -*/
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+.h1-text {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 5px;
+}
