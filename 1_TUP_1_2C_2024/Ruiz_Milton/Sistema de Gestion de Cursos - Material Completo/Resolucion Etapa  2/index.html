@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Cursos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sistema de Gestión de Cursos</h1>
+    
+    <!-- Formulario para agregar cursos -->
+    <h2>Agregar Curso</h2>
+    <form id="form-curso">
+      <label for="nombre-curso">Nombre del curso:</label>
+      <input type="text" id="nombre-curso" required>
+      
+      <label for="profesor-curso">Profesor a cargo:</label>
+      <input type="text" id="profesor-curso" required>
+      
+      <button type="submit">Agregar Curso</button>
+    </form>
+    
+    <!-- Formulario para agregar estudiantes -->
+    <h2>Agregar Estudiante</h2>
+    <form id="form-estudiante">
+      <label for="nombre-estudiante">Nombre del estudiante:</label>
+      <input type="text" id="nombre-estudiante" required>
+      
+      <label for="edad-estudiante">Edad:</label>
+      <input type="number" id="edad-estudiante" required>
+      
+      <label for="nota-estudiante">Nota:</label>
+      <input type="number" id="nota-estudiante" required>
+      
+      <label for="curso-estudiante">Curso:</label>
+      <select id="curso-estudiante">
+        <!-- Opciones de curso dinámicamente -->
+      </select>
+      
+      <button type="submit">Agregar Estudiante</button>
+    </form>
+    
+    <!-- Listado de cursos y estudiantes -->
+    <h2>Listado de Cursos y Estudiantes</h2>
+    <div id="lista-cursos">
+      <!-- Cursos y estudiantes se mostrarán aquí -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
