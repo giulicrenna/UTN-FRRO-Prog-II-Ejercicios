@@ -42,10 +42,20 @@ class Curso {
 let cursos = [];
 
 // DOM elements
+//-------------------------------------------------------------------------//
+
 const formCurso = document.getElementById("form-curso");
 const formEstudiante = document.getElementById("form-estudiante");
 const cursoEstudianteSelect = document.getElementById("curso-estudiante");
 const listaCursos = document.getElementById("lista-cursos");
+const nombreCurso = document.getElementById("nombre-curso");
+const guardarEdicion = document.getElementById("guardar-edicion");
+const cancelarEdicion = document.getElementById("cancelar-edicion");
+const formularioEdicion = document.getElementById("formulario-edicion");
+const nuevoNombreCurso = document.getElementById("nuevo-nombre-curso");
+const nuevoNombreProfesor = document.getElementById("nuevo-nombre-profesor");
+
+//-------------------------------------------------------------------------//
 
 // Evento para agregar un curso
 formCurso.addEventListener("submit", (e) => {
@@ -71,43 +81,16 @@ formCurso.addEventListener("submit", (e) => {
 
 //--------------------------- Función para eliminar un curso ---------------------------
 function eliminarCurso(nombreCurso) {
-  // Busco el indice para eliminar (el curso)
   const indice = cursos.findIndex((curso) => curso.nombre === nombreCurso);
   if (indice !== -1) {
-    // Elimino
     cursos.splice(indice, 1);
-    // Actualizo lista de cursos
     actualizarCursosSelect();
-    // Muestro cursos actualizados
     mostrarCursos();
   }
-  //Acción al hacer click
   botonEliminar.addEventListener("click", () => {
-    const nombreCurso = document.getElementById("nombre-curso").value;
-    eliminarCurso(nombreCurso);
+    eliminarCurso(nombreCurso.value);
   });
 }
-//--------------------------- Función para editar un curso y el nombre del profesor ---------------------------
-function editarCurso(
-  nombreCursoAntiguo,
-  nuevoNombreCurso,
-  nuevoNombreProfesor
-) {
-  // Busco el índice del curso a editar
-  const indice = cursos.findIndex(
-    (curso) => curso.nombre === nombreCursoAntiguo
-  );
-  if (indice !== -1) {
-    // Actualizo el nombre del curso y del profesor
-    cursos[indice].nombre = nuevoNombreCurso;
-    cursos[indice].profesor = nuevoNombreProfesor;
-    // Actualizo lista de cursos
-    actualizarCursosSelect();
-    // Muestro cursos actualizados
-    mostrarCursos();
-  }
-}
-
 //--------------------------------------------------------------------------------------
 
 // Evento para agregar un estudiante
@@ -155,7 +138,7 @@ function actualizarCursosSelect() {
 // Variables globales
 let cursoActual = null;
 
-//--------------------------- Función para editar un curso y el nombre del profesor en los campos del formulario ---------------------------
+//--------------------- Función para editar campos de Cursos --------------------//
 function editarCurso(
   nombreCursoAntiguo,
   nuevoNombreCurso,
@@ -173,12 +156,12 @@ function editarCurso(
 }
 
 // Función para mostrar los cursos y estudiantes con botones eliminar y editar
+//-----------------------------------------------------------------------------//
 function mostrarCursos() {
   listaCursos.innerHTML = "";
   cursos.forEach((curso) => {
     let cursoDiv = document.createElement("div");
     cursoDiv.classList.add("curso");
-
     cursoDiv.innerHTML = `
         <h3>Curso: ${curso.nombre} (Profesor: ${curso.profesor})</h3>
         <p><strong>Promedio:</strong> ${curso.obtenerPromedio()}</p>
@@ -193,8 +176,7 @@ function mostrarCursos() {
       `;
     listaCursos.appendChild(cursoDiv);
   });
-
-  // Creación de botón Eliminar + función
+  // Creación de botón Eliminar + función eliminarCurso()
   const botonEliminar = document.querySelectorAll(".eliminar");
   botonEliminar.forEach((boton) => {
     boton.addEventListener("click", () => {
@@ -202,17 +184,32 @@ function mostrarCursos() {
       eliminarCurso(nombreCurso);
     });
   });
-
   // Creación de botón Editar + función
   const botonEditar = document.querySelectorAll(".editar");
   botonEditar.forEach((boton) => {
     boton.addEventListener("click", () => {
       const nombreCurso = boton.getAttribute("nombre");
       cursoActual = cursos.find((c) => c.nombre === nombreCurso);
-      document.getElementById("nuevo-nombre-curso").value = cursoActual.nombre;
-      document.getElementById("nuevo-nombre-profesor").value =
-        cursoActual.profesor;
-      document.getElementById("formulario-edicion").style.display = "block";
+      nuevoNombreCurso.value = cursoActual.nombre;
+      nuevoNombreProfesor.value = cursoActual.profesor;
+      formularioEdicion.style.display = "block";
     });
   });
 }
+//-----------------------------------------------------------------------------//
+// Guardar edicion
+guardarEdicion.addEventListener("click", () => {
+  if (nuevoNombreCurso.value && nuevoNombreProfesor.value) {
+    editarCurso(
+      cursoActual.nombre,
+      nuevoNombreCurso.value,
+      nuevoNombreProfesor.value
+    );
+    formularioEdicion.style.display = "none";
+  }
+});
+// Cancelar edición
+cancelarEdicion.addEventListener("click", () => {
+  formularioEdicion.style.display = "none";
+});
+//-----------------------------------------------------------------------------//
