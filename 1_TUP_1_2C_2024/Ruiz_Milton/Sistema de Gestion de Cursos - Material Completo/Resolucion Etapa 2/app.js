@@ -1,3 +1,10 @@
+//----------------------------- Importacion de Funciones -----------------------------//
+
+import { eliminarCurso } from "../Resolución Etapa 3/etapa3.js";
+import { cursoActual } from "../Resolución Etapa 3/etapa3.js";
+
+//----------------------------------------------------------------------------------//
+
 // Clase Estudiante
 class Estudiante {
   constructor(nombre, edad, nota) {
@@ -39,93 +46,62 @@ class Curso {
 }
 
 // Arreglo para almacenar los cursos
-let cursos = [];
+export let cursos = [];
 
 // DOM elements
 //-------------------------------------------------------------------------//
 
 const formCurso = document.getElementById("form-curso");
 const formEstudiante = document.getElementById("form-estudiante");
+const edadEstudiante = document.getElementById("edad-estudiante");
+const notaEstudiante = document.getElementById("nota-estudiante");
 const cursoEstudianteSelect = document.getElementById("curso-estudiante");
 const listaCursos = document.getElementById("lista-cursos");
 const nombreCurso = document.getElementById("nombre-curso");
-const guardarEdicion = document.getElementById("guardar-edicion");
-const cancelarEdicion = document.getElementById("cancelar-edicion");
 const formularioEdicion = document.getElementById("formulario-edicion");
 const nuevoNombreCurso = document.getElementById("nuevo-nombre-curso");
 const nuevoNombreProfesor = document.getElementById("nuevo-nombre-profesor");
+const profesorCurso = document.getElementById("profesor-curso");
 
-//-------------------------------------------------------------------------//
+//--------------------- Evento para agregar un curso ----------------------//
 
-// Evento para agregar un curso
 formCurso.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // Capturar datos del formulario
-  const nombreCurso = document.getElementById("nombre-curso").value;
-  const profesorCurso = document.getElementById("profesor-curso").value;
-
-  // Crear un nuevo curso
-  const nuevoCurso = new Curso(nombreCurso, profesorCurso);
+  const nuevoCurso = new Curso(nombreCurso.value, profesorCurso.value);
   cursos.push(nuevoCurso);
-
-  // Limpiar formulario
   formCurso.reset();
-
-  // Actualizar la lista de cursos en el select
   actualizarCursosSelect();
-
-  // Mostrar los cursos
   mostrarCursos();
 });
 
-//--------------------------- Función para eliminar un curso ---------------------------
-function eliminarCurso(nombreCurso) {
-  const indice = cursos.findIndex((curso) => curso.nombre === nombreCurso);
-  if (indice !== -1) {
-    cursos.splice(indice, 1);
-    actualizarCursosSelect();
-    mostrarCursos();
-  }
-  botonEliminar.addEventListener("click", () => {
-    eliminarCurso(nombreCurso.value);
-  });
-}
-//--------------------------------------------------------------------------------------
+//--------------------- Evento para agregar un curso ----------------------//
 
-// Evento para agregar un estudiante
 formEstudiante.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // Capturar datos del formulario
   const nombreEstudiante = document.getElementById("nombre-estudiante").value;
-  const edadEstudiante = parseInt(
-    document.getElementById("edad-estudiante").value
-  );
-  const notaEstudiante = parseFloat(
-    document.getElementById("nota-estudiante").value
-  );
+  const edadEstudianteValor = parseInt(edadEstudiante.value);
+  const notaEstudianteValor = parseFloat(notaEstudiante.value);
   const cursoIndex = cursoEstudianteSelect.value;
-
-  // Crear un nuevo estudiante
+  if (edadEstudianteValor <= 0) {
+    alert("La edad debe ser mayor que cero.");
+    return;
+  }
+  if (notaEstudianteValor < 0 || notaEstudianteValor > 10) {
+    alert("La nota debe estar entre 0 y 10.");
+    return;
+  }
   const nuevoEstudiante = new Estudiante(
     nombreEstudiante,
-    edadEstudiante,
-    notaEstudiante
+    edadEstudianteValor,
+    notaEstudianteValor
   );
-
-  // Agregar estudiante al curso seleccionado
   cursos[cursoIndex].agregarEstudiante(nuevoEstudiante);
-
-  // Limpiar formulario
   formEstudiante.reset();
-
-  // Mostrar los cursos actualizados
   mostrarCursos();
 });
+// ------------------- Función para actualizar el select de cursos--------------//
 
-// Función para actualizar el select de cursos
-function actualizarCursosSelect() {
+export function actualizarCursosSelect() {
   cursoEstudianteSelect.innerHTML = "";
   cursos.forEach((curso, index) => {
     let option = document.createElement("option");
@@ -134,30 +110,9 @@ function actualizarCursosSelect() {
     cursoEstudianteSelect.appendChild(option);
   });
 }
-
-// Variables globales
-let cursoActual = null;
-
-//--------------------- Función para editar campos de Cursos --------------------//
-function editarCurso(
-  nombreCursoAntiguo,
-  nuevoNombreCurso,
-  nuevoNombreProfesor
-) {
-  const indice = cursos.findIndex(
-    (curso) => curso.nombre === nombreCursoAntiguo
-  );
-  if (indice !== -1) {
-    cursos[indice].nombre = nuevoNombreCurso;
-    cursos[indice].profesor = nuevoNombreProfesor;
-    actualizarCursosSelect();
-    mostrarCursos();
-  }
-}
-
 // Función para mostrar los cursos y estudiantes con botones eliminar y editar
 //-----------------------------------------------------------------------------//
-function mostrarCursos() {
+export function mostrarCursos() {
   listaCursos.innerHTML = "";
   cursos.forEach((curso) => {
     let cursoDiv = document.createElement("div");
@@ -196,20 +151,4 @@ function mostrarCursos() {
     });
   });
 }
-//-----------------------------------------------------------------------------//
-// Guardar edicion
-guardarEdicion.addEventListener("click", () => {
-  if (nuevoNombreCurso.value && nuevoNombreProfesor.value) {
-    editarCurso(
-      cursoActual.nombre,
-      nuevoNombreCurso.value,
-      nuevoNombreProfesor.value
-    );
-    formularioEdicion.style.display = "none";
-  }
-});
-// Cancelar edición
-cancelarEdicion.addEventListener("click", () => {
-  formularioEdicion.style.display = "none";
-});
 //-----------------------------------------------------------------------------//
