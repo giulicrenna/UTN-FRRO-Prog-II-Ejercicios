@@ -1,7 +1,7 @@
 //----------------------------- Importacion de Funciones -----------------------------//
 
 import { eliminarCurso } from "../Resolución Etapa 3/etapa3.js";
-import { cursoActual } from "../Resolución Etapa 3/etapa3.js";
+import { editarCurso } from "../Resolución Etapa 3/etapa3.js";
 
 //----------------------------------------------------------------------------------//
 
@@ -44,12 +44,12 @@ class Curso {
       : "N/A";
   }
 }
+//--------------------- Arreglo para almacenar los cursos ----------------------//
 
-// Arreglo para almacenar los cursos
 export let cursos = [];
+let cursoActual = null;
 
-// DOM elements
-//-------------------------------------------------------------------------//
+//------------------------------- Captura de ID's ------------------------------//
 
 const formCurso = document.getElementById("form-curso");
 const formEstudiante = document.getElementById("form-estudiante");
@@ -62,6 +62,8 @@ const formularioEdicion = document.getElementById("formulario-edicion");
 const nuevoNombreCurso = document.getElementById("nuevo-nombre-curso");
 const nuevoNombreProfesor = document.getElementById("nuevo-nombre-profesor");
 const profesorCurso = document.getElementById("profesor-curso");
+const guardarEdicion = document.getElementById("guardar-edicion");
+const cancelarEdicion = document.getElementById("cancelar-edicion");
 
 //--------------------- Evento para agregar un curso ----------------------//
 
@@ -112,6 +114,7 @@ export function actualizarCursosSelect() {
 }
 // Función para mostrar los cursos y estudiantes con botones eliminar y editar
 //-----------------------------------------------------------------------------//
+
 export function mostrarCursos() {
   listaCursos.innerHTML = "";
   cursos.forEach((curso) => {
@@ -151,4 +154,20 @@ export function mostrarCursos() {
     });
   });
 }
-//-----------------------------------------------------------------------------//
+//------------------------------- Guardar edicion --------------------------------//
+
+guardarEdicion.addEventListener("click", () => {
+  if (nuevoNombreCurso.value && nuevoNombreProfesor.value) {
+    editarCurso(
+      cursoActual.nombre,
+      nuevoNombreCurso.value,
+      nuevoNombreProfesor.value
+    );
+    formularioEdicion.style.display = "none";
+  }
+});
+//------------------------------- Cancelar edicion ------------------------------//
+
+cancelarEdicion.addEventListener("click", () => {
+  formularioEdicion.style.display = "none";
+});
