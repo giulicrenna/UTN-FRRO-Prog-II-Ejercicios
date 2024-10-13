@@ -2,8 +2,9 @@
 
 import { eliminarCurso } from "../Resolución Etapa 3/etapa3.js";
 import { editarCurso } from "../Resolución Etapa 3/etapa3.js";
+import { primeraMayuscula } from "../Resolución Etapa 3/etapa3.js";
 
-//----------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------//
 
 // Clase Estudiante
 class Estudiante {
@@ -69,14 +70,16 @@ const cancelarEdicion = document.getElementById("cancelar-edicion");
 
 formCurso.addEventListener("submit", (e) => {
   e.preventDefault();
-  const nuevoCurso = new Curso(nombreCurso.value, profesorCurso.value);
+  const nombreCursoCorregido = primeraMayuscula(nombreCurso.value);
+  const nombreProfesorCorregido = primeraMayuscula(profesorCurso.value);
+  const nuevoCurso = new Curso(nombreCursoCorregido, nombreProfesorCorregido);
   cursos.push(nuevoCurso);
   formCurso.reset();
   actualizarCursosSelect();
   mostrarCursos();
 });
 
-//--------------------- Evento para agregar un curso ----------------------//
+//------------------ Evento para agregar un estudiante --------------------//
 
 formEstudiante.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -93,7 +96,7 @@ formEstudiante.addEventListener("submit", (e) => {
     return;
   }
   const nuevoEstudiante = new Estudiante(
-    nombreEstudiante,
+    primeraMayuscula(nombreEstudiante),
     edadEstudianteValor,
     notaEstudianteValor
   );
@@ -112,33 +115,69 @@ export function actualizarCursosSelect() {
     cursoEstudianteSelect.appendChild(option);
   });
 }
-// Función para mostrar los cursos y estudiantes con botones eliminar y editar
-//-----------------------------------------------------------------------------//
+//------------------ Función para mostrar los cursos y estudiantes -------------------//
 
 export function mostrarCursos() {
   listaCursos.innerHTML = "";
+  const tabla = document.createElement("table");
+  tabla.classList.add("tabla-cursos");
+  tabla.innerHTML = `
+    <thead>
+      <tr>
+        <th>Curso</th>
+        <th>Profesor</th>
+        <th>Promedio</th>
+        <th>Estudiante</th>
+        <th>Edad</th>
+        <th>Nota</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+  `;
   cursos.forEach((curso) => {
-    let cursoDiv = document.createElement("div");
-    cursoDiv.classList.add("curso");
-    cursoDiv.innerHTML = `
-        <h3 class="titulo-curso">Curso: ${curso.nombre} (Profesor: ${
-      curso.profesor
-    })</h3>
-        <p><strong>Promedio:</strong> ${curso.obtenerPromedio()}</p>
-        <div class="estudiantes">
-          <strong>Estudiantes:</strong><br>
-          ${curso.listarEstudiantes() || "No hay estudiantes en este curso."}
-        </div>
+    const filaCurso = document.createElement("tr");
+    filaCurso.innerHTML = `
+      <td>${curso.nombre}</td>
+      <td>${curso.profesor}</td>
+      <td>${curso.obtenerPromedio()}</td>
+      <td>${
+        curso.estudiantes.length > 0
+          ? curso.estudiantes[0].nombre
+          : "No hay estudiantes"
+      }</td>
+      <td>${curso.estudiantes.length > 0 ? curso.estudiantes[0].edad : ""}</td>
+      <td>${curso.estudiantes.length > 0 ? curso.estudiantes[0].nota : ""}</td>
+      <td>
         <button id="boton-eliminar" class="eliminar btn btn-danger" nombre="${
           curso.nombre
-        }"><i class="fa-solid fa-minus"></i> Eliminar Curso</button>
+        }">
+          <i class="fa-solid fa-minus"></i> Eliminar
+        </button>
         <button id="boton-editar" class="editar btn btn-warning" nombre="${
           curso.nombre
-        }"><i class="fa-solid fa-pen-to-square"></i> Editar Curso</button>
+        }">
+          <i class="fa-solid fa-pen-to-square"></i> Editar
+        </button>
+      </td>
+    `;
+    tabla.querySelector("tbody").appendChild(filaCurso);
+    for (let i = 1; i < curso.estudiantes.length; i++) {
+      const filaEstudiante = document.createElement("tr");
+      filaEstudiante.innerHTML = `
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>${curso.estudiantes[i].nombre}</td>
+        <td>${curso.estudiantes[i].edad}</td>
+        <td>${curso.estudiantes[i].nota}</td>
+        <td></td>
       `;
-    listaCursos.appendChild(cursoDiv);
+      tabla.querySelector("tbody").appendChild(filaEstudiante);
+    }
   });
-  // Creación de botón Eliminar + función eliminarCurso()
+  tabla.innerHTML += `</tbody></table>`;
+  listaCursos.appendChild(tabla);
   const botonEliminar = document.querySelectorAll(".eliminar");
   botonEliminar.forEach((boton) => {
     boton.addEventListener("click", () => {
@@ -146,26 +185,26 @@ export function mostrarCursos() {
       eliminarCurso(nombreCurso);
     });
   });
-  // Creación de botón Editar + función
   const botonEditar = document.querySelectorAll(".editar");
   botonEditar.forEach((boton) => {
     boton.addEventListener("click", () => {
       const nombreCurso = boton.getAttribute("nombre");
       cursoActual = cursos.find((c) => c.nombre === nombreCurso);
-      nuevoNombreCurso.value = cursoActual.nombre;
-      nuevoNombreProfesor.value = cursoActual.profesor;
+      nuevoNombreCurso.value = primeraMayuscula(cursoActual.nombre);
+      nuevoNombreProfesor.value = primeraMayuscula(cursoActual.profesor);
       formularioEdicion.style.display = "block";
     });
   });
 }
+
 //------------------------------- Guardar edicion --------------------------------//
 
 guardarEdicion.addEventListener("click", () => {
   if (nuevoNombreCurso.value && nuevoNombreProfesor.value) {
     editarCurso(
       cursoActual.nombre,
-      nuevoNombreCurso.value,
-      nuevoNombreProfesor.value
+      primeraMayuscula(nuevoNombreCurso.value),
+      primeraMayuscula(nuevoNombreProfesor.value)
     );
     formularioEdicion.style.display = "none";
   }

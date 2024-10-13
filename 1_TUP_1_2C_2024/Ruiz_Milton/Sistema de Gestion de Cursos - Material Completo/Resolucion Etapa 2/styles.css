@@ -85,14 +85,15 @@ select {
   border-radius: 3px;
   margin-top: 10px;
 }
-#boton-eliminar {
+#boton-eliminar,
+#boton-editar {
   font-size: 13px;
   padding: 9px 1px 9px 1px;
-  width: 17%;
+  width: 100%;
   border-radius: 3px;
   margin-top: 10px;
+  color: white;
 }
-#boton-editar,
 #guardar-edicion,
 #cancelar-edicion {
   color: white;
@@ -123,4 +124,18 @@ select {
 }
 .titulo-curso {
   font-size: 15px;
+}
+.tabla-cursos {
+  width: 100%; /* Ajusta al 100% del contenedor */
+  margin: 20px auto; /* Centrar la tabla */
+  border-collapse: collapse; /* Unir bordes */
+}
+.tabla-cursos th,
+.tabla-cursos td {
+  border: 1px solid #ddd; /* Bordes de las celdas */
+  padding: 8px; /* Espaciado interno */
+  text-align: left; /* Alinear texto a la izquierda */
+}
+.tabla-cursos th {
+  background-color: #f2f2f2; /* Fondo de encabezados */
 }
