@@ -121,16 +121,20 @@ export function mostrarCursos() {
     let cursoDiv = document.createElement("div");
     cursoDiv.classList.add("curso");
     cursoDiv.innerHTML = `
-        <h3>Curso: ${curso.nombre} (Profesor: ${curso.profesor})</h3>
+        <h3 class="titulo-curso">Curso: ${curso.nombre} (Profesor: ${
+      curso.profesor
+    })</h3>
         <p><strong>Promedio:</strong> ${curso.obtenerPromedio()}</p>
         <div class="estudiantes">
           <strong>Estudiantes:</strong><br>
           ${curso.listarEstudiantes() || "No hay estudiantes en este curso."}
         </div>
-        <button class="eliminar" nombre="${
+        <button id="boton-eliminar" class="eliminar btn btn-danger" nombre="${
           curso.nombre
-        }">Eliminar Curso</button>
-        <button class="editar" nombre="${curso.nombre}">Editar Curso</button>
+        }"><i class="fa-solid fa-minus"></i> Eliminar Curso</button>
+        <button id="boton-editar" class="editar btn btn-warning" nombre="${
+          curso.nombre
+        }"><i class="fa-solid fa-pen-to-square"></i> Editar Curso</button>
       `;
     listaCursos.appendChild(cursoDiv);
   });
