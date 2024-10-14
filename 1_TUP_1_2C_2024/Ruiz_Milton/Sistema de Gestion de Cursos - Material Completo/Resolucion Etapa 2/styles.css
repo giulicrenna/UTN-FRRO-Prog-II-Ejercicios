@@ -46,10 +46,14 @@ select {
 }
 #form-curso,
 #form-estudiante,
-#form-edicion {
+#form-edicion,
+#lista-cursos {
   border: 1px solid #ccc;
   border-radius: 2px;
   padding: 20px;
+}
+#form-edicion {
+  border: 1px solid #0dcaf0;
 }
 #nombre-curso,
 #profesor-curso,
@@ -85,21 +89,26 @@ select {
   border-radius: 3px;
   margin-top: 10px;
 }
-#boton-eliminar,
-#boton-editar {
+#boton-eliminar-curso,
+#boton-editar-curso {
   font-size: 13px;
-  padding: 9px 1px 9px 1px;
-  width: 100%;
+  padding: 9px 20px 9px 20px;
+  width: 50%;
   border-radius: 3px;
-  margin-top: 10px;
   color: white;
+}
+.td-contenedor-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 #guardar-edicion,
 #cancelar-edicion {
   color: white;
   font-size: 13px;
-  padding: 9px 1px 9px 1px;
-  width: 17%;
+  padding: 9px 1px;
+  width: 13%;
   border-radius: 3px;
   margin-top: 10px;
 }
@@ -126,16 +135,16 @@ select {
   font-size: 15px;
 }
 .tabla-cursos {
-  width: 100%; /* Ajusta al 100% del contenedor */
-  margin: 20px auto; /* Centrar la tabla */
-  border-collapse: collapse; /* Unir bordes */
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
 }
 .tabla-cursos th,
 .tabla-cursos td {
-  border: 1px solid #ddd; /* Bordes de las celdas */
-  padding: 8px; /* Espaciado interno */
-  text-align: left; /* Alinear texto a la izquierda */
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 .tabla-cursos th {
-  background-color: #f2f2f2; /* Fondo de encabezados */
+  background-color: #f2f2f2;
 }
