@@ -135,54 +135,54 @@ export function mostrarCursos() {
     </thead>
     <tbody>
   `;
+
   cursos.forEach((curso) => {
+    const cantidadEstudiantes = curso.estudiantes.length;
     const filaCurso = document.createElement("tr");
     filaCurso.innerHTML = `
-      <td>${curso.nombre}</td>
-      <td>${curso.profesor}</td>
-      <td class="text-center">${curso.obtenerPromedio()}</td>
+      <td rowspan="${cantidadEstudiantes || 1}">${curso.nombre}</td>
+      <td rowspan="${cantidadEstudiantes || 1}">${curso.profesor}</td>
+      <td rowspan="${cantidadEstudiantes || 1}">${curso.obtenerPromedio()}</td>
       <td>${
-        curso.estudiantes.length > 0
+        cantidadEstudiantes > 0
           ? curso.estudiantes[0].nombre
           : "No hay estudiantes"
       }</td>
-      <td class="text-center">${
-        curso.estudiantes.length > 0 ? curso.estudiantes[0].edad : "N/A"
-      }</td>
-      <td class="text-center">${
-        curso.estudiantes.length > 0 ? curso.estudiantes[0].nota : "N/A"
-      }</td>
-      <td class="td-contenedor-botones">
-        <button id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
-          curso.nombre
-        }">
-          <i class="fa-solid fa-pen-to-square"></i> Editar
-        </button>
-        <button id="boton-eliminar-curso" class="eliminar-curso btn btn-danger" nombre="${
-          curso.nombre
-        }">
-          <i class="fa-solid fa-minus"></i> Eliminar
-        </button>
+      <td>${cantidadEstudiantes > 0 ? curso.estudiantes[0].edad : "N/A"}</td>
+      <td>${cantidadEstudiantes > 0 ? curso.estudiantes[0].nota : "N/A"}</td>
+      <td class="td-contenedor-botones" rowspan="${cantidadEstudiantes || 1}">
+        <div class="botones-acciones">
+          <button id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
+            curso.nombre
+          }">
+            <i class="fa-solid fa-pen-to-square"></i> Editar
+          </button>
+          <button id="boton-eliminar-curso" class="eliminar-curso btn btn-danger" nombre="${
+            curso.nombre
+          }">
+            <i class="fa-solid fa-minus"></i> Eliminar
+          </button>
+        </div>
       </td>
     `;
     tabla.querySelector("tbody").appendChild(filaCurso);
-    for (let i = 1; i < curso.estudiantes.length; i++) {
+
+    // Agrega filas adicionales solo para estudiantes
+    for (let i = 1; i < cantidadEstudiantes; i++) {
       const filaEstudiante = document.createElement("tr");
       filaEstudiante.innerHTML = `
-        <td></td>
-        <td></td>
-        <td></td>
         <td>${curso.estudiantes[i].nombre}</td>
         <td>${curso.estudiantes[i].edad}</td>
         <td>${curso.estudiantes[i].nota}</td>
-        <td></td>
       `;
       tabla.querySelector("tbody").appendChild(filaEstudiante);
     }
   });
+
   tabla.innerHTML += `</tbody></table>`;
   listaCursos.appendChild(tabla);
 
+  // Manejo de eventos para eliminar cursos
   const botonEliminar = document.querySelectorAll(".eliminar-curso");
   botonEliminar.forEach((boton) => {
     boton.addEventListener("click", () => {
@@ -191,6 +191,7 @@ export function mostrarCursos() {
     });
   });
 
+  // Manejo de eventos para editar cursos
   const botonEditar = document.querySelectorAll(".editar-curso");
   botonEditar.forEach((boton) => {
     boton.addEventListener("click", () => {

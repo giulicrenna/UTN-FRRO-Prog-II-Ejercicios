@@ -97,11 +97,9 @@ select {
   border-radius: 3px;
   color: white;
 }
-.td-contenedor-botones {
+.botones-acciones {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  gap: 10px; /* Espaciado entre los botones */
 }
 #guardar-edicion,
 #cancelar-edicion {
@@ -143,7 +141,7 @@ select {
 .tabla-cursos td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
+  text-align: center;
 }
 .tabla-cursos th {
   background-color: #f2f2f2;
