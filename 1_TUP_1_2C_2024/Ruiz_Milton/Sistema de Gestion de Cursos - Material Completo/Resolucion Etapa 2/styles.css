@@ -132,13 +132,16 @@ select {
 .titulo-curso {
   font-size: 15px;
 }
-.tabla-cursos {
+.tabla-cursos,
+.tabla-estudiantes {
   width: 100%;
   margin: 20px auto;
   border-collapse: collapse;
 }
 .tabla-cursos th,
-.tabla-cursos td {
+.tabla-cursos td,
+.tabla-estudiantes th,
+.tabla-estudiantes td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;

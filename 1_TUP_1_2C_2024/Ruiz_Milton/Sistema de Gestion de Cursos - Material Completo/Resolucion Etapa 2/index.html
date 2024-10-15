@@ -68,22 +68,47 @@
             <!-- Listado de cursos y estudiantes -->
             <h2 class="texto-h2">Listado de Cursos y Estudiantes</h2>
             <div id="formulario-edicion" style="display: none">
-              <h3>Editar Curso</h3>
-              <div id="form-edicion">
-                <label for="nuevo-nombre-curso">Nuevo Nombre del Curso:</label>
-                <input type="text" id="nuevo-nombre-curso" />
-                <label for="nuevo-nombre-profesor"
-                  >Nuevo Nombre del Profesor:</label
-                >
-                <input type="text" id="nuevo-nombre-profesor" />
-                <button id="guardar-edicion" class="btn btn-info">
-                  <i class="fa-solid fa-floppy-disk"></i> Guardar
-                </button>
-                <button id="cancelar-edicion" class="btn btn-secondary">
-                  <i class="fa-solid fa-x"></i> Cancelar
-                </button>
+              <h3 class="text-center">Edición</h3>
+              <div id="form-edicion" class="row">
+                <h4>Curso</h4>
+                <div class="col-md-6 mb-3">
+                  <label for="nuevo-nombre-curso"
+                    >Nuevo Nombre del Curso:</label
+                  >
+                  <input
+                    type="text"
+                    id="nuevo-nombre-curso"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="nuevo-nombre-profesor"
+                    >Nuevo Nombre del Profesor:</label
+                  >
+                  <input
+                    type="text"
+                    id="nuevo-nombre-profesor"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="col-12">
+                  <h4>Estudiantes</h4>
+                  <div id="lista-estudiantes-edicion"></div>
+                  <!-- Nueva área para estudiantes -->
+                </div>
+
+                <div class="col-12 mt-3">
+                  <button id="guardar-edicion" class="btn btn-info">
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar
+                  </button>
+                  <button id="cancelar-edicion" class="btn btn-secondary">
+                    <i class="fa-solid fa-x"></i> Cancelar
+                  </button>
+                </div>
               </div>
             </div>
+
             <div id="lista-cursos">
               <!-- Cursos y estudiantes se mostrarán aquí -->
             </div>

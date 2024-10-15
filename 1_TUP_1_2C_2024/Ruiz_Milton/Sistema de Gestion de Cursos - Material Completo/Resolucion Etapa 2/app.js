@@ -1,8 +1,10 @@
-//----------------------------- Importacion de Funciones -----------------------------//
+//----------------------------- Importación de Funciones -----------------------------//
 
-import { eliminarCurso } from "../Resolución Etapa 3/etapa3.js";
-import { editarCurso } from "../Resolución Etapa 3/etapa3.js";
-import { primeraMayuscula } from "../Resolución Etapa 3/etapa3.js";
+import {
+  eliminarCurso,
+  editarCurso,
+  primeraMayuscula,
+} from "../Resolución Etapa 3/etapa3.js";
 
 //---------------------------------- Captura de ID's --------------------------------//
 
@@ -20,9 +22,8 @@ const profesorCurso = document.getElementById("profesor-curso");
 const guardarEdicion = document.getElementById("guardar-edicion");
 const cancelarEdicion = document.getElementById("cancelar-edicion");
 
-//---------------------------- Evento para agregar un curso -------------------------//
+//---------------------------- Clase Estudiante -------------------------------------//
 
-// Clase Estudiante
 class Estudiante {
   constructor(nombre, edad, nota) {
     this.nombre = nombre;
@@ -35,7 +36,8 @@ class Estudiante {
   }
 }
 
-// Clase Curso
+//----------------------------- Clase Curso ----------------------------------------//
+
 class Curso {
   constructor(nombre, profesor) {
     this.nombre = nombre;
@@ -52,7 +54,7 @@ class Curso {
   }
 
   obtenerPromedio() {
-    let totalNotas = this.estudiantes.reduce(
+    const totalNotas = this.estudiantes.reduce(
       (total, est) => total + est.nota,
       0
     );
@@ -61,6 +63,7 @@ class Curso {
       : "N/A";
   }
 }
+
 //--------------------- Arreglo para almacenar los cursos ----------------------//
 
 export let cursos = [];
@@ -87,29 +90,34 @@ formEstudiante.addEventListener("submit", (e) => {
   const edadEstudianteValor = parseInt(edadEstudiante.value);
   const notaEstudianteValor = parseFloat(notaEstudiante.value);
   const cursoIndex = cursoEstudianteSelect.value;
+
   if (edadEstudianteValor <= 0) {
     alert("La edad debe ser mayor que cero.");
     return;
   }
+
   if (notaEstudianteValor < 0 || notaEstudianteValor > 10) {
     alert("La nota debe estar entre 0 y 10.");
     return;
   }
+
   const nuevoEstudiante = new Estudiante(
     primeraMayuscula(nombreEstudiante),
     edadEstudianteValor,
     notaEstudianteValor
   );
+
   cursos[cursoIndex].agregarEstudiante(nuevoEstudiante);
   formEstudiante.reset();
   mostrarCursos();
 });
-// ------------------- Función para actualizar el select de cursos--------------//
+
+//------------------- Función para actualizar el select de cursos --------------//
 
 export function actualizarCursosSelect() {
   cursoEstudianteSelect.innerHTML = "";
   cursos.forEach((curso, index) => {
-    let option = document.createElement("option");
+    const option = document.createElement("option");
     option.value = index;
     option.textContent = curso.nombre;
     cursoEstudianteSelect.appendChild(option);
@@ -135,7 +143,6 @@ export function mostrarCursos() {
     </thead>
     <tbody>
   `;
-
   cursos.forEach((curso) => {
     const cantidadEstudiantes = curso.estudiantes.length;
     const filaCurso = document.createElement("tr");
@@ -166,8 +173,6 @@ export function mostrarCursos() {
       </td>
     `;
     tabla.querySelector("tbody").appendChild(filaCurso);
-
-    // Agrega filas adicionales solo para estudiantes
     for (let i = 1; i < cantidadEstudiantes; i++) {
       const filaEstudiante = document.createElement("tr");
       filaEstudiante.innerHTML = `
@@ -178,20 +183,8 @@ export function mostrarCursos() {
       tabla.querySelector("tbody").appendChild(filaEstudiante);
     }
   });
-
   tabla.innerHTML += `</tbody></table>`;
   listaCursos.appendChild(tabla);
-
-  // Manejo de eventos para eliminar cursos
-  const botonEliminar = document.querySelectorAll(".eliminar-curso");
-  botonEliminar.forEach((boton) => {
-    boton.addEventListener("click", () => {
-      const nombreCurso = boton.getAttribute("nombre");
-      eliminarCurso(nombreCurso);
-    });
-  });
-
-  // Manejo de eventos para editar cursos
   const botonEditar = document.querySelectorAll(".editar-curso");
   botonEditar.forEach((boton) => {
     boton.addEventListener("click", () => {
@@ -199,12 +192,134 @@ export function mostrarCursos() {
       cursoActual = cursos.find((c) => c.nombre === nombreCurso);
       nuevoNombreCurso.value = primeraMayuscula(cursoActual.nombre);
       nuevoNombreProfesor.value = primeraMayuscula(cursoActual.profesor);
+      const tablaEstudiantesEdicion = document.createElement("table");
+      tablaEstudiantesEdicion.classList.add("tabla-estudiantes");
+      tablaEstudiantesEdicion.innerHTML = `
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Nota</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+    `;
+      if (cursoActual.estudiantes.length > 0) {
+        cursoActual.estudiantes.forEach((est) => {
+          const filaEstudiante = document.createElement("tr");
+          filaEstudiante.innerHTML = `
+            <td>${est.nombre}</td>
+            <td>${est.edad}</td>
+            <td>${est.nota}</td>
+            <td>
+              <button class="btn btn-warning btn-sm editar-estudiante" data-nombre="${est.nombre}">Editar</button>
+              <button class="btn btn-danger btn-sm eliminar-estudiante" data-nombre="${est.nombre}">Eliminar</button>
+            </td>
+          `;
+          tablaEstudiantesEdicion
+            .querySelector("tbody")
+            .appendChild(filaEstudiante);
+        });
+      } else {
+        const mensajeSinEstudiantes = document.createElement("tr");
+        mensajeSinEstudiantes.innerHTML = `
+          <td colspan="4" class="text-center">No hay estudiantes en este curso</td>
+        `;
+        tablaEstudiantesEdicion
+          .querySelector("tbody")
+          .appendChild(mensajeSinEstudiantes);
+      }
+      const listaEstudiantesEdicion = document.getElementById(
+        "lista-estudiantes-edicion"
+      );
+      listaEstudiantesEdicion.innerHTML = "";
+      listaEstudiantesEdicion.appendChild(tablaEstudiantesEdicion);
+      manejarEventosEdicionEstudiante();
       formularioEdicion.style.display = "block";
     });
   });
+  document
+    .getElementById("lista-estudiantes-edicion")
+    .addEventListener("click", (e) => {
+      if (e.target.classList.contains("eliminar-estudiante")) {
+        const nombreEstudiante = e.target.getAttribute("data-nombre");
+        cursoActual.estudiantes = cursoActual.estudiantes.filter(
+          (est) => est.nombre !== nombreEstudiante
+        );
+        mostrarCursos();
+      }
+    });
 }
+//------------------------------- Función para manejar eventos de edición de estudiantes -------------------------------//
 
-//------------------------------- Guardar edicion --------------------------------//
+function manejarEventosEdicionEstudiante() {
+  document.querySelectorAll(".editar-estudiante").forEach((boton) => {
+    boton.addEventListener("click", () => {
+      const nombreEstudiante = boton.getAttribute("data-nombre");
+      const estudiante = cursoActual.estudiantes.find(
+        (est) => est.nombre === nombreEstudiante
+      );
+      const formularioEdicionEstudiante = document.createElement("form");
+      formularioEdicionEstudiante.classList.add("row", "mb-3");
+      const divNombre = document.createElement("div");
+      divNombre.classList.add("col-md-4");
+      divNombre.innerHTML = `
+        <label for="nombre-estudiante-editar">Nombre:</label>
+        <input type="text" id="nombre-estudiante-editar" class="form-control" value="${estudiante.nombre}" required />
+      `;
+      formularioEdicionEstudiante.appendChild(divNombre);
+      const divEdad = document.createElement("div");
+      divEdad.classList.add("col-md-4");
+      divEdad.innerHTML = `
+        <label for="edad-estudiante-editar">Edad:</label>
+        <input type="number" id="edad-estudiante-editar" class="form-control" value="${estudiante.edad}" required />
+      `;
+      formularioEdicionEstudiante.appendChild(divEdad);
+      const divNota = document.createElement("div");
+      divNota.classList.add("col-md-4");
+      divNota.innerHTML = `
+        <label for="nota-estudiante-editar">Nota:</label>
+        <input type="number" id="nota-estudiante-editar" class="form-control" value="${estudiante.nota}" required />
+      `;
+      formularioEdicionEstudiante.appendChild(divNota);
+      const botonGuardar = document.createElement("button");
+      botonGuardar.type = "submit";
+      botonGuardar.classList.add("btn", "btn-info", "col-12");
+      botonGuardar.innerHTML = `<i class="fa-solid fa-floppy-disk"></i> Guardar`;
+
+      formularioEdicionEstudiante.appendChild(botonGuardar);
+      const listaEstudiantesEdicion = document.getElementById(
+        "lista-estudiantes-edicion"
+      );
+      listaEstudiantesEdicion.innerHTML = "";
+      listaEstudiantesEdicion.appendChild(formularioEdicionEstudiante);
+      formularioEdicionEstudiante.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nuevoNombre = document.getElementById(
+          "nombre-estudiante-editar"
+        ).value;
+        const nuevaEdad = parseInt(
+          document.getElementById("edad-estudiante-editar").value
+        );
+        const nuevaNota = parseFloat(
+          document.getElementById("nota-estudiante-editar").value
+        );
+
+        if (nuevoNombre && nuevaEdad > 0 && nuevaNota >= 0 && nuevaNota <= 10) {
+          estudiante.nombre = primeraMayuscula(nuevoNombre);
+          estudiante.edad = nuevaEdad;
+          estudiante.nota = nuevaNota;
+
+          mostrarCursos();
+        } else {
+          alert("Por favor, introduce valores válidos.");
+        }
+      });
+    });
+  });
+}
+//------------------------------- Guardar edición --------------------------------//
 
 guardarEdicion.addEventListener("click", () => {
   if (nuevoNombreCurso.value && nuevoNombreProfesor.value) {
@@ -216,7 +331,7 @@ guardarEdicion.addEventListener("click", () => {
     formularioEdicion.style.display = "none";
   }
 });
-//------------------------------- Cancelar edicion ------------------------------//
+//------------------------------- Cancelar edición ------------------------------//
 
 cancelarEdicion.addEventListener("click", () => {
   formularioEdicion.style.display = "none";
