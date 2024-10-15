@@ -1,19 +1,36 @@
-from typing import List, Dict, Any
+from typing import List,Dict, Iterable
 
-def numero_mas_frecuente(lista):
-    frecuencia = {}
+def numero_mas_frecuente(*,lista : list[int]) -> Iterable[int]:
+    frecuencias: Dict[int,int] = {numero : 0 for numero in set(lista)}
+    numero_mas_frecuente_lista: list[int] = []
 
     for numero in lista:
-        
+        frecuencias[numero] += 1
 
-        for numero in lista:
-            if numero in frecuencia:
-                frecuencia[numero] += 1
-            else:
-                frecuencia[numero] = 1
-    
+    mayor_frecuencia: int = sorted(list(frecuencias.values()))[-1]
 
-    return max(frecuencia, key=frecuencia.get)
+    for key in frecuencias.keys():
+        if frecuencias[key] == mayor_frecuencia:
+            numero_mas_frecuente_lista.append(key)
+
+    return numero_mas_frecuente_lista
 
 
-print(numero_mas_frecuente([1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

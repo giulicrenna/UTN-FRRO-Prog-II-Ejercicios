@@ -1,11 +1,14 @@
-from typing import List, Dict, Tuple, Any
+from typing import List
 
-def esPar(num):
-    return num % 2 == 0
+def filtrar_y_transformat(lista: list[list]) -> list[int]:
+    lista_aux: list[int] = []
+    
+    for numero in lista:
+        if numero % 2 == 0 : lista_aux.append(numero**2)
 
-def filtrar_transformar(array):
-    numeroPar = list(filter(esPar, array))
-    elevado = list(map(lambda x: x**2, numeroPar))
-    return elevado
+    return lista_aux
 
-print(filtrar_transformar([1, 2, 3, 4]))
+def filtrar_y_transformar_2(*,lista : list[int]) -> Iterable[int]:
+    for numero in lista:
+        if numero % 2 == 0 : yield numero ** 2
+
