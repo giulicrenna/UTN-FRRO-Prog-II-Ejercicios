@@ -1,7 +1,7 @@
 //----------------------------- Importación de Funciones -----------------------------//
 
 import {
-  eliminarCurso,
+  edicionEstudiantes,
   editarCurso,
   primeraMayuscula,
 } from "../Resolución Etapa 3/etapa3.js";
@@ -69,7 +69,7 @@ class Curso {
 export let cursos = [];
 let cursoActual = null;
 
-//--------------------- Evento para agregar un curso ----------------------//
+//------------------ Evento para agregar un curso ----------------------//
 
 formCurso.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -212,9 +212,9 @@ export function mostrarCursos() {
             <td>${est.nombre}</td>
             <td>${est.edad}</td>
             <td>${est.nota}</td>
-            <td>
-              <button class="btn btn-warning btn-sm editar-estudiante" data-nombre="${est.nombre}">Editar</button>
-              <button class="btn btn-danger btn-sm eliminar-estudiante" data-nombre="${est.nombre}">Eliminar</button>
+            <td class="td-contenedor-botones">
+              <button id="boton-editar-estudiante" class="btn btn-warning btn-sm editar-estudiante" data-nombre="${est.nombre}"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
+              <button id="boton-eliminar-estudiante" class="btn btn-danger btn-sm eliminar-estudiante" data-nombre="${est.nombre}"><i class="fa-solid fa-minus"></i> Eliminar</button>
             </td>
           `;
           tablaEstudiantesEdicion
@@ -235,7 +235,7 @@ export function mostrarCursos() {
       );
       listaEstudiantesEdicion.innerHTML = "";
       listaEstudiantesEdicion.appendChild(tablaEstudiantesEdicion);
-      manejarEventosEdicionEstudiante();
+      edicionEstudiantes();
       formularioEdicion.style.display = "block";
     });
   });
@@ -250,72 +250,14 @@ export function mostrarCursos() {
         mostrarCursos();
       }
     });
-}
-//------------------------------- Función para manejar eventos de edición de estudiantes -------------------------------//
-
-function manejarEventosEdicionEstudiante() {
-  document.querySelectorAll(".editar-estudiante").forEach((boton) => {
+  const botonEliminar = document.querySelectorAll(".eliminar-curso");
+  botonEliminar.forEach((boton) => {
     boton.addEventListener("click", () => {
-      const nombreEstudiante = boton.getAttribute("data-nombre");
-      const estudiante = cursoActual.estudiantes.find(
-        (est) => est.nombre === nombreEstudiante
-      );
-      const formularioEdicionEstudiante = document.createElement("form");
-      formularioEdicionEstudiante.classList.add("row", "mb-3");
-      const divNombre = document.createElement("div");
-      divNombre.classList.add("col-md-4");
-      divNombre.innerHTML = `
-        <label for="nombre-estudiante-editar">Nombre:</label>
-        <input type="text" id="nombre-estudiante-editar" class="form-control" value="${estudiante.nombre}" required />
-      `;
-      formularioEdicionEstudiante.appendChild(divNombre);
-      const divEdad = document.createElement("div");
-      divEdad.classList.add("col-md-4");
-      divEdad.innerHTML = `
-        <label for="edad-estudiante-editar">Edad:</label>
-        <input type="number" id="edad-estudiante-editar" class="form-control" value="${estudiante.edad}" required />
-      `;
-      formularioEdicionEstudiante.appendChild(divEdad);
-      const divNota = document.createElement("div");
-      divNota.classList.add("col-md-4");
-      divNota.innerHTML = `
-        <label for="nota-estudiante-editar">Nota:</label>
-        <input type="number" id="nota-estudiante-editar" class="form-control" value="${estudiante.nota}" required />
-      `;
-      formularioEdicionEstudiante.appendChild(divNota);
-      const botonGuardar = document.createElement("button");
-      botonGuardar.type = "submit";
-      botonGuardar.classList.add("btn", "btn-info", "col-12");
-      botonGuardar.innerHTML = `<i class="fa-solid fa-floppy-disk"></i> Guardar`;
-
-      formularioEdicionEstudiante.appendChild(botonGuardar);
-      const listaEstudiantesEdicion = document.getElementById(
-        "lista-estudiantes-edicion"
-      );
-      listaEstudiantesEdicion.innerHTML = "";
-      listaEstudiantesEdicion.appendChild(formularioEdicionEstudiante);
-      formularioEdicionEstudiante.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const nuevoNombre = document.getElementById(
-          "nombre-estudiante-editar"
-        ).value;
-        const nuevaEdad = parseInt(
-          document.getElementById("edad-estudiante-editar").value
-        );
-        const nuevaNota = parseFloat(
-          document.getElementById("nota-estudiante-editar").value
-        );
-
-        if (nuevoNombre && nuevaEdad > 0 && nuevaNota >= 0 && nuevaNota <= 10) {
-          estudiante.nombre = primeraMayuscula(nuevoNombre);
-          estudiante.edad = nuevaEdad;
-          estudiante.nota = nuevaNota;
-
-          mostrarCursos();
-        } else {
-          alert("Por favor, introduce valores válidos.");
-        }
-      });
+      const cursoIndex = boton.getAttribute("data-index");
+      if (confirm("¿Estás seguro de que deseas eliminar este curso?")) {
+        cursos.splice(cursoIndex, 1);
+        mostrarCursos();
+      }
     });
   });
 }

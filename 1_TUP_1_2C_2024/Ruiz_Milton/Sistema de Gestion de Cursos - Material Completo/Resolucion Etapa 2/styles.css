@@ -54,6 +54,7 @@ select {
 }
 #form-edicion {
   border: 1px solid #0dcaf0;
+  margin: auto;
 }
 #nombre-curso,
 #profesor-curso,
@@ -92,10 +93,19 @@ select {
 #boton-eliminar-curso,
 #boton-editar-curso {
   font-size: 13px;
-  padding: 9px 20px 9px 20px;
+  padding: 7px 15px 7px 15px;
   width: 50%;
   border-radius: 3px;
   color: white;
+}
+#boton-editar-estudiante,
+#boton-eliminar-estudiante {
+  font-size: 13px;
+  padding: 7px 15px 7px 15px;
+  color: white;
+  border-radius: 3px;
+  width: 22%;
+  margin-right: 5px;
 }
 .botones-acciones {
   display: flex;
@@ -105,10 +115,9 @@ select {
 #cancelar-edicion {
   color: white;
   font-size: 13px;
-  padding: 9px 1px;
+  padding: 7px 1px;
   width: 13%;
   border-radius: 3px;
-  margin-top: 10px;
 }
 #lista-cursos {
   margin-top: 20px;
@@ -135,7 +144,7 @@ select {
 .tabla-cursos,
 .tabla-estudiantes {
   width: 100%;
-  margin: 20px auto;
+  margin: 10px auto;
   border-collapse: collapse;
 }
 .tabla-cursos th,
@@ -146,6 +155,17 @@ select {
   padding: 8px;
   text-align: center;
 }
-.tabla-cursos th {
+.tabla-cursos th,
+.tabla-estudiantes th {
   background-color: #f2f2f2;
+}
+label {
+  font-size: 13px;
+}
+.texto-h4 {
+  font-size: 20px;
+  margin: auto;
+}
+td {
+  font-size: 14px;
 }
