@@ -99,31 +99,45 @@ formCurso.addEventListener("submit", (e) => {
 
 formEstudiante.addEventListener("submit", (e) => {
   e.preventDefault();
-  const nombreEstudianteValor = nombreEstudiante.value;
+  const nombreEstudianteValor = primeraMayuscula(nombreEstudiante.value);
   const edadEstudianteValor = parseInt(edadEstudiante.value);
   const notaEstudianteValor = parseFloat(notaEstudiante.value);
   const cursoIndex = cursoEstudianteSelect.value;
   const nombreValido = cadenaValida(nombreEstudianteValor);
-  if (!nombreValido) {
-    mostrarMensaje("¡Nombre de Estudiante incorrecto!", "error");
-    return;
+  if (
+    (!nombreValido && edadEstudianteValor <= 0 && notaEstudianteValor < 0) ||
+    notaEstudianteValor > 10
+  ) {
+    mostrarMensaje("¡Valores ingresados incorrectos!", "error");
+  } else if (!nombreValido && edadEstudianteValor <= 0) {
+    mostrarMensaje("¡Nombre y Edad ingresado Incorrectos!", "error");
+  } else if (
+    (!nombreValido && notaEstudianteValor < 0) ||
+    notaEstudianteValor > 10
+  ) {
+    mostrarMensaje("¡Nombre y Nota ingresado Incorrectos!", "error");
+  } else if (
+    (edadEstudianteValor <= 0 && notaEstudianteValor < 0) ||
+    notaEstudianteValor > 10
+  ) {
+    mostrarMensaje("¡Edad y Nota ingresadas Incorrectas!", "error");
+  } else if (!nombreValido) {
+    mostrarMensaje("Nombre ingresado Incorrecto!", "error");
+  } else if (edadEstudianteValor <= 0) {
+    mostrarMensaje("Edad ingresada Incorrecta!", "error");
+  } else if (notaEstudianteValor < 0 || notaEstudianteValor > 10) {
+    mostrarMensaje("¡Nota ingresada Incorrecta!", "error");
+  } else {
+    const nuevoEstudiante = new Estudiante(
+      nombreEstudianteValor,
+      edadEstudianteValor,
+      notaEstudianteValor
+    );
+    cursos[cursoIndex].agregarEstudiante(nuevoEstudiante);
+    formEstudiante.reset();
+    mostrarCursos();
+    mostrarMensaje("¡Estudiante agregado correctamente!", "success");
   }
-  if (edadEstudianteValor <= 0) {
-    alert("La edad debe ser mayor que cero.");
-    return;
-  }
-  if (notaEstudianteValor < 0 || notaEstudianteValor > 10) {
-    alert("La nota debe estar entre 0 y 10.");
-    return;
-  }
-  const nuevoEstudiante = new Estudiante(
-    primeraMayuscula(nombreValido),
-    edadEstudianteValor,
-    notaEstudianteValor
-  );
-  cursos[cursoIndex].agregarEstudiante(nuevoEstudiante);
-  formEstudiante.reset();
-  mostrarCursos();
 });
 
 //------------------- Función para actualizar el select de cursos --------------//
