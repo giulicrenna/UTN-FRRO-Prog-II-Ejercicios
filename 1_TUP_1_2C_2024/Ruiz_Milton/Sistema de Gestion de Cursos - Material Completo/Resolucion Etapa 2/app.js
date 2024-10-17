@@ -5,6 +5,7 @@ import {
   editarCurso,
   primeraMayuscula,
   mostrarMensaje,
+  cadenaValida,
 } from "../Resolución Etapa 3/etapa3.js";
 
 //---------------------------------- Captura de ID's --------------------------------//
@@ -22,6 +23,7 @@ const nuevoNombreProfesor = document.getElementById("nuevo-nombre-profesor");
 const profesorCurso = document.getElementById("profesor-curso");
 const guardarEdicion = document.getElementById("guardar-edicion");
 const cancelarEdicion = document.getElementById("cancelar-edicion");
+const nombreEstudiante = document.getElementById("nombre-estudiante");
 
 //---------------------------- Clase Estudiante -------------------------------------//
 
@@ -74,23 +76,18 @@ export let cursoActual = null;
 
 formCurso.addEventListener("submit", (e) => {
   e.preventDefault();
-  const nombreCursoCorregido = primeraMayuscula(nombreCurso.value);
-  const nombreProfesorCorregido = primeraMayuscula(profesorCurso.value);
-
-  const esCadenaValida = (cadena) =>
-    typeof cadena === "string" && cadena.trim() !== "" && !/\d/.test(cadena);
-
-  const esNombreCursoValido = esCadenaValida(nombreCursoCorregido);
-  const esNombreProfesorValido = esCadenaValida(nombreProfesorCorregido);
-
-  if (!esNombreCursoValido && !esNombreProfesorValido) {
+  const cursoCorregido = primeraMayuscula(nombreCurso.value);
+  const profesorCorregido = primeraMayuscula(profesorCurso.value);
+  const nombreValido = cadenaValida(cursoCorregido);
+  const profesorValido = cadenaValida(profesorCorregido);
+  if (!nombreValido && !profesorValido) {
     mostrarMensaje("¡Valores ingresados incorrectos!", "error");
-  } else if (!esNombreCursoValido) {
+  } else if (!nombreValido) {
     mostrarMensaje("¡Nombre de curso incorrecto!", "error");
-  } else if (!esNombreProfesorValido) {
+  } else if (!profesorValido) {
     mostrarMensaje("¡Nombre de profesor incorrecto!", "error");
   } else {
-    const nuevoCurso = new Curso(nombreCursoCorregido, nombreProfesorCorregido);
+    const nuevoCurso = new Curso(cursoCorregido, profesorCorregido);
     cursos.push(nuevoCurso);
     formCurso.reset();
     actualizarCursosSelect();
@@ -102,27 +99,28 @@ formCurso.addEventListener("submit", (e) => {
 
 formEstudiante.addEventListener("submit", (e) => {
   e.preventDefault();
-  const nombreEstudiante = document.getElementById("nombre-estudiante").value;
+  const nombreEstudianteValor = nombreEstudiante.value;
   const edadEstudianteValor = parseInt(edadEstudiante.value);
   const notaEstudianteValor = parseFloat(notaEstudiante.value);
   const cursoIndex = cursoEstudianteSelect.value;
-
+  const nombreValido = cadenaValida(nombreEstudianteValor);
+  if (!nombreValido) {
+    mostrarMensaje("¡Nombre de Estudiante incorrecto!", "error");
+    return;
+  }
   if (edadEstudianteValor <= 0) {
     alert("La edad debe ser mayor que cero.");
     return;
   }
-
   if (notaEstudianteValor < 0 || notaEstudianteValor > 10) {
     alert("La nota debe estar entre 0 y 10.");
     return;
   }
-
   const nuevoEstudiante = new Estudiante(
-    primeraMayuscula(nombreEstudiante),
+    primeraMayuscula(nombreValido),
     edadEstudianteValor,
     notaEstudianteValor
   );
-
   cursos[cursoIndex].agregarEstudiante(nuevoEstudiante);
   formEstudiante.reset();
   mostrarCursos();
