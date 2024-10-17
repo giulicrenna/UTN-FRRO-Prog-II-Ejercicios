@@ -4,6 +4,7 @@ import {
   edicionEstudiantes,
   editarCurso,
   primeraMayuscula,
+  mostrarMensaje,
 } from "../Resolución Etapa 3/etapa3.js";
 
 //---------------------------------- Captura de ID's --------------------------------//
@@ -67,7 +68,7 @@ class Curso {
 //--------------------- Arreglo para almacenar los cursos ----------------------//
 
 export let cursos = [];
-let cursoActual = null;
+export let cursoActual = null;
 
 //------------------ Evento para agregar un curso ----------------------//
 
@@ -75,13 +76,28 @@ formCurso.addEventListener("submit", (e) => {
   e.preventDefault();
   const nombreCursoCorregido = primeraMayuscula(nombreCurso.value);
   const nombreProfesorCorregido = primeraMayuscula(profesorCurso.value);
-  const nuevoCurso = new Curso(nombreCursoCorregido, nombreProfesorCorregido);
-  cursos.push(nuevoCurso);
-  formCurso.reset();
-  actualizarCursosSelect();
-  mostrarCursos();
-});
 
+  const esCadenaValida = (cadena) =>
+    typeof cadena === "string" && cadena.trim() !== "" && !/\d/.test(cadena);
+
+  const esNombreCursoValido = esCadenaValida(nombreCursoCorregido);
+  const esNombreProfesorValido = esCadenaValida(nombreProfesorCorregido);
+
+  if (!esNombreCursoValido && !esNombreProfesorValido) {
+    mostrarMensaje("¡Valores ingresados incorrectos!", "error");
+  } else if (!esNombreCursoValido) {
+    mostrarMensaje("¡Nombre de curso incorrecto!", "error");
+  } else if (!esNombreProfesorValido) {
+    mostrarMensaje("¡Nombre de profesor incorrecto!", "error");
+  } else {
+    const nuevoCurso = new Curso(nombreCursoCorregido, nombreProfesorCorregido);
+    cursos.push(nuevoCurso);
+    formCurso.reset();
+    actualizarCursosSelect();
+    mostrarCursos();
+    mostrarMensaje("¡Curso creado correctamente!", "success");
+  }
+});
 //------------------ Evento para agregar un estudiante --------------------//
 
 formEstudiante.addEventListener("submit", (e) => {
