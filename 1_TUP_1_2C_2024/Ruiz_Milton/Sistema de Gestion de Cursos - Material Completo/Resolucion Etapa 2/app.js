@@ -24,6 +24,7 @@ const profesorCurso = document.getElementById("profesor-curso");
 const guardarEdicion = document.getElementById("guardar-edicion");
 const cancelarEdicion = document.getElementById("cancelar-edicion");
 const nombreEstudiante = document.getElementById("nombre-estudiante");
+const busquedaIngresada = document.getElementById("busqueda-ingresada");
 
 //---------------------------- Clase Estudiante -------------------------------------//
 
@@ -153,7 +154,7 @@ export function actualizarCursosSelect() {
 }
 //------------------ Función para mostrar los cursos y estudiantes -------------------//
 
-export function mostrarCursos() {
+export function mostrarCursos(busqueda = "") {
   listaCursos.innerHTML = "";
   const tabla = document.createElement("table");
   tabla.classList.add("tabla-cursos");
@@ -171,46 +172,106 @@ export function mostrarCursos() {
     </thead>
     <tbody>
   `;
+  let resultadosEncontrados = false;
   cursos.forEach((curso) => {
-    const cantidadEstudiantes = curso.estudiantes.length;
-    const filaCurso = document.createElement("tr");
-    filaCurso.innerHTML = `
-      <td rowspan="${cantidadEstudiantes || 1}">${curso.nombre}</td>
-      <td rowspan="${cantidadEstudiantes || 1}">${curso.profesor}</td>
-      <td rowspan="${cantidadEstudiantes || 1}">${curso.obtenerPromedio()}</td>
-      <td>${
-        cantidadEstudiantes > 0
-          ? curso.estudiantes[0].nombre
-          : "No hay estudiantes"
-      }</td>
-      <td>${cantidadEstudiantes > 0 ? curso.estudiantes[0].edad : "N/A"}</td>
-      <td>${cantidadEstudiantes > 0 ? curso.estudiantes[0].nota : "N/A"}</td>
-      <td class="td-contenedor-botones" rowspan="${cantidadEstudiantes || 1}">
-        <div class="botones-acciones">
-          <button id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
-            curso.nombre
-          }">
-            <i class="fa-solid fa-pen-to-square"></i> Editar
-          </button>
-          <button id="boton-eliminar-curso" class="eliminar-curso btn btn-danger" nombre="${
-            curso.nombre
-          }">
-            <i class="fa-solid fa-minus"></i> Eliminar
-          </button>
-        </div>
-      </td>
-    `;
-    tabla.querySelector("tbody").appendChild(filaCurso);
-    for (let i = 1; i < cantidadEstudiantes; i++) {
-      const filaEstudiante = document.createElement("tr");
-      filaEstudiante.innerHTML = `
-        <td>${curso.estudiantes[i].nombre}</td>
-        <td>${curso.estudiantes[i].edad}</td>
-        <td>${curso.estudiantes[i].nota}</td>
+    if (
+      curso.nombre.toLowerCase().includes(busqueda) ||
+      curso.profesor.toLowerCase().includes(busqueda)
+    ) {
+      resultadosEncontrados = true;
+      const cantidadEstudiantes = curso.estudiantes.length;
+      const filaCurso = document.createElement("tr");
+      filaCurso.innerHTML = `
+        <td rowspan="${cantidadEstudiantes || 1}">${curso.nombre}</td>
+        <td rowspan="${cantidadEstudiantes || 1}">${curso.profesor}</td>
+        <td rowspan="${
+          cantidadEstudiantes || 1
+        }">${curso.obtenerPromedio()}</td>
+        <td>${
+          cantidadEstudiantes > 0
+            ? curso.estudiantes[0].nombre
+            : "No hay estudiantes"
+        }</td>
+        <td>${cantidadEstudiantes > 0 ? curso.estudiantes[0].edad : "N/A"}</td>
+        <td>${cantidadEstudiantes > 0 ? curso.estudiantes[0].nota : "N/A"}</td>
+        <td class="td-contenedor-botones" rowspan="${cantidadEstudiantes || 1}">
+          <div class="botones-acciones">
+            <button id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
+              curso.nombre
+            }">
+              <i class="fa-solid fa-pen-to-square"></i> Editar
+            </button>
+            <button id="boton-eliminar-curso" class="eliminar-curso btn btn-danger" nombre="${
+              curso.nombre
+            }">
+              <i class="fa-solid fa-minus"></i> Eliminar
+            </button>
+          </div>
+        </td>
       `;
-      tabla.querySelector("tbody").appendChild(filaEstudiante);
+      tabla.querySelector("tbody").appendChild(filaCurso);
+      for (let i = 1; i < cantidadEstudiantes; i++) {
+        const filaEstudiante = document.createElement("tr");
+        filaEstudiante.innerHTML = `
+          <td>${curso.estudiantes[i].nombre}</td>
+          <td>${curso.estudiantes[i].edad}</td>
+          <td>${curso.estudiantes[i].nota}</td>
+        `;
+        tabla.querySelector("tbody").appendChild(filaEstudiante);
+      }
+    } else {
+      const estudiantesFiltrados = curso.estudiantes.filter((est) =>
+        est.nombre.toLowerCase().includes(busqueda)
+      );
+      if (estudiantesFiltrados.length > 0) {
+        resultadosEncontrados = true;
+        const filaCurso = document.createElement("tr");
+        filaCurso.innerHTML = `
+          <td rowspan="${estudiantesFiltrados.length}">${curso.nombre}</td>
+          <td rowspan="${estudiantesFiltrados.length}">${curso.profesor}</td>
+          <td rowspan="${
+            estudiantesFiltrados.length
+          }">${curso.obtenerPromedio()}</td>
+          <td>${estudiantesFiltrados[0].nombre}</td>
+          <td>${estudiantesFiltrados[0].edad}</td>
+          <td>${estudiantesFiltrados[0].nota}</td>
+          <td class="td-contenedor-botones" rowspan="${
+            estudiantesFiltrados.length
+          }">
+            <div class="botones-acciones">
+              <button id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
+                curso.nombre
+              }">
+                <i class="fa-solid fa-pen-to-square"></i> Editar
+              </button>
+              <button id="boton-eliminar-curso" class="eliminar-curso btn btn-danger" nombre="${
+                curso.nombre
+              }">
+                <i class="fa-solid fa-minus"></i> Eliminar
+              </button>
+            </div>
+          </td>
+        `;
+        tabla.querySelector("tbody").appendChild(filaCurso);
+        for (let i = 1; i < estudiantesFiltrados.length; i++) {
+          const filaEstudiante = document.createElement("tr");
+          filaEstudiante.innerHTML = `
+            <td>${estudiantesFiltrados[i].nombre}</td>
+            <td>${estudiantesFiltrados[i].edad}</td>
+            <td>${estudiantesFiltrados[i].nota}</td>
+          `;
+          tabla.querySelector("tbody").appendChild(filaEstudiante);
+        }
+      }
     }
   });
+  if (!resultadosEncontrados) {
+    const mensajeNoEncontrado = document.createElement("tr");
+    mensajeNoEncontrado.innerHTML = `
+      <td colspan="7" class="text-center fst-italic">¡No hay resultados para la búsqueda!</td>
+    `;
+    tabla.querySelector("tbody").appendChild(mensajeNoEncontrado);
+  }
   tabla.innerHTML += `</tbody></table>`;
   listaCursos.appendChild(tabla);
   const botonEditar = document.querySelectorAll(".editar-curso");
@@ -289,6 +350,7 @@ export function mostrarCursos() {
     });
   });
 }
+
 //------------------------------- Guardar edición --------------------------------//
 
 guardarEdicion.addEventListener("click", () => {
@@ -305,4 +367,10 @@ guardarEdicion.addEventListener("click", () => {
 
 cancelarEdicion.addEventListener("click", () => {
   formularioEdicion.style.display = "none";
+});
+//--------------------------------- Búsqueda ----------------------------------//
+
+busquedaIngresada.addEventListener("input", () => {
+  const valorBusqueda = busquedaIngresada.value.toLowerCase();
+  mostrarCursos(valorBusqueda);
 });
