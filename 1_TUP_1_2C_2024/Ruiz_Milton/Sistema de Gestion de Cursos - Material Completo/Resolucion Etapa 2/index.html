@@ -44,18 +44,14 @@
             <form id="form-estudiante">
               <label for="nombre-estudiante">Nombre:</label>
               <input type="text" id="nombre-estudiante" required />
-
               <label for="edad-estudiante">Edad:</label>
               <input type="number" id="edad-estudiante" required />
-
               <label for="nota-estudiante">Nota:</label>
               <input type="number" id="nota-estudiante" required />
-
               <label for="curso-estudiante">Curso:</label>
               <select id="curso-estudiante">
                 <!-- Opciones de curso dinámicamente -->
               </select>
-
               <button
                 id="boton-agregar-estudiante"
                 type="submit"
@@ -64,17 +60,28 @@
                 <i class="fa-solid fa-plus"></i> Agregar Estudiante
               </button>
             </form>
-
             <!-- Listado de cursos y estudiantes -->
             <h2 class="texto-h2">Listado de Cursos y Estudiantes</h2>
-            <div class="input-container">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input
-                type="text"
-                id="busqueda-ingresada"
-                class="form-control"
-                placeholder="Buscar curso o estudiante..."
-              />
+            <div class="input-container mb-3 container">
+              <div class="row">
+                <div class="col"></div>
+                <div class="col position-relative">
+                  <input
+                    type="text"
+                    id="busqueda-ingresada"
+                    class="form-control"
+                    placeholder="Buscar curso o estudiante..."
+                  />
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="col contenedor-select">
+                  <select id="filtro-estudiantes" class="form-select">
+                    <option value="">Ordenar por</option>
+                    <option value="edad">Ordenar por Edad</option>
+                    <option value="nota">Ordenar por Nota</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div id="formulario-edicion" style="display: none">
               <h2 class="texto-h2">Edición</h2>
@@ -96,13 +103,11 @@
                     class="form-control"
                   />
                 </div>
-
                 <div class="col-12">
                   <h4 class="texto-h4">Estudiantes</h4>
                   <div id="lista-estudiantes-edicion"></div>
                   <!-- Nueva área para estudiantes -->
                 </div>
-
                 <div class="col-12">
                   <button id="guardar-edicion" class="btn btn-info">
                     <i class="fa-solid fa-floppy-disk"></i> Guardar

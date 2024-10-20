@@ -200,29 +200,37 @@ td {
 .mensaje.oculto {
   opacity: 0;
 }
-#busqueda-ingresada{
-  width: 25%;
-  border-radius: 24px;
-  font-size: 13px;
-  padding: 7px 15px 7px 15px;
-}
 #busqueda-ingresada:hover{
   border: 1px solid blue;
 }
 .input-container {
-  display: flex;
-  justify-content: center;
-  position: relative;
   width: 100%;
-  margin: 25px 0px;
+  margin: 25px 0;
+}
+.input-container .col-auto {
+  display: flex;
+  align-items: center;
+}
+#filtro-estudiantes {
+  font-size: 13px;
+  margin-left: auto;
+  width: 70%;
+}
+.contenedor-select{
+  width: 50%;
+}
+#busqueda-ingresada {
+  width: 100%;
+  border-radius: 24px;
+  font-size: 13px;
+  padding: 7px 30px;
 }
 .fa-magnifying-glass {
   position: absolute;
-  left: 59%;
+  left: 250px;
   top: 50%;
   transform: translateY(-50%);
   color: #999;
   pointer-events: none;
   font-size: 14px;
-  font-weight: 600;
 }
