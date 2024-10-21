@@ -27,6 +27,10 @@ const cancelarEdicion = document.getElementById("cancelar-edicion");
 const nombreEstudiante = document.getElementById("nombre-estudiante");
 const busquedaIngresada = document.getElementById("busqueda-ingresada");
 const filtroEstudiantes = document.getElementById("filtro-estudiantes");
+const mensajeConfirmacion = document.getElementById("mensaje-confirmacion");
+const modalConfirmacion = document.getElementById("modal-confirmacion");
+const botonConfirmar = document.getElementById("btn-confirmar");
+const botonCancelar = document.getElementById("btn-cancelar");
 
 //---------------------------- Clase Estudiante -------------------------------------//
 
@@ -93,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
   actualizarCursosSelect();
   mostrarCursos();
 });
-
 //------------------ Evento para agregar un curso ----------------------//
 
 formCurso.addEventListener("submit", (e) => {
@@ -314,22 +317,29 @@ cancelarEdicion.addEventListener("click", () => {
 listaCursos.addEventListener("click", (e) => {
   if (e.target.id === "boton-eliminar-curso") {
     const cursoNombre = e.target.closest("tr").querySelector("td").textContent;
-    const confirmacion = confirm(
-      `¿Estás seguro de que deseas eliminar el curso "${cursoNombre}"?`
-    );
-    if (confirmacion) {
+    mensajeConfirmacion.textContent = `¿Estás seguro de que deseas eliminar el curso "${cursoNombre}"?`;
+    modalConfirmacion.style.display = "block";
+    const cursoAEliminar = cursoNombre;
+    botonConfirmar.onclick = () => {
       const indiceCurso = cursos.findIndex(
-        (curso) => curso.nombre === cursoNombre
+        (curso) => curso.nombre === cursoAEliminar
       );
       if (indiceCurso !== -1) {
         cursos.splice(indiceCurso, 1);
         mostrarCursos();
         guardarDatos();
+        mostrarMensaje(
+          `Se ha eliminado el curso "${cursoAEliminar}"`,
+          "success"
+        );
       }
-    }
+      modalConfirmacion.style.display = "none";
+    };
+    botonCancelar.onclick = () => {
+      modalConfirmacion.style.display = "none";
+    };
   }
 });
-
 //----------------------- Eventos de edición de curso -------------------//
 
 listaCursos.addEventListener("click", (e) => {
