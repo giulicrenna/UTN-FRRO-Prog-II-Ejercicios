@@ -352,3 +352,49 @@ listaCursos.addEventListener("click", (e) => {
     formularioEdicion.style.display = "block";
   }
 });
+
+//-------------------------------------------------------------------------
+
+function mostrarEstudiantes() {
+  const listaEstudiantesEdicion = document.getElementById(
+    "lista-estudiantes-edicion"
+  );
+  listaEstudiantesEdicion.innerHTML = ""; // Limpiar contenido previo
+
+  if (cursoActual.estudiantes.length === 0) {
+    listaEstudiantesEdicion.innerHTML =
+      "<p>No hay estudiantes en este curso.</p>";
+    return;
+  }
+
+  const tablaEstudiantes = document.createElement("table");
+  tablaEstudiantes.classList.add("table", "table-striped");
+  tablaEstudiantes.innerHTML = `
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Nota</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+  `;
+
+  cursoActual.estudiantes.forEach((estudiante, index) => {
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+      <td>${estudiante.nombre}</td>
+      <td>${estudiante.edad}</td>
+      <td>${estudiante.nota}</td>
+      <td>
+        <button class="btn btn-danger" id="boton-eliminar-estudiante" data-index="${index}">
+          <i class="fa-solid fa-trash"></i> Eliminar
+        </button>
+      </td>
+    `;
+    tablaEstudiantes.querySelector("tbody").appendChild(fila);
+  });
+
+  listaEstudiantesEdicion.appendChild(tablaEstudiantes);
+}

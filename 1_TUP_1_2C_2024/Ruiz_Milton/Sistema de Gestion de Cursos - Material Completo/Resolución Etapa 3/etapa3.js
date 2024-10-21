@@ -41,7 +41,7 @@ export function editarCurso(
     mostrarCursos();
   }
 }
-//--------------------------- Función para editar un curso ---------------------------//
+//----------------------- Función para primera letra Mayuscula -----------------------//
 
 export function primeraMayuscula(palabra) {
   return palabra.charAt(0).toUpperCase() + palabra.slice(1);
