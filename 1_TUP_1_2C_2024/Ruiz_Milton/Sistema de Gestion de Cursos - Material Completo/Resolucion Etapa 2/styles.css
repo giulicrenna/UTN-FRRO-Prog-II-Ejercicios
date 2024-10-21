@@ -63,9 +63,27 @@ select {
 #nota-estudiante,
 #curso-estudiante,
 #nuevo-nombre-curso,
-#nuevo-nombre-profesor {
+#nuevo-nombre-profesor{
   font-size: 14px;
   width: 100%;
+  padding: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 2px;
+}
+#edad-estudiante-editar,
+#nota-estudiante-editar,
+#nombre-estudiante-editar{
+  width: 42%;
+  font-size: 14px;
+  padding: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 2px;
+}
+#edad-estudiante-editar,
+#nota-estudiante-editar,
+#nombre-estudiante-editar{
+  width: 42%;
+  font-size: 14px;
   padding: 6px;
   border: 1px solid rgba(128, 128, 128, 0.5);
   border-radius: 2px;
@@ -109,15 +127,24 @@ select {
 }
 .botones-acciones {
   display: flex;
-  gap: 10px; /* Espaciado entre los botones */
+  gap: 10px;
 }
 #guardar-edicion,
-#cancelar-edicion {
+#cancelar-edicion{
   color: white;
   font-size: 13px;
   padding: 7px 1px;
   width: 13%;
   border-radius: 3px;
+}
+#guardar-edicion-estudiante,
+#cancelar-edicion-estudiante {
+  color: white;
+  font-size: 13px;
+  padding: 7px 1px;
+  width: 33%;
+  border-radius: 3px;
+  margin-right: 5px;
 }
 #lista-cursos {
   margin-top: 20px;
@@ -268,4 +295,7 @@ td {
   border-radius: 5px;
   width: 50%;
   background-color: white;
+}
+.form-control {
+  margin-right: 10px;
 }

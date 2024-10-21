@@ -31,7 +31,23 @@ const mensajeConfirmacion = document.getElementById("mensaje-confirmacion");
 const modalConfirmacion = document.getElementById("modal-confirmacion");
 const botonConfirmar = document.getElementById("btn-confirmar");
 const botonCancelar = document.getElementById("btn-cancelar");
-
+const listaEstudiantesEdicion = document.getElementById(
+  "lista-estudiantes-edicion"
+);
+const cancelarEdicionEstudiante = document.getElementById(
+  "cancelar-edicion-estudiante"
+);
+const formEdicionEstudiante = document.getElementById(
+  "formulario-edicion-estudiante"
+);
+const nombreEstudianteEditar = document.getElementById(
+  "nombre-estudiante-editar"
+);
+const edadEstudianteEditar = document.getElementById("edad-estudiante-editar");
+const notaEstudianteEditar = document.getElementById("nota-estudiante-editar");
+const guardarEdicionEstudiante = document.getElementById(
+  "guardar-edicion-estudiante"
+);
 //---------------------------- Clase Estudiante -------------------------------------//
 
 class Estudiante {
@@ -96,6 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   actualizarCursosSelect();
   mostrarCursos();
+  document.getElementById("formulario-edicion-estudiante").style.display =
+    "none";
 });
 //------------------ Evento para agregar un curso ----------------------//
 
@@ -294,7 +312,7 @@ filtroEstudiantes.addEventListener("change", () => {
 busquedaIngresada.addEventListener("input", () => {
   mostrarCursos(busquedaIngresada.value.toLowerCase());
 });
-//------------------- Eventos de edición de curso ---------------------------//
+//--------------------- Eventos de guardar curso ---------------------------//
 
 guardarEdicion.addEventListener("click", () => {
   if (nuevoNombreCurso.value && nuevoNombreProfesor.value) {
@@ -350,9 +368,11 @@ listaCursos.addEventListener("click", (e) => {
     nuevoNombreCurso.value = cursoActual.nombre;
     nuevoNombreProfesor.value = cursoActual.profesor;
     formularioEdicion.style.display = "block";
+
+    // Llamar a la función para mostrar los estudiantes del curso
+    mostrarEstudiantes();
   }
 });
-
 //-------------------------------------------------------------------------
 
 function mostrarEstudiantes() {
@@ -388,6 +408,9 @@ function mostrarEstudiantes() {
       <td>${estudiante.edad}</td>
       <td>${estudiante.nota}</td>
       <td>
+        <button class="btn btn-warning" id="boton-editar-estudiante" data-index="${index}">
+          <i class="fa-regular fa-pen-to-square"></i> Editar
+        </button>
         <button class="btn btn-danger" id="boton-eliminar-estudiante" data-index="${index}">
           <i class="fa-solid fa-trash"></i> Eliminar
         </button>
@@ -398,3 +421,50 @@ function mostrarEstudiantes() {
 
   listaEstudiantesEdicion.appendChild(tablaEstudiantes);
 }
+//--------------------- Eventos de edición de estudiante -------------------//
+
+let estudianteActualIndex = null;
+listaEstudiantesEdicion.addEventListener("click", (e) => {
+  if (e.target.id === "boton-editar-estudiante") {
+    estudianteActualIndex = e.target.dataset.index;
+    const estudiante = cursoActual.estudiantes[estudianteActualIndex];
+    nombreEstudianteEditar.value = estudiante.nombre;
+    edadEstudianteEditar.value = estudiante.edad;
+    notaEstudianteEditar.value = estudiante.nota;
+    formEdicionEstudiante.style.display = "flex";
+  }
+});
+//--------------------- Eventos para guardar los cambios del estudiante -------------------//
+
+guardarEdicionEstudiante.addEventListener("click", () => {
+  if (estudianteActualIndex !== null) {
+    const nombreNuevo = nombreEstudianteEditar.value;
+    const edadNueva = parseInt(edadEstudianteEditar.value);
+    const notaNueva = parseFloat(notaEstudianteEditar.value);
+    if (
+      cadenaValida(nombreNuevo) &&
+      edadNueva > 0 &&
+      notaNueva >= 0 &&
+      notaNueva <= 10
+    ) {
+      cursoActual.estudiantes[estudianteActualIndex].nombre =
+        primeraMayuscula(nombreNuevo);
+      cursoActual.estudiantes[estudianteActualIndex].edad = edadNueva;
+      cursoActual.estudiantes[estudianteActualIndex].nota = notaNueva;
+      formEdicionEstudiante.style.display = "none";
+      mostrarEstudiantes();
+      mostrarMensaje("¡Estudiante actualizado correctamente!", "success");
+      guardarDatos();
+    } else {
+      mostrarMensaje("¡Valores ingresados incorrectos!", "error");
+    }
+  }
+});
+//------------------------------ Evento para cancelar la edición --------------------------//
+
+cancelarEdicionEstudiante.addEventListener("click", () => {
+  formEdicionEstudiante.style.display = "none";
+  nombreEstudianteEditar.value = "";
+  edadEstudianteEditar.value = "";
+  notaEstudianteEditar.value = "";
+});
