@@ -164,6 +164,6 @@ export function cadenaValida(cadena) {
 }
 //------------------ Función para guardar en localStorage ------------------//
 
-export function guardarDatosEnLocalStorage() {
+export function guardarDatos() {
   localStorage.setItem("cursos", JSON.stringify(cursos));
 }

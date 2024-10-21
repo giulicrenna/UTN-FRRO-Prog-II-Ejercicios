@@ -6,7 +6,7 @@ import {
   primeraMayuscula,
   mostrarMensaje,
   cadenaValida,
-  guardarDatosEnLocalStorage,
+  guardarDatos,
 } from "../Resolución Etapa 3/etapa3.js";
 
 //---------------------------------- Captura de ID's --------------------------------//
@@ -120,7 +120,7 @@ formCurso.addEventListener("submit", (e) => {
     actualizarCursosSelect();
     mostrarCursos();
     mostrarMensaje("¡Curso creado correctamente!", "success");
-    guardarDatosEnLocalStorage();
+    guardarDatos();
   }
 });
 //------------------ Evento para agregar un estudiante --------------------//
@@ -171,7 +171,7 @@ formEstudiante.addEventListener("submit", (e) => {
     formEstudiante.reset();
     mostrarCursos();
     mostrarMensaje("¡Estudiante agregado correctamente!", "success");
-    guardarDatosEnLocalStorage();
+    guardarDatos();
   }
 });
 //------------------- Función para actualizar el select de cursos --------------//
@@ -242,8 +242,8 @@ export function mostrarCursos(busqueda = "") {
           <div class="botones-acciones">
             <button id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
               curso.nombre
-            }">Editar</button>
-            <button class="btn btn-danger" id="boton-eliminar-curso">Eliminar</button>
+            }"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            <button class="btn btn-danger" id="boton-eliminar-curso"><i class="fa-solid fa-trash"></i> Eliminar</button>
           </div>
         </td>
       `;
@@ -300,7 +300,7 @@ guardarEdicion.addEventListener("click", () => {
       primeraMayuscula(nuevoNombreCurso.value),
       primeraMayuscula(nuevoNombreProfesor.value)
     );
-    guardarDatosEnLocalStorage();
+    guardarDatos();
     formularioEdicion.style.display = "none";
   }
 });
@@ -324,7 +324,7 @@ listaCursos.addEventListener("click", (e) => {
       if (indiceCurso !== -1) {
         cursos.splice(indiceCurso, 1);
         mostrarCursos();
-        guardarDatosEnLocalStorage();
+        guardarDatos();
       }
     }
   }
