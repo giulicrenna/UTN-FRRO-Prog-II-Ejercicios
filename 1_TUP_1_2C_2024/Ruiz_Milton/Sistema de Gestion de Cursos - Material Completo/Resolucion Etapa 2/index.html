@@ -24,12 +24,24 @@
             <h1 class="texto-h1">Sistema de Gestión de Cursos</h1>
 
             <!-- Formulario para agregar cursos -->
-            <h2 class="texto-h2">Agregar Curso</h2>
+            <h2 class="texto-h2">
+              <i class="fa-solid fa-book-medical"></i> Agregar Curso
+            </h2>
             <form id="form-curso">
               <label for="nombre-curso">Nombre:</label>
-              <input type="text" id="nombre-curso" required />
+              <input
+                class="form-control"
+                type="text"
+                id="nombre-curso"
+                required
+              />
               <label for="profesor-curso">Profesor:</label>
-              <input type="text" id="profesor-curso" required />
+              <input
+                class="form-control"
+                type="text"
+                id="profesor-curso"
+                required
+              />
               <button
                 id="boton-agregar-curso"
                 type="submit"
@@ -40,16 +52,33 @@
             </form>
 
             <!-- Formulario para agregar estudiantes -->
-            <h2 class="texto-h2">Agregar Estudiante</h2>
+            <h2 class="texto-h2">
+              <i class="fa-solid fa-user-plus"></i> Agregar Estudiante
+            </h2>
             <form id="form-estudiante">
               <label for="nombre-estudiante">Nombre:</label>
-              <input type="text" id="nombre-estudiante" required />
+              <input
+                class="form-control"
+                type="text"
+                id="nombre-estudiante"
+                required
+              />
               <label for="edad-estudiante">Edad:</label>
-              <input type="number" id="edad-estudiante" required />
+              <input
+                class="form-control"
+                type="number"
+                id="edad-estudiante"
+                required
+              />
               <label for="nota-estudiante">Nota:</label>
-              <input type="number" id="nota-estudiante" required />
+              <input
+                class="form-control"
+                type="number"
+                id="nota-estudiante"
+                required
+              />
               <label for="curso-estudiante">Curso:</label>
-              <select id="curso-estudiante">
+              <select class="form-control" id="curso-estudiante">
                 <!-- Opciones de curso dinámicamente -->
               </select>
               <button
@@ -61,7 +90,9 @@
               </button>
             </form>
             <!-- Listado de cursos y estudiantes -->
-            <h2 class="texto-h2">Listado de Cursos y Estudiantes</h2>
+            <h2 class="texto-h2">
+              <i class="fa-solid fa-list"></i> Listado de Cursos y Estudiantes
+            </h2>
             <div class="input-container mb-3 container">
               <div class="row">
                 <div class="col"></div>
@@ -86,7 +117,9 @@
             <div id="formulario-edicion" style="display: none">
               <h2 class="texto-h2">Edición</h2>
               <div id="form-edicion" class="row">
-                <h4 class="texto-h4">Curso</h4>
+                <h4 class="texto-h4-curso">
+                  <i class="fa-solid fa-graduation-cap"></i> Curso
+                </h4>
                 <div class="col-md-6">
                   <label for="nuevo-nombre-curso">Nuevo Curso:</label>
                   <input
@@ -95,7 +128,7 @@
                     class="form-control"
                   />
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                   <label for="nuevo-nombre-profesor">Nuevo Profesor:</label>
                   <input
                     type="text"
@@ -104,42 +137,59 @@
                   />
                 </div>
                 <div class="col-12">
-                  <h4 class="texto-h4">Estudiantes</h4>
+                  <h4 class="texto-h4-estudiante">
+                    <i class="fa-solid fa-users"></i> Estudiantes
+                  </h4>
                   <!-- Formulario de edición de estudiante -->
-                  <div id="formulario-edicion-estudiante" style="display: none">
-                    <input
-                      class="form-control"
-                      type="text"
-                      id="nombre-estudiante-editar"
-                      placeholder="Nombre"
-                    />
-                    <input
-                      class="form-control"
-                      type="number"
-                      id="edad-estudiante-editar"
-                      placeholder="Edad"
-                    />
-                    <input
-                      class="form-control"
-                      type="number"
-                      id="nota-estudiante-editar"
-                      placeholder="Nota"
-                      step="0.1"
-                      min="0"
-                      max="10"
-                    />
-                    <button
-                      id="guardar-edicion-estudiante"
-                      class="btn btn-info"
-                    >
-                      <i class="fa-solid fa-floppy-disk"></i> Guardar
-                    </button>
-                    <button
-                      id="cancelar-edicion-estudiante"
-                      class="btn btn-secondary"
-                    >
-                      Cancelar
-                    </button>
+                  <div
+                    class="row"
+                    id="formulario-edicion-estudiante"
+                    style="display: none"
+                  >
+                    <div class="col">
+                      <label for="nombre-estudiante-editar">Nombre:</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="nombre-estudiante-editar"
+                        placeholder="Nombre"
+                      />
+                    </div>
+                    <div class="col">
+                      <label for="edad-estudiante-editar">Edad:</label>
+                      <input
+                        class="form-control"
+                        type="number"
+                        id="edad-estudiante-editar"
+                        placeholder="Edad"
+                      />
+                    </div>
+                    <div class="col">
+                      <label for="nota-estudiante-editar">Nota:</label>
+                      <input
+                        class="form-control"
+                        type="number"
+                        id="nota-estudiante-editar"
+                        placeholder="Nota"
+                        step="0.1"
+                        min="0"
+                        max="10"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <button
+                        id="guardar-edicion-estudiante"
+                        class="btn btn-info"
+                      >
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar
+                      </button>
+                      <button
+                        id="cancelar-edicion-estudiante"
+                        class="btn btn-secondary"
+                      >
+                        <i class="fa-solid fa-x"></i> Cancelar
+                      </button>
+                    </div>
                   </div>
                   <div id="lista-estudiantes-edicion"></div>
                   <!-- Aquí se mostrará la tabla -->

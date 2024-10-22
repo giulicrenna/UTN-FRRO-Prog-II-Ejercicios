@@ -29,7 +29,7 @@ h2 {
 }
 .texto-h2 {
   font-size: 22px;
-  margin: 20px 0px 20px 0px;
+  margin: 30px 0px 20px 0px;
 }
 form {
   margin-bottom: 30px;
@@ -82,7 +82,7 @@ select {
 #edad-estudiante-editar,
 #nota-estudiante-editar,
 #nombre-estudiante-editar{
-  width: 42%;
+  width: 100%;
   font-size: 14px;
   padding: 6px;
   border: 1px solid rgba(128, 128, 128, 0.5);
@@ -136,15 +136,16 @@ select {
   padding: 7px 1px;
   width: 13%;
   border-radius: 3px;
+  margin: 10px 0px;
 }
 #guardar-edicion-estudiante,
 #cancelar-edicion-estudiante {
   color: white;
   font-size: 13px;
   padding: 7px 1px;
-  width: 33%;
+  width: 13%;
   border-radius: 3px;
-  margin-right: 5px;
+  margin: 10px 0px;
 }
 #lista-cursos {
   margin-top: 20px;
@@ -169,29 +170,32 @@ select {
   font-size: 15px;
 }
 .tabla-cursos,
-.tabla-estudiantes {
+.tabla-estudiante {
   width: 100%;
   margin: 10px auto;
   border-collapse: collapse;
 }
 .tabla-cursos th,
 .tabla-cursos td,
-.tabla-estudiantes th,
-.tabla-estudiantes td {
+.tabla-estudiante th,
+.tabla-estudiante td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
-.tabla-cursos th,
-.tabla-estudiantes th {
+.tabla-cursos th {
   background-color: #f2f2f2;
 }
 label {
   font-size: 13px;
 }
-.texto-h4 {
+.texto-h4-curso,
+.texto-h4-estudiante {
   font-size: 20px;
   margin: auto;
+}
+.texto-h4-estudiante{
+  padding: 20px 0px 5px 0px;
 }
 td {
   font-size: 14px;
@@ -298,4 +302,11 @@ td {
 }
 .form-control {
   margin-right: 10px;
+}
+.fa-book-medical,
+.fa-user-plus,
+.fa-list,
+.fa-graduation-cap,
+.fa-users{
+  font-size: 15px;
 }

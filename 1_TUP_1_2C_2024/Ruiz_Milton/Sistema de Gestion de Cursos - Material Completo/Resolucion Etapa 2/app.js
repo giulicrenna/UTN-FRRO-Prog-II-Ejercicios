@@ -388,14 +388,14 @@ function mostrarEstudiantes() {
   }
 
   const tablaEstudiantes = document.createElement("table");
-  tablaEstudiantes.classList.add("table", "table-striped");
+  tablaEstudiantes.classList.add("table", "tabla-estudiante");
   tablaEstudiantes.innerHTML = `
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Edad</th>
-        <th>Nota</th>
-        <th>Acciones</th>
+        <th class="bg-body-tertiary">Nombre</th>
+        <th class="bg-body-tertiary">Edad</th>
+        <th class="bg-body-tertiary">Nota</th>
+        <th class="bg-body-tertiary">Acciones</th>
       </tr>
     </thead>
     <tbody>
