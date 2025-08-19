@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: SUSE, helvetica, Arial, sans-serif;
+}
+p{font-size: 19px;}
+li{
+    margin-left: -5px;
+}
+h1, h2, h3 {
+    color:rgb(17, 17, 17);
+}
+body {
+    background-position: 160px 0px;
+    background-size: 1400px;
+}
+header{
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 160px;
+    padding-bottom: 250px;
+    background-size: 1400px;
+    background-position: 0px -100px; 
+    h1{
+        padding-top: 5px;
+        padding-right: 5px;
+        color: rgb(0, 0, 0);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        text-shadow: rgb(255, 255, 244) 3px 3px 0px, rgb(255, 255, 244) -3px 3px 0px, rgb(255, 255, 244) -3px -3px 0, rgb(255, 255, 244) 3px -3px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end; 
+        font-size: 80px;
+        img{border-radius: 40%;}
+    }
+    
+}
+nav{
+    img{margin-left: -15px;}
+    a{font-size: 20px; padding: 10px; color: rgb(240, 246, 255);}
+    a:hover{color:rgb(0, 136, 255)}
+    margin-left: 160px;
+    background-color: rgb(92, 92, 104);
+    form{padding-left: 25%;}
+}
+aside{
+    margin: 0px!important;
+    background-color: rgb(44, 44, 50);
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    padding-left: 4px;
+    li{margin-left: -2px;}
+    div.social-network{position: fixed; margin-left: 2px; margin-top: 82vmin; font-size: 30px; padding-left: 10px;}
+}
+main{
+    margin-left: 160px;
+}
+article{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: rgba(210, 214, 217, 0.900);
+    border-width: 3px;
+    border-radius: 1%;
+    border-color: rgb(0, 64, 255);
+    box-shadow: 0px 0px 7px rgb(255, 0, 225);
+    border-style: solid;
+    dd{font-size: 19px;}
+    li{font-size: 19px;}
+    a{font-size: 19px;}
+    td{font-size: 19px;}
+    h2{background-color: rgba(91, 35, 154, 0.467); padding-top: 5px; padding-left: 15px; padding-bottom: 5px; border-radius: 1%; }
+    h3{background-color: rgba(107, 140, 160, 0.345); padding-top: 10px; padding-left: 15px; padding-bottom: 5px; border-radius: 1%; margin-top: -8px;}
+    div{margin-left: 30px; padding-top: 10px; padding-bottom: 28px;}
+}
+section{
+    background-color: rgba(210, 214, 217, 0.668);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: rgba(193, 191, 216, 0.9);
+    border-width: 3px;
+    border-color: rgb(255, 0, 136);
+    box-shadow: 0px 0px 7px rgb(255, 217, 0);
+    border-style: solid;
+    h2{background-color: rgba(154, 35, 35, 0.467); padding-top: 5px; padding-left: 15px; padding-bottom: 5px; border-radius: 1%; }
+    h3{background-color: rgba(127, 160, 107, 0.345); padding-top: 10px; padding-left: 15px; padding-bottom: 5px; border-radius: 1%; margin-top: -8px;}
+    p{margin-left: 20px;}
+    img{ margin-left: 7%; max-width: 86%; min-width: 86%; padding: 15px; border-radius: 10%;}
+}
+article#redes{
+    div#redes{ 
+        a{
+            margin: 3px;
+            margin-right: 54px;
+            margin-left: 10px;
+            padding: 10px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: rgb(122, 0, 147);
+            background-color: rgba(240, 248, 255, 0.467);
+            border-radius: 20%;
+        }
+        a:hover{
+            margin: 3px;
+            margin-right: 54px;
+            margin-left: 10px;
+            padding: 10px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: rgb(181, 0, 222);
+            background-color: rgba(240, 248, 255, 0.868);
+            border-radius: 20%;
+            box-shadow: 0px 0px 2px rgb(255, 0, 225);
+        }
+    }
+    div#contac{
+        tr{
+            
+            padding: 15px;
+            background-color: rgba(240, 248, 255, 0.253);
+        }
+        td{
+            padding: 15px;
+            border-width: 2px;
+            border-color: rgb(133, 133, 133);
+        }
+        td:hover{
+            padding: 15px;
+            border-width: 2px;
+            border-color: rgb(60, 60, 60);
+            background-color: rgba(240, 248, 255, 0.868);
+        }
+    }
+    form{
+        max-width: 50%; min-width: 50%;
+        p{max-width: 50%; min-width: 50%;}
+    }
+}
