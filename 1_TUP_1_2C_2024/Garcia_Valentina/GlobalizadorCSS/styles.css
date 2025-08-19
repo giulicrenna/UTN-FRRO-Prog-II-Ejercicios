@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    background-color: rgb(247, 250, 245);
+    color: rgb(1, 2, 1);
+}
+
+header{
+    background-color: beige(248, 255, 253);
+    color: rgb(108, 160, 78);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+header .logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li{
+    margin-right: 20px;
+}
+
+header nav ul li a{
+    color: rgb(108, 160, 78);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover{
+    color: rgb(42, 116, 91);
+}
+
+.buscar{
+    padding: 5px;
+    border: rgb(72, 148, 72);
+    border-radius: 4px;
+}
+
+.buscar button{
+    padding: 5px 10px;
+    background-color: rgb(103, 216, 122);
+    color: rgb(239, 243, 239);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buscar button:hover{
+    background-color: rgb(127, 255, 155);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1100px 200px;
+    gap: 30px;
+    padding: 30px;
+}
+
+.content article{
+    background-color: rgb(106, 179, 106);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(103, 216, 122);
+}
+
+.content article img{
+    width: 40%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.comentario h3{
+    margin-top: 10px;
+
+}
+
+.comentario form{
+    margin-top: 5px;
+}
+
+.comentario textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.comentario button {
+    padding: 5px 10px;
+    background-color: rgb(23, 121, 23);
+    color: rgb(9, 161, 98);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comentario button:hover{
+    background-color: rgb(71, 158, 90);
+}
+
+.barra{
+    background-color: rgb(106, 179, 106);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.barra h3{
+    margin-bottom: 1px;
+}
+
+.barra ul{
+    list-style: none;
+}
+
+.barra ul li{
+    margin-bottom: 10px;
+}
+
+.barra ul li a{
+    color: rgb(177, 226, 149);
+    text-decoration: none;
+}
+
+.barra ul li a:hover{
+    text-decoration: underline;
+}
+
+.Contacto a{
+    display: block;
+    color:rgb(177, 226, 149);
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.Contacto a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    background-color: rgb(107, 219, 107);
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer nav a{
+    color: rgb(0, 139, 7);
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+footer nav a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 768px){
+    .container{
+        grid-template-columns: 10px;
+    }
+    header{
+        flex-direction: column;
+    }
+}
