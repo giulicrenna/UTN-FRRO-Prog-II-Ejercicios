@@ -2,41 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/ico_rosario.ico">
-    <meta name="keywords" content="Rosario, Argentina, Monumento a la Bandera, turismo, sitios emblemáticos">
-    <title>Galeria</title>
+    <title>Galería</title>
+    <link rel="stylesheet" href="../styles/galeria.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <a href="../index.html">Inicio</a>
-            <a href="galeria.html">Galeria</a>
+            <a href="galeria.html">Galería</a>
             <a href="tabla.html">Tabla</a>
-            <a href="http://www.google.com">Google</a>
-            <a href="../lista.html">Listas</a>
-            <a href="../formulario.html">Formularios</a>
+            <a href="http://www.google.com" target="_blank">Google</a>
+            <a href="lista.html">Listas</a>
+            <a href="formulario.html">Formularios</a>
         </nav>
     </header>
-<hr>
+
+    <hr>
+
     <main>
-        <section>
-            <section>
-                <img src="../img/y36T9jX5q_870x580__1.jpg" alt="Edificio">
-                <h2>Edificios</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed hic facere beatae necessitatibus laudantium. Error excepturi asperiores voluptates delectus ratione officia numquam vel expedita? Cumque incidunt quis quas sit delectus!</p>
-                <a href="../img/y36T9jX5q_870x580__1.jpg" target="_blank">Enlace a la imagen</a><br>
-                <a href="../pdf/perfil linkedin.pdf"dowload>Descargar PDF</a><br>
-                <a href="maito:seba@seba.com">Enviar Email</a>
-            </section>
+        <section class="card">
+            <img src="../img/y36T9jX5q_870x580__1.jpg" alt="Edificio moderno" class="imagen-responsive">
+            <h2 class="card-title">Edificios</h2>
+            <p>Lorem ipsum dolor sit amet...</p>
+            <a href="../img/y36T9jX5q_870x580__1.jpg" target="_blank">
+                <i class="fas fa-external-link-alt icon"></i> Enlace a la imagen
+            </a><br>
+            <a href="../pdf/perfil linkedin.pdf" download>
+                <i class="fas fa-file-pdf icon"></i> Descargar PDF
+            </a><br>
+            <a href="mailto:seba@seba.com">
+                <i class="fas fa-envelope icon"></i> Enviar Email
+            </a>
         </section>
-        <section>
-            <center><a href="../index.html">Volver a inicio</a></center>
+
+        <section id="segunda-seccion">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</h2>
+        </section>
+
+        <section style="text-align: center;">
+            <a href="../index.html">Volver a inicio</a>
         </section>
     </main>
-<hr>
+
     <footer>
-        <p>footer pie de pagina</p>
+        <p>footer pie de página</p>
     </footer>
 </body>
 </html>

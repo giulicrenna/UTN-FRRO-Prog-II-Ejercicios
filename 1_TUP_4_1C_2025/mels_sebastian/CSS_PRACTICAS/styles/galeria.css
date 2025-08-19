@@ -1,0 +1,116 @@
+
+/*
+/*  PARA FACILIDAD PERSONAL, LE PEDÍ CHAT GPT QUE ME AYUDE CON LOS COMENTARIOS DE CADA COMANDO, ME PROPUSO MEJORAS Y LAS QUE ME PARECIERON BUENAS LAS SUME AL CÓDIGO.
+/*  LOS ENUNCIADOS DE LOS PRÁCTICOS DE CSS ME PARECIERON MUY MUY COMPLICADOS DE ENTENDER, PASABA MAS TIEMPO INTENTANDO VER QUE PEDÍA Y DONDE LO REQUERÍA, QUE HACER LO QUE PEDÍA UNA VEZ "INTERPRETADO"
+/*
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap'); /* Importa las fuentes Montserrat y Open Sans */
+
+/* Variables de color */
+:root {
+    --color-azul: #2c3e50; /* Definición del color azul (variable) */
+    --color-gris: #ecf0f1; /* Definición del color gris (variable) */
+}
+
+/* Reset básico */
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el relleno por defecto de todos los elementos */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el cálculo del ancho y alto de los elementos */
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-gris); /* Establece el color de fondo del body con la variable gris */
+    font-family: 'Arial', sans-serif; /* Usa la fuente Arial para todo el contenido */
+}
+
+/* Navegación */
+header nav {
+    display: flex; /* Usa flexbox para los elementos de navegación */
+    justify-content: center; /* Centra horizontalmente los elementos del menú */
+    background-color: var(--color-azul); /* Aplica el color azul al fondo de la barra de navegación */
+    padding: 1rem 0; /* Añade relleno arriba y abajo en la barra de navegación */
+    flex-wrap: wrap; /* Permite que los elementos de navegación se envuelvan si es necesario */
+}
+
+header nav a {
+    color: white; /* Establece el color del texto de los enlaces a blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 0 1rem; /* Añade relleno lateral (izquierda y derecha) a los enlaces */
+    font-weight: bold; /* Hace que el texto de los enlaces sea en negrita */
+}
+
+/* Card */
+.card {
+    position: relative; /* Permite posicionar elementos dentro de la card con precisión */
+    margin: 1rem auto; /* Añade margen superior e inferior de 1rem y centra la card horizontalmente */
+    background-color: rgba(42, 67, 59, 0.1); /* Color de fondo de la card con un leve tono transparente */
+    max-width: 300px; /* Establece el ancho máximo de la card */
+    width: 100%; /* La card ocupará todo el ancho disponible hasta el máximo especificado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Añade una sombra sutil a la card */
+    text-align: center; /* Centra el texto dentro de la card */
+    border-radius: 10px; /* Rueda las esquinas de la card con un radio de 10px */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde fuera de los límites de la card */
+}
+
+/* Imagen dentro de la card */
+.imagen-responsive {
+    margin-top: 1rem; /* Añade margen superior de 1rem a la imagen */
+    max-width: 100%; /* La imagen ocupará el 100% del ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Convierte la imagen en un bloque (elimina el espacio debajo) */
+}
+
+/* Título dentro de la card */
+.card-title {
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente Montserrat al título */
+    padding: 1rem 0; /* Añade un relleno de 1rem arriba y abajo del título */
+}
+
+/* Párrafos */
+p {
+    font-family: 'Open Sans', sans-serif; /* Aplica la fuente Open Sans a los párrafos */
+    padding: 0 1rem 1rem; /* Añade relleno de 1rem a los lados y 1rem al final del párrafo */
+}
+
+/* Sección especial */
+#segunda-seccion {
+    height: 200px; /* Establece una altura fija de 200px */
+    width: 100%; /* La sección ocupará el 100% del ancho disponible */
+    background-color: var(--color-azul); /* Aplica el color azul al fondo de la sección */
+    color: white; /* Establece el color de texto a blanco */
+    display: flex; /* Usa flexbox para los elementos dentro de la sección */
+    align-items: center; /* Centra verticalmente los elementos dentro de la sección */
+    justify-content: center; /* Centra horizontalmente los elementos dentro de la sección */
+    margin: 1rem 0; /* Añade margen superior e inferior de 1rem */
+    text-align: center; /* Centra el texto dentro de la sección */
+    padding: 0 1rem; /* Añade relleno lateral de 1rem */
+}
+
+/* Íconos */
+.icon {
+    width: 24px; /* Establece el tamaño de los íconos */
+    height: 24px; /* Establece el tamaño de los íconos */
+    margin: 0 5px; /* Añade margen lateral (5px a izquierda y derecha) */
+    vertical-align: middle; /* Alinea verticalmente el ícono al texto */
+}
+
+/* Estilo del último section (volver) */
+main > section:nth-of-type(3) {
+    width: 90%; /* Establece el ancho al 90% del contenedor principal */
+    max-width: 1200px; /* Ancho máximo de 1200px */
+    height: auto; /* La altura será automática */
+    padding: 20px; /* Relleno de 20px alrededor de la sección */
+    border: 1px solid #ddd; /* Borde gris claro alrededor de la sección */
+    margin: 30px auto; /* Añade márgenes de 30px arriba y abajo, centrado horizontal */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Centra el texto dentro del pie de página */
+    padding: 1rem; /* Relleno de 1rem alrededor del pie de página */
+    background-color: #ddd; /* Fondo gris claro para el pie de página */
+    margin-top: 2rem; /* Añade un margen superior de 2rem al pie de página */
+}

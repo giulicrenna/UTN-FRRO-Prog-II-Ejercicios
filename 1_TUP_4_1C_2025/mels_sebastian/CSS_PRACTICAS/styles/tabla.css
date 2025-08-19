@@ -1,0 +1,193 @@
+
+/*
+/*  PARA FACILIDAD PERSONAL, LE PEDÍ CHAT GPT QUE ME AYUDE CON LOS COMENTARIOS DE CADA COMANDO, ME PROPUSO MEJORAS Y LAS QUE ME PARECIERON BUENAS LAS SUME AL CÓDIGO.
+/*  LOS ENUNCIADOS DE LOS PRÁCTICOS DE CSS ME PARECIERON MUY MUY COMPLICADOS DE ENTENDER, PASABA MAS TIEMPO INTENTANDO VER QUE PEDÍA Y DONDE LO REQUERÍA, QUE HACER LO QUE PEDÍA UNA VEZ "INTERPRETADO"
+/*
+
+/* Variables globales de color */
+:root {
+    --color-primario: #2c3e50;        /* Azul oscuro: usado como fondo en encabezados de tabla */
+    --color-secundario: #ecf0f1;      /* Gris claro: color de fondo general */
+    --color-hover: #dfe6e9;           /* Gris más claro: usado al pasar el mouse por filas */
+    --color-header: #34495e;          /* Azul más oscuro: fondo de header y footer */
+    --color-texto: #fff;              /* Blanco: para textos sobre fondos oscuros */
+}
+
+/* Reset básico de márgenes y tamaño de caja */
+* {
+    margin: 0;                        /* Elimina márgenes por defecto */
+    padding: 0;                       /* Elimina padding por defecto */
+    box-sizing: border-box;          /* Incluye bordes y padding dentro del ancho/alto total */
+}
+
+/* Estilos generales del cuerpo del sitio */
+body {
+    font-family: 'Arial', sans-serif;       /* Fuente sin serifas para legibilidad */
+    background-color: var(--color-secundario); /* Fondo claro */
+    color: #333;                             /* Texto gris oscuro */
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 1.8rem;               /* Tamaño grande de fuente */
+    text-align: center;             /* Centrado horizontal */
+    margin: 1rem 0;                 /* Margen vertical arriba y abajo */
+    color: var(--color-primario);   /* Azul oscuro */
+}
+
+/* Subtítulos */
+h2, h3, h4 {
+    font-size: 1.5rem;              /* Tamaño estándar para subtítulos */
+    font-weight: bold;             /* Negrita */
+    margin-bottom: 1rem;           /* Separación inferior */
+}
+
+/* Navegación superior */
+header nav {
+    display: flex;                  /* Usa flexbox para los enlaces */
+    justify-content: center;       /* Centra los enlaces horizontalmente */
+    background-color: var(--color-header); /* Fondo azul oscuro */
+    padding: 1rem 0;                /* Relleno vertical */
+    flex-wrap: wrap;               /* Permite que los enlaces bajen a otra línea si no entran */
+}
+
+/* Enlaces del menú */
+header nav a {
+    color: rgb(223, 214, 240);        /* Morado intenso */
+    text-decoration: none;         /* Sin subrayado */
+    padding: 0 1rem;                /* Espaciado lateral entre enlaces */
+    font-weight: bold;             /* Texto en negrita */
+}
+
+/* Contenedor de audio y video */
+.container-s1 {
+    display: flex;                 /* Usa flexbox */
+    flex-direction: row;          /* Elementos en fila horizontal */
+    justify-content: center;      /* Centra horizontalmente el contenido */
+    align-items: center;          /* Centra verticalmente el contenido */
+    overflow-x: auto;             /* Permite scroll horizontal si no entra */
+    gap: 1rem;                    /* Espacio entre audio y video */
+    margin: 2rem auto;            /* Separación vertical y centrado */
+}
+
+/* Audio y Video dentro de container-s1 */
+.container-s1 audio,
+.container-s1 .video {
+    width: 100%;                  /* Ocupa todo el ancho disponible */
+    max-width: 400px;             /* Máximo 400px */
+}
+
+/* Video individual */
+.video {
+    width: 100%;                  /* 100% del contenedor */
+    height: auto;                 /* Altura automática según proporción */
+    margin-left: 1rem;            /* Separación izquierda */
+}
+
+/* Contenedor de mapa y video de YouTube */
+.container-s2 {
+    display: flex;                /* Usa flexbox */
+    justify-content: center;     /* Centrado horizontal */
+    align-items: center;         /* Centrado vertical */
+    flex-wrap: wrap;             /* Permite envolver elementos */
+    gap: 1rem;                   /* Espacio entre elementos */
+    margin-top: 2rem;            /* Separación superior */
+}
+
+/* Contenedor de la tabla con diseño grid */
+.container-s3 {
+    display: grid;                       /* Usa grid layout */
+    grid-template-columns: 1fr;         /* Una sola columna */
+    row-gap: 2rem;                       /* Espacio entre filas */
+    justify-items: center;              /* Centra los ítems dentro de cada celda */
+    margin-bottom: 2rem;                /* Margen inferior para separación del footer */
+    padding-left: 1rem;                 /* Relleno izquierdo */
+}
+
+/* Tabla */
+table {
+    width: 100%;                        /* Ocupa todo el ancho disponible */
+    border-collapse: collapse;         /* Elimina espacios entre bordes de celdas */
+}
+
+/* Celdas */
+th, td {
+    padding: 1rem;                      /* Relleno interno */
+    text-align: center;                /* Texto centrado */
+}
+
+/* Encabezados de tabla */
+th {
+    background-color: var(--color-primario); /* Fondo azul oscuro */
+    color: var(--color-texto);               /* Texto blanco */
+}
+
+/* Bordes inferiores */
+tr td, tr th {
+    border-bottom: 2px solid #ccc;     /* Línea gris clara inferior */
+}
+
+/*Fondo alterno para filas impares */
+tr:nth-child(odd) {
+    background-color: #f5f5f5;         /* Gris muy claro */
+}
+
+/*Efecto hover en filas */
+tr:hover {
+    background-color: var(--color-hover); /* Cambia fondo al pasar el mouse */
+}
+
+/*Pie de página */
+footer {
+    display: flex;                     /* Usa flexbox */
+    justify-content: center;          /* Centrado horizontal */
+    align-items: center;              /* Centrado vertical */
+    background-color: var(--color-header); /* Fondo oscuro */
+    color: var(--color-texto);        /* Texto blanco */
+    padding: 1rem;                    /* Espaciado interno */
+    margin-top: 2rem;                 /* Separación con contenido anterior */
+}
+
+/*MEDIA QUERIES: diseño adaptable */
+
+/* Tablets grandes: reorganiza navegación y multimedia */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;       /* Apila elementos verticalmente */
+        align-items: center;          /* Centrado horizontal */
+    }
+
+    .container-s1 {
+        flex-direction: column;       /* Cambia a columna */
+        align-items: center;          /* Centra elementos */
+    }
+
+    .navegar a {
+        display: block;               /* Cada enlace ocupa una línea */
+        margin: 0.5rem 0;             /* Separación entre enlaces */
+    }
+}
+
+/* Tablets pequeñas: cambia s2 a columna */
+@media (max-width: 768px) {
+    .container-s2 {
+        flex-direction: column;       /* Apila mapa y video */
+        align-items: center;          /* Centrado */
+    }
+}
+
+/* Celulares */
+@media (max-width: 425px) {
+    header nav {
+        flex-direction: column;       /* Apila enlaces */
+        align-items: center;          /* Centrado horizontal */
+    }
+
+    th, td {
+        font-size: 0.8rem;            /* Tamaño más chico para tablas */
+    }
+
+    .video {
+        margin-left: 1rem;            /* Pequeño margen izquierdo */
+    }
+}

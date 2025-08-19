@@ -1,0 +1,19 @@
+
+/*
+/*  PARA FACILIDAD PERSONAL, LE PEDÍ CHAT GPT QUE ME AYUDE CON LOS COMENTARIOS DE CADA COMANDO, ME PROPUSO MEJORAS Y LAS QUE ME PARECIERON BUENAS LAS SUME AL CÓDIGO.
+/*  LOS ENUNCIADOS DE LOS PRÁCTICOS DE CSS ME PARECIERON MUY MUY COMPLICADOS DE ENTENDER, PASABA MAS TIEMPO INTENTANDO VER QUE PEDÍA Y DONDE LO REQUERÍA, QUE HACER LO QUE PEDÍA UNA VEZ "INTERPRETADO"
+/*
+
+/* Estilo para el encabezado (header) */
+header {
+    position: fixed; /* Hace que el header quede fijo en la parte superior al hacer scroll */
+    top: 0; /* Fija el encabezado en la parte superior de la página */
+    width: 100%; /* Establece el ancho del encabezado al 100% del contenedor */
+    z-index: 1000; /* Establece el nivel de apilamiento (para que el header quede encima de otros elementos, si es necesario) */
+}
+
+/* Estilo para el contenido principal (main) */
+main {
+    margin-top: 80px; /* Añade un margen superior para evitar que el contenido se solape con el encabezado fijo. El valor debe ser igual o mayor que la altura del encabezado */
+}
+

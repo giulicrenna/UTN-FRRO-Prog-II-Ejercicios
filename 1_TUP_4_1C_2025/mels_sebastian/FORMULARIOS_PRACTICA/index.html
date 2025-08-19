@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulario de Registro</h1>
+
+        <!-- Formulario de registro -->
+        <form id="registroForm" novalidate> <!-- novalidate evita que el html haga cualquier validacion dejando todo en manos del js-->
+            
+            <!-- Campo para el nombre -->
+            <!-- Solo letras y mayor a 3 caracteres -->
+            <div class="form-group">
+                <label for="nombre">Nombre*</label>
+                <input type="text" name="nombre" id="nombre" required  placeholder="Ingrese su nombre" />
+                <div class="error-text" id="errorNombre"></div>
+            </div>
+
+            <!-- Campo para el apellido -->
+            <!-- Solo letras y mayor a 3 caracteres -->
+            <div class="form-group">
+                <label for="apellido">Apellido*</label>
+                <input type="text" name="apellido" id="apellido" required  placeholder="Ingrese su apellido" />
+                <div class="error-text" id="errorApellido"></div>
+            </div>
+
+            <!-- Campo para la edad -->
+            <!-- Mayor a 18 años y menor de 80 años -->
+            <div class="form-group">
+                <label for="edad">Edad*</label>
+                <input type="number" name="edad" id="edad" required  placeholder="Ingrese su edad" />
+                <div class="error-text" id="errorEdad"></div>
+            </div>
+
+            <!-- Campo para el precio mínimo -->
+            <!-- Mayor a 1 -->
+            <div class="form-group">
+                <label for="precioMin">Precio Mínimo*</label>
+                <input type="number" id="precioMin" name="precioMin" required  placeholder="Ingrese el precio mínimo" />
+                <div class="error-text" id="errorPrecioMin"></div>
+            </div>
+
+            <!-- Campo para el precio máximo -->
+            <!-- Mayor que el precio mínimo -->
+            <div class="form-group">
+                <label for="precioMax">Precio Máximo*</label>
+                <input type="number" id="precioMax" name="precioMax" required  placeholder="Ingrese el precio máximo" />
+                <div class="error-text" id="errorPrecioMax"></div>
+            </div>
+            
+            <!-- Campo para el telefono -->
+            <!-- +549 [caracteres0-9]{digitos 10}-->
+            <div class="form-group">
+                <label for="telefono">Teléfono*</label>
+                <input type="text" id="telefono" required  placeholder="Ingrese su teléfono">
+                <div class="error-text" id="errorTelefono"></div>
+            </div>
+
+
+            <!-- Campo para el correo electrónico -->
+            <!-- Validar formato de correo -->
+            <div class="form-group">
+                <label for="correo">Correo electrónico*</label>
+                <input type="email" name="correo" id="correo" required  placeholder="Ingrese su correo electrónico" />
+                <div class="error-text" id="errorCorreo"></div>
+            </div>
+
+            <!-- Campo para el reingreso de correo electrónico -->
+            <!-- Validar que sea igual al ingresado previamente -->
+            <div class="form-group">
+                <label for="reingresoCorreo">Reingrese el correo electrónico*</label>
+                <input type="email" name="reingresoCorreo" id="reingresoCorreo" required  placeholder="Reingrese su correo electrónico" />
+                <div class="error-text" id="errorReingresoCorreo"></div>
+            </div>
+
+            <!-- Campo para la contraseña -->
+            <!-- Mínimo 8 caracteres, una mayúscula -->
+            <div class="form-group">
+                <label for="clave">Contraseña*</label>
+                <input type="password" name="clave" id="clave" required  placeholder="Ingrese su contraseña" />
+                <div class="error-text" id="errorClave"></div>
+            </div>
+
+            <!-- Campo para reingresar la contraseña -->
+            <!-- Verificar que sea igual a la contraseña ingresada anteriormente -->
+            <div class="form-group">
+                <label for="reingresoClave">Reingrese la contraseña*</label>
+                <input type="password" name="reingresoClave" id="reingresoClave" required  placeholder="Reingrese su contraseña" />
+                <div class="error-text" id="errorReingresoClave"></div>
+            </div>
+
+            <!-- Campo para el género -->
+            <!-- Se debe seleccionar uno -->
+            <div class="form-group">
+                <label for="genero">Género*</label>
+                <select name="genero" id="genero" required aria-required="true">
+                    <option value="">Seleccione...</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <div class="error-text" id="errorGenero"></div>
+            </div>
+
+            <!-- Campo fecha de nacimiento -->
+            <!-- Formato dd/mm/aaaa -->
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento*</label>
+                <input type="date" id="fechaNacimiento" required placeholder="Ingrese su fecha de nacimiento">
+                <div class="error-text" id="errorFechaNacimiento"></div>
+            </div>
+
+            <!-- Campo comentarios -->
+            <!-- Minimo 100 caracteres -->
+            <div class="form-group">
+                <label for="comentarios">Comentarios*</label>
+                <textarea id="comentarios" required minlength="15" placeholder="Ingrese sus comentarios" ></textarea>
+                <div class="error-text" id="errorComentarios"></div>
+            </div>
+
+            <!-- Campo para los intereses -->
+            <!-- Se debe seleccionar al menos uno y no mas que dos -->
+            <fieldset class="form-group">
+                <legend>Intereses*</legend>
+                <label><input type="checkbox" name="interes" value="Deportes" required /> Deportes</label>
+                <label><input type="checkbox" name="interes" value="Música" required /> Música</label>
+                <label><input type="checkbox" name="interes" value="Tecnología" required /> Tecnología</label>
+                <div class="error-text" id="errorInteres"></div>
+            </fieldset>
+
+            <!-- Campo para los términos y condiciones -->
+            <!-- Debe estar marcado -->
+            <fieldset class="form-group">
+                <legend>Términos y condiciones*</legend>
+                <label>
+                    <input type="checkbox" name="terminos" id="terminos" required /> Acepto los términos y condiciones
+                </label>
+                <div class="error-text" id="errorTerminos"></div>
+            </fieldset>
+
+            <!-- Botón para registrarse -->
+            <button type="submit">Registrarse</button>
+        </form>
+        
+        <p>* Campos obligatorios</p>
+        <div id="success-message" class="success-message"></div>
+        <div id="error-message" class="error-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

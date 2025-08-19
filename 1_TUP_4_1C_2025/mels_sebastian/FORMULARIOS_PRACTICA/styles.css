@@ -1,0 +1,106 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal del documento */
+    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+    padding: 20px; /* Espaciado interno alrededor del contenido del cuerpo */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor horizontalmente */
+    background: white; /* Fondo blanco para el contenedor */
+    padding: 20px; /* Espaciado interno del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del contenedor */
+}
+
+/* Estilo del título principal */
+h1 {
+    text-align: center; /* Centra el texto del título */
+}
+
+/* Estilo de los grupos de formulario */
+.form-group {
+    margin-bottom: 15px; /* Espaciado inferior entre los grupos de formulario */
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block; /* Hace que las etiquetas ocupen toda la línea */
+    margin-bottom: 5px; /* Espaciado inferior entre la etiqueta y el campo */
+}
+
+/* Estilo de los campos de texto de varias líneas (textarea) */
+textarea {
+    width: 100%; /* El textarea ocupa todo el ancho del contenedor */
+    height: 150px; /* Altura específica del textarea */
+    resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+}
+
+/* Estilo general para los campos de entrada y los selectores */
+input, select {
+    width: 100%; /* Los campos ocupan todo el ancho del contenedor */
+    padding: 8px; /* Espaciado interno dentro de los campos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Estilo de los fieldsets (grupos de campos) */
+fieldset {
+    border: none; /* Elimina el borde predeterminado del fieldset */
+    margin-bottom: 15px; /* Espaciado inferior entre los fieldsets */
+}
+
+/* Estilo de los títulos de los fieldsets (legend) */
+legend {
+    font-weight: bold; /* Hace que el texto del legend sea negrita */
+    margin-bottom: 5px; /* Espaciado inferior entre el legend y el contenido del fieldset */
+}
+
+/* Estilo del botón */
+button {
+    width: 100%; /* El botón ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno dentro del botón */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: none; /* Elimina el borde predeterminado del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+
+/* Estilo del botón al pasar el cursor (hover) */
+button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo a un azul más oscuro */
+}
+
+/* Estilo del texto de error */
+.error-text {
+    color: red; /* Color rojo para los mensajes de error */
+    font-size: 0.875em; /* Tamaño de fuente más pequeño para los mensajes de error */
+    margin-top: 5px; /* Espaciado superior entre el mensaje de error y el campo */
+}
+
+/* Estilo de los checkboxes */
+input[type="checkbox"] {
+    width: 20px; /* Ancho del checkbox */
+    height: 20px; /* Altura del checkbox */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el checkbox */
+    accent-color: #007bff; /* Cambia el color del checkbox (compatible con navegadores modernos) */
+}
+
+
+.success-message {
+    color: #27ae60;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}

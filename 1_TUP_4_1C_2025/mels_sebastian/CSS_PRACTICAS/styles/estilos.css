@@ -1,28 +1,114 @@
+
+/*
+/*  PARA FACILIDAD PERSONAL, LE PEDÍ CHAT GPT QUE ME AYUDE CON LOS COMENTARIOS DE CADA COMANDO, ME PROPUSO MEJORAS Y LAS QUE ME PARECIERON BUENAS LAS SUME AL CÓDIGO.
+/*  LOS ENUNCIADOS DE LOS PRÁCTICOS DE CSS ME PARECIERON MUY MUY COMPLICADOS DE ENTENDER, PASABA MAS TIEMPO INTENTANDO VER QUE PEDÍA Y DONDE LO REQUERÍA, QUE HACER LO QUE PEDÍA UNA VEZ "INTERPRETADO"
+/*
+
+/* Definir color principal a nivel de toda la aplicación */
 :root {
-    color:brown
+    color: brown; /* Color principal para usar en todo el documento */
 }
 
+/* Eliminar márgenes y rellenos por defecto de todos los elementos */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Elimina margen por defecto */
+    padding: 0; /* Elimina relleno por defecto */
 }
 
+/* Estilos básicos para el cuerpo de la página */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif; /* Tipografía predeterminada */
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    color: #333; /* Color de texto gris oscuro */
 }
 
+/* Estilos para el encabezado */
 header {
-    background-color: #a0c9e3;
-    color: #020b0b;
-    text-align: center;
+    background-color: #f8f8f8; /* Color de fondo del header */
+    padding: 1rem; /* Relleno interno del header (1 rem) */
 }
 
+/* Estilos para el menú de navegación dentro del header */
+header nav {
+    display: flex; /* Activamos flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    justify-content: center; /* Alinea todos los elementos al centro horizontalmente */
+    gap: 1rem; /* Espacio entre los elementos del menú */
+}
+
+/* Estilos para los enlaces dentro del menú de navegación */
+header nav a {
+    color: #2c3e50; /* Color de texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 0 15px; /* Margen de 15px a izquierda y derecha de cada enlace */
+    padding: 5px 0; /* Padding superior e inferior de 5px */
+    font-weight: 500; /* Grosor de la fuente (500) */
+    transition: color 0.3s ease; /* Transición suave al pasar el ratón (cambio de color) */
+}
+
+/* Estilos para el logo (imagen circular) */
 .logo {
-    width: 80px;         
-    height: 80px;         
-    border-radius: 50%;    
-    object-fit: cover;    
-    margin-right: 100px;   
+    width: 80px; /* Ancho del logo */
+    height: 80px; /* Alto del logo */
+    border-radius: 50%; /* Hace el logo circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    margin-right: 100px; /* Espacio a la derecha del logo */
+}
+
+/* Estilos para el título principal */
+.titulo-principal {
+    font-size: 10rem; /* Tamaño de la fuente extremadamente grande */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 0 auto 3rem; /* Centra el texto y agrega margen inferior de 3 rem */
+    background-image: url('../img/20_junio_monumento.jpg'); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del texto */
+    color: transparent; /* Hace el texto transparente */
+    background-clip: text; /* Hace que el fondo se recorte dentro del texto */
+    padding: 20px; /* Padding interno de 20px */
+    display: block; /* Convierte el elemento en un bloque (por defecto es inline) */
+    width: fit-content; /* Ajusta el ancho según el contenido del texto */
+}
+
+/* Estilos para el primer párrafo */
+#parrafo1 {
+    background-image: url('../img/fondo-parrafo.jpg'); /* Imagen de fondo para el párrafo */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el área */
+    background-position: center; /* Centra la imagen de fondo */
+    background-color: #f0f0f0; /* Color de fondo en caso de que no cargue la imagen */
+    color: hwb(0 89% 9%); /* Color de texto */
+    text-align: justify; /* Justifica el texto */
+    line-height: 1.6; /* Establece la altura de las líneas para mejor legibilidad */
+    margin: 20px 0; /* Márgenes superior e inferior de 20px */
+    padding: 0; /* Sin relleno interno */
+    min-height: 150px; /* Altura mínima para asegurar que el fondo se vea bien */
+    display: flex; /* Flexbox para centrar el contenido */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    background-attachment: local; /* Fija la imagen de fondo cuando se hace scroll */
+}
+
+/* Estilos para los bloques de contenido de texto */
+.contenido-texto {
+    margin: 20px 0; /* Márgenes superior e inferior de 20px */
+    padding: 15px; /* Relleno interno de 15px */
+    text-align: justify; /* Justifica el texto */
+    color: #333333; /* Color del texto (gris oscuro) */
+    line-height: 1.6; /* Altura de la línea para mejorar la legibilidad */
+}
+
+/* Estilos para una sección secundaria con un max-width */
+.seccion-secundaria {
+    margin: 30px auto; /* Márgenes superior e inferior de 30px, centrado horizontal */
+    text-align: left; /* Alineación de texto a la izquierda */
+    max-width: 800px; /* Ancho máximo de la sección */
+}
+
+/* Estilos para el footer (pie de página) */
+.footer {
+    background-color: #2c3e50; /* Fondo oscuro para el pie de página */
+    color: #ffffff; /* Texto blanco */
+    padding: 1.5rem 0; /* Relleno de 1.5rem arriba y abajo */
+    text-align: center; /* Centra el texto en el pie de página */
 }

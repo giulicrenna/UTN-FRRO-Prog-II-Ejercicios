@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/ico_rosario.ico">
     <meta name="keywords" content="Rosario, Argentina, Monumento a la Bandera, turismo, sitios emblemáticos">
+    <link rel="stylesheet" href="../styles/tabla.css"> 
     <title>Tabla</title>
 </head>
 <body>
     <header>
-        <nav>
+        <h1 class="titulo-principal">Mi Sitio de Rosario</h1>
+        <nav class="navegar">
             <a href="../index.html">Inicio</a>
             <a href="galeria.html">Galeria</a>
             <a href="tabla.html">Tabla</a>
@@ -18,19 +20,20 @@
             <a href="../formulario.html">Formularios</a>
         </nav>
     </header>
-<hr>
+
     <main>
-        <section>
+
+        <section class="container-s1">
             <audio controls autoplay>
-                <source src="./mp3/1.mp3" type="audio/mpeg" autoplay="1">
+                <source src="./mp3/1.mp3" type="audio/mpeg">
             </audio>
-<hr>
-            <video width="400" controls>
+
+            <video class="video" controls>
                 <source src="./mp4/1.mp4" type="video/mp4">
             </video>
         </section>
-<hr>
-        <section>
+
+        <section class="container-s2">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.81627974202105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d2d2b2a4f3c4!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1625070000000!5m2!1sen!2sus" 
                 width="600" 
@@ -38,18 +41,22 @@
                 style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy">
-            </iframe>       
-<hr>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcATeLccwC0?si=EvdIJBe7XQPRDexL" 
-            title="YouTube video player" 
-            frameborder="3"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
-<hr>
+
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/ZcATeLccwC0?si=EvdIJBe7XQPRDexL" 
+                title="YouTube video player" 
+                frameborder="3"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
         </section>
-        <section>
-            <table border="12">
+
+        <section class="container-s3">
+            <table>
                 <tr>
                     <th>Horas</th>
                     <th>Lunes</th>
@@ -60,11 +67,11 @@
                 </tr>
                 <tr>
                     <td>8:00-9:00</td>
-                    <td>Ed. Historicos</td>
+                    <td>Ed. Históricos</td>
                     <td>Costanera</td>
                     <td>Música</td>
                     <td></td>
-                    <td>Gastronomia</td>
+                    <td>Gastronomía</td>
                 </tr>
                 <tr>
                     <td>9:00-10:00</td>
@@ -104,14 +111,15 @@
                 </tr>
             </table>
         </section>
-<hr>
+
         <section>
             <center><a href="../index.html">Volver a inicio</a></center>
         </section>
+
     </main>
-<hr>
+
     <footer>
-        <p>footer pie de pagina</p>
+        <p>footer pie de página</p>
     </footer>
 </body>
 </html>

@@ -28,49 +28,69 @@
 -->
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="./templates/galeria.html">Galeria</a>
-            <a href="./templates/tabla.html">Tabla</a>
-            <a href="http://www.google.com">Google</a>
-            <a href="lista.html">Listas</a>
-            <a href="formulario.html">Formularios</a>
-            <img src="./img/logo_rosario.avif" alt="Logo Rosario" class="logo">
-        </nav>
-    </header>
-<hr>
-    <main>
-        <section>
-            <article>
-                <h1><u>Rosario en imagenes</u></h1>
-                <p id="parrafo1">
-                    Este sitio web ofrece un recorrido virtual por los lugares más emblemáticos de la ciudad de Rosario, provincia de Santa Fe, Argentina. 
-                    A través de imágenes, descripciones detalladas y datos históricos, los visitantes podrán conocer los sitios más representativos de la ciudad, 
-                    desde su icónico <mark><b>Monumento a la Bandera</b></mark> hasta la Costanera del Paraná, pasando por plazas, museos, edificios históricos y gastronomicos.
-                </p>
-                <h2><b>Características principales:</b></h2>
-                <ul>
-                    <li><b>Galería interactiva:</b> Fotografías y videos de alta calidad de cada sitio.</li>
-                    <li><b>Historia y datos clave:</b>Información detallada sobre la importancia de cada lugar.</li>
-                    <li><b>Mapas y ubicación:</b> Integración con Google Maps para facilitar la visita a cada sitio.</li>
-                    <li><b>Recomendaciones turísticas:</b>Lugares cercanos para visitar, opciones gastronómicas y eventos.</li>
-                    <li><b>Sección de noticias:</b>Información sobre actividades culturales y eventos en la ciudad.</li>
-                </ul>
-                <img src="./img/images (1).jpg"> 
-            </article>
-        </section>
-        <section>
-            <div>
-                <mark>Lorem ipsum, dolor sit amet</mark> <i>consectetur adipisicing elit</i> . Rerum facere aspernatur non <strong>molestias dicta,</strong> 
-                repellendus maiores accusantium temporibus voluptatem quos quas, <b>voluptatum quam sint?</b> <br>Accusamus <u>reiciendis deserunt 
-                laudantium</u> aliquid.
+    <div class="contenedor-principal">
+        <header class="header">
+            <div class="contenedor-nav">
+                <nav class="nav-principal">
+                    <div class="logo-container">
+                        <img src="./img/logo_rosario.avif" alt="Logo Rosario" class="logo">
+                    </div>
+                    <div class="enlaces-nav">
+                        <a href="index.html" class="nav-enlace">Inicio</a>
+                        <a href="./templates/galeria.html" class="nav-enlace">Galeria</a>
+                        <a href="./templates/tabla.html" class="nav-enlace">Tabla</a>
+                        <a href="http://www.google.com" class="nav-enlace">Google</a>
+                        <a href="lista.html" class="nav-enlace">Listas</a>
+                        <a href="formulario.html" class="nav-enlace">Formularios</a>
+                    </div>
+                </nav>
             </div>
-        </section>
-    </main>
-<hr>
-    <footer>
-        <p>footer pie de pagina</p>
-    </footer>
+        </header>
+        
+        <main class="contenido-principal">
+            <div class="seccion-destacada">
+                <article class="articulo-principal">
+                    <h1 class="titulo-principal"><u>Rosario en imagenes</u></h1>
+                    <div class="contenido-texto">
+                        <p id="parrafo1">
+                            Este sitio web ofrece un recorrido virtual por los lugares más emblemáticos de la ciudad de Rosario, provincia de Santa Fe, Argentina. 
+                            A través de imágenes, descripciones detalladas y datos históricos, los visitantes podrán conocer los sitios más representativos de la ciudad, 
+                            desde su icónico <mark><b>Monumento a la Bandera</b></mark> hasta la Costanera del Paraná, pasando por plazas, museos, edificios históricos y gastronómicos.
+                        </p>
+                    </div>
+                    
+                    <div class="caracteristicas">
+                        <h2 class="subtitulo"><b>Características principales:</b></h2>
+                        <ul class="lista-caracteristicas">
+                            <li class="item-lista"><b>Galería interactiva:</b> Fotografías y videos de alta calidad de cada sitio.</li>
+                            <li class="item-lista"><b>Historia y datos clave:</b> Información detallada sobre la importancia de cada lugar.</li>
+                            <li class="item-lista"><b>Mapas y ubicación:</b> Integración con Google Maps para facilitar la visita a cada sitio.</li>
+                            <li class="item-lista"><b>Recomendaciones turísticas:</b> Lugares cercanos para visitar, opciones gastronómicas y eventos.</li>
+                            <li class="item-lista"><b>Sección de noticias:</b> Información sobre actividades culturales y eventos en la ciudad.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="imagen-destacada">
+                        <img src="./img/images (1).jpg" alt="Vista de Rosario">
+                    </div>
+                </article>
+            </div>
+
+            <div class="seccion-secundaria">
+                <div class="texto-secundario">
+                    <mark>Lorem ipsum, dolor sit amet</mark> <i>consectetur adipisicing elit</i>. Rerum facere aspernatur non <strong>molestias dicta,</strong> 
+                    repellendus maiores accusantium temporibus voluptatem quos quas, <b>voluptatum quam sint?</b> <br>Accusamus <u>reiciendis deserunt 
+                    laudantium</u> aliquid.
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="contenedor-footer">
+                <p class="texto-footer">© 2023 Sitios de Rosario. Todos los derechos reservados.</p>
+                <p class="texto-footer">Desarrollado por Sebastian Mels</p>
+            </div>
+        </footer>   
+    </div>
 </body>
 </html>
